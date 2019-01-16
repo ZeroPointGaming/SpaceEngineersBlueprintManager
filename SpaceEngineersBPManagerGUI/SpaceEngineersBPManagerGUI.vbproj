@@ -1,0 +1,784 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{02FFADAF-8160-4193-90FA-C2FCF6EEFF26}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>SpaceEngineersBPManagerGUI.My.MyApplication</StartupObject>
+    <RootNamespace>SpaceEngineersBPManagerGUI</RootNamespace>
+    <AssemblyName>SpaceEngineersBPManagerGUI</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+    <HockeyAppResourceId>2245f724fabd4247a7df223adb53a669</HockeyAppResourceId>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>SpaceEngineersBPManagerGUI.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>SpaceEngineersBPManagerGUI.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Icon_png_32e5b78167c7612f41898bc83e58ea13.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroFramework.RunTime.1.2.0.3\lib\net40-Client\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroFramework.Design.1.2.0.3\lib\net40\MetroFramework.Design.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroFramework.Fonts.1.2.0.3\lib\net40\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.HockeyApp.Core45, Version=4.1.6.1005, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\HockeySDK.Core.4.1.6\lib\portable-net45+win8+wp8+wpa81+win81+uap10.0\Microsoft.HockeyApp.Core45.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FlatTheme.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.vb">
+      <DependentUpon>Main.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Main.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\heavy_armor_cube.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ArmorCenter.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ArmorCorner.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ArmorSide.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ArtificialMass.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AtmosphericThrusterLargeLarge.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AtmosphericThrusterSmall.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BlastDoorCornerInverted.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BlastFurnace.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ButtonPanel.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Camera.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CockpitOpen.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CockpitSmall.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ConnectorSmall.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Control Panel.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ConveyorCurveSmall.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ConveyorFrameMedium.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ConveyorSmall.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ConveyorSorterLarge.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ConveyorSorterMedium.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ConveyorTube.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ConveyorTubeCurved.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ConveyorTubeSmall.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Corner2x1x1Base.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Corner2x1x1Tip.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CryoPod.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FighterCockpit.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Grinder.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HangarDoor.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HeavyCorner2x1x1Base.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HeavyCorner2x1x1Tip.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HeavyInvCorner2x1x1Base.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HeavyInvCorner2x1x1Tip.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HeavyRoundArmorInvCorner.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HeavyRoundArmorSlope.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HeavySlope2x1x1Base.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HeavySlope2x1x1Tip.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HydrogenTank.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HydrogenThrusterLarge.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HydrogenThrusterSmall.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\InvCorner2x1x1Base.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\InvCorner2x1x1Tip.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\JumpDrive.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LargeBlock.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LaserAntenna.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LaserAntennaSmall.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LCDPanel.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LCDPanelWide.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MergeBlock.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OxygenGenerator.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OxygenGeneratorSmall.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OxygenTank.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OxygenTankSmall.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PassengerSeat.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Piston.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ProgrammingBlock.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Projector.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RemoteControl.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RocketLauncherReload.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RotorPart.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RoundArmorCorner.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RoundArmorInvCorner.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RoundArmorSlope.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sensor.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Slope2x1x1Base.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Slope2x1x1Tip.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SolarHydroponics.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SolarPanel.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SpaceBall.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TextPanel.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TimerBlock.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UpgradeEffectiveness.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UpgradeEnergy.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UpgradeProductivity.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Welder.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Wheel1x1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Wheel3x3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Wheel5x5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WheelSuspension1x1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WheelSuspension3x3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WheelSuspension5x5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Window1x1Face.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Window1x1Flat.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Window1x1FlatInv.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Window1x1Inv.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Window1x1Side.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Window1x1SideInv.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Window1x1Slope.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Window1x2Face.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Window1x2Flat.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Window1x2FlatInv.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Window1x2Inv.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Window1x2SideLeft.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Window1x2SideLeftInv.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Window1x2SideRight.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Window1x2SideRightInv.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Window1x2Slope.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Window2x3Flat.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Window2x3FlatInv.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LargeBlockArmorBlock.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LargeBlockArmorCorner.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LargeBlockArmorCornerInv.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LargeBlockArmorSlope.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LargeHeavyBlockArmorBlock.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LargeHeavyBlockArmorCorner.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LargeHeavyBlockArmorCornerInv.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LargeHeavyBlockArmorSlope.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LargeMedicalRoom.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Connector.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LargeAssembler.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LargeDecoy.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LargeJumpDrive.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LargeBeacon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LargeBlockCockpit.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LargeBlockGyro.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ModdedItem.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ButtonPanelLarge.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LargeBlockArmorCorner2Base.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LargeBlockArmorCorner2Tip.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LargeBlockArmorInvCorner2Base.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LargeBlockArmorInvCorner2Tip.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LargeBlockArmorRoundCorner.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LargeBlockArmorRoundInvCorner.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LargeBlockArmorRoundSlope.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LargeBlockArmorSlope2Base.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LargeBlockArmorSlope2Tip.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LargeBlockCryoChamber.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LargeStairs.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LargeTextPanel.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PassengerSeatLarge.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TimerBlockLarge.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\VirtualMassLarge.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LargeBlockBatteryBlock.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LargeBlockConveyor.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LargeBlockDetector.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LargeBlockInteriorWall.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LargeBlockLargeContainer.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LargeBlockSmallContainer.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LargeBlockSolarPanel.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LargeCameraBlock.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\unknown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Icon_png_32e5b78167c7612f41898bc83e58ea13.ico" />
+    <None Include="Resources\LargeBlockLargeThrust2.jpg" />
+    <None Include="Resources\LargeBlockLargeHydrogenThrust2.jpg" />
+    <None Include="Resources\LargeBlockLargeAtmosphericThrust2.jpg" />
+    <None Include="Resources\SmallBlockSmallAtmosphericThrust.jpg" />
+    <None Include="Resources\SoundBlock.jpg" />
+    <None Include="Resources\CockpitSmall1.jpg" />
+    <None Include="Resources\LargeBlockSolarPanel1.jpg" />
+    <None Include="Resources\LargeLCDPanel1.jpg" />
+    <None Include="Resources\LargeDecoy1.jpg" />
+    <None Include="Resources\LargeBlockSmallGenerator1.jpg" />
+    <None Include="Resources\LargeBlockSmallContainer1.jpg" />
+    <None Include="Resources\SmallSuspension5x5mirrored1.jpg" />
+    <None Include="Resources\SmallSuspension3x3mirrored1.jpg" />
+    <None Include="Resources\SmallSuspension1x1mirrored1.jpg" />
+    <None Include="Resources\HydrogenTank1.jpg" />
+    <None Include="Resources\ProgrammingBlock1.jpg" />
+    <None Include="Resources\LargeProjector1.jpg" />
+    <None Include="Resources\Piston1.jpg" />
+    <None Include="Resources\Camera1.jpg" />
+    <None Include="Resources\SmallBlockLight_2corner1.jpg" />
+    <None Include="Resources\LargeBlockSmallThrust1.jpg" />
+    <None Include="Resources\LargeBlockSmallHydrogenThrust1.jpg" />
+    <None Include="Resources\LargeBlockLargeThrust1.jpg" />
+    <None Include="Resources\LargeBlockLargeHydrogenThrust1.jpg" />
+    <None Include="Resources\LargeBlockLargeAtmosphericThrust1.jpg" />
+    <None Include="Resources\SmallLight1.jpg" />
+    <None Include="Resources\SmParachute.jpg" />
+    <None Include="Resources\SmallStator.jpg" />
+    <None Include="Resources\SmallShipConveyorHub.jpg" />
+    <None Include="Resources\SmallBlockSensor.jpg" />
+    <None Include="Resources\SmallBlockRemoteControl.jpg" />
+    <None Include="Resources\SmallBlockRadioAntenna.jpg" />
+    <None Include="Resources\SmallBlockOreDetector.jpg" />
+    <None Include="Resources\SmallBlockMediumContainer.jpg" />
+    <None Include="Resources\SmallBlockLight_2corner.jpg" />
+    <None Include="Resources\SmallBlockLight_1corner.jpg" />
+    <None Include="Resources\SmallBlockLargeGenerator.jpg" />
+    <None Include="Resources\SmallBlockLargeContainer.jpg" />
+    <None Include="Resources\SmallBlockLandingGear.jpg" />
+    <None Include="Resources\SmallBlockGyro.jpg" />
+    <None Include="Resources\SmallBlockFrontLight.jpg" />
+    <None Include="Resources\SmallBlockCorner_LCD_1.jpg" />
+    <None Include="Resources\SmallBlockConveyorSorter.jpg" />
+    <None Include="Resources\SmallBlockConveyor.jpg" />
+    <None Include="Resources\SmallBlockCockpit.jpg" />
+    <None Include="Resources\SmallBlockBeacon.jpg" />
+    <None Include="Resources\SmallBlockBatteryBlock.jpg" />
+    <None Include="Resources\SmallAdvancedStator.jpg" />
+    <None Include="Resources\PassengerSeatSmall.jpg" />
+    <None Include="Resources\ConnectorMedium.jpg" />
+    <None Include="Resources\CollectorSmall.jpg" />
+    <None Include="Resources\Collector.jpg" />
+    <None Include="Resources\SmallWheel5x5.jpg" />
+    <None Include="Resources\SmallWheel3x3.jpg" />
+    <None Include="Resources\SmallWheel1x1.jpg" />
+    <None Include="Resources\SmallSuspension5x5mirrored.jpg" />
+    <None Include="Resources\SmallSuspension3x3mirrored.jpg" />
+    <None Include="Resources\SmallSuspension1x1mirrored.jpg" />
+    <None Include="Resources\LargeSteelCatwalk.jpg" />
+    <None Include="Resources\SpaceBallSmall.jpg" />
+    <None Include="Resources\SpaceBallLarge.jpg" />
+    <None Include="Resources\SmallShipMergeBlock.jpg" />
+    <None Include="Resources\LargeSteelCatwalkCorner.jpg" />
+    <None Include="Resources\LargeSteelCatwalk2Sides.jpg" />
+    <None Include="Resources\WheelSuspension5x51.jpg" />
+    <None Include="Resources\Wheel1x11.jpg" />
+    <None Include="Resources\MediumBlockConveyorSorter.jpg" />
+    <None Include="Resources\DBSmallBlockFighterCockpit.jpg" />
+    <None Include="Resources\ConveyorTubeMedium.jpg" />
+    <None Include="Resources\ConveyorTubeCurvedMedium.jpg" />
+    <None Include="Resources\ConveyorSorterSmall.jpg" />
+    <None Include="Resources\ConbeyorTubeSmallCurved.jpg" />
+    <None Include="Resources\ButtonPanelSmall.jpg" />
+    <None Include="Resources\LargeSteelCatwalk11.jpg" />
+    <None Include="Resources\LargeSteelCatwalk1.jpg" />
+    <None Include="Resources\Control Panel1.jpg" />
+    <None Include="Resources\SmallWarhead.jpg" />
+    <None Include="Resources\SmallShipWelder.jpg" />
+    <None Include="Resources\SmallShipGrinder.jpg" />
+    <None Include="Resources\SmallMissileTurret.jpg" />
+    <None Include="Resources\SmallMissileLauncher.jpg" />
+    <None Include="Resources\SmallGatlingTurret.jpg" />
+    <None Include="Resources\SmallGatlingGun.jpg" />
+    <None Include="Resources\SmallBlockDrill.jpg" />
+    <None Include="Resources\LargeWarhead.jpg" />
+    <None Include="Resources\LargeShipWelder.jpg" />
+    <None Include="Resources\LargeShipGrinder.jpg" />
+    <None Include="Resources\LargeRamp.jpg" />
+    <None Include="Resources\LargeMissileTurret.jpg" />
+    <None Include="Resources\LargeMissileLauncher.jpg" />
+    <None Include="Resources\LargeGatlingTurret.jpg" />
+    <None Include="Resources\LargeBlockDrill.jpg" />
+    <None Include="Resources\SmallRocketLauncherReload.jpg" />
+    <None Include="Resources\RocketLauncherReload.dds" />
+    <None Include="Resources\LargeWindowSquare.jpg" />
+    <None Include="Resources\LargeWindowEdge.jpg" />
+    <None Include="Resources\LargeInteriorTurret.jpg" />
+    <None Include="Resources\TimerBlockSmall.jpg" />
+    <None Include="Resources\AirVent.jpg" />
+    <None Include="Resources\HeavyHalfSlopeArmorBlock.jpg" />
+    <None Include="Resources\HeavyHalfArmorBlock.jpg" />
+    <None Include="Resources\HalfSlopeArmorBlock.jpg" />
+    <None Include="Resources\HalfArmorBlock.jpg" />
+    <None Include="Resources\SmallArmorSide.jpg" />
+    <None Include="Resources\SmallArmorInvCorner.jpg" />
+    <None Include="Resources\SmallArmorCorner.jpg" />
+    <None Include="Resources\SmallArmorCenter.jpg" />
+    <None Include="Resources\HeavyRoundArmorCorner.jpg" />
+    <None Include="Resources\SmallHeavyBlockRoundArmorSlope.jpg" />
+    <None Include="Resources\SmallHeavyBlockRoundArmorSlope .jpg" />
+    <None Include="Resources\SmallHeavyBlockInvCorner2x1x1Tip.jpg" />
+    <None Include="Resources\SmallHeavyBlockInvCorner2x1x1Base.jpg" />
+    <None Include="Resources\SmallHeavyBlockCorner2x1x1Tip.jpg" />
+    <None Include="Resources\SmallHeavyBlockCorner2x1x1Base.jpg" />
+    <None Include="Resources\SmallHeavyBlockArmorSlope2Tip.jpg" />
+    <None Include="Resources\SmallHeavyBlockArmorSlope2Base.jpg" />
+    <None Include="Resources\SmallHeavyBlockArmorSlope.jpg" />
+    <None Include="Resources\SmallHeavyBlockArmorCornerInv.jpg" />
+    <None Include="Resources\SmallHeavyBlockArmorCorner.jpg" />
+    <None Include="Resources\SmallHeavyBlockArmorBlock.jpg" />
+    <None Include="Resources\SmallBlockArmorSlope2Tip.jpg" />
+    <None Include="Resources\SmallBlockArmorSlope2Base.jpg" />
+    <None Include="Resources\SmallBlockArmorSlope.jpg" />
+    <None Include="Resources\SmallBlockArmorRoundSlope.jpg" />
+    <None Include="Resources\SmallBlockArmorRoundInvCorner.jpg" />
+    <None Include="Resources\SmallBlockArmorRoundCorner.jpg" />
+    <None Include="Resources\SmallBlockArmorInvCorner2Tip.jpg" />
+    <None Include="Resources\SmallBlockArmorInvCorner2Base.jpg" />
+    <None Include="Resources\SmallBlockArmorCornerInv.jpg" />
+    <None Include="Resources\SmallBlockArmorCorner2Tip.jpg" />
+    <None Include="Resources\SmallBlockArmorCorner2Base.jpg" />
+    <None Include="Resources\SmallBlockArmorCorner.jpg" />
+    <None Include="Resources\SmallBlockArmorBlock.jpg" />
+    <None Include="Resources\LargeHeavyHalfSlopeArmorBlock.jpg" />
+    <None Include="Resources\LargeHeavyHalfArmorBlock.jpg" />
+    <None Include="Resources\LargeHalfSlopeArmorBlock.jpg" />
+    <None Include="Resources\LargeHalfArmorBlock.jpg" />
+    <None Include="Resources\Window3x3FlatInv.jpg" />
+    <None Include="Resources\Window3x3Flat.jpg" />
+    <None Include="Resources\LargePistonBase.jpg" />
+    <None Include="Resources\LargeBlockLight_1corner.jpg" />
+    <None Include="Resources\MyObjectBuilder_GravityGenerator.jpg" />
+    <None Include="Resources\MyObjectBuilder_AirVent.jpg" />
+    <None Include="Resources\MyObjectBuilder_Door.jpg" />
+    <None Include="Resources\LargeBlockHeavyArmorCorner2Tip.jpg" />
+    <None Include="Resources\LargeBlockHeavyArmorCorner2Base.jpg" />
+    <None Include="Resources\LargeHeavyBlockArmorSlope2Tip.jpg" />
+    <None Include="Resources\LargeHeavyBlockArmorSlope2Base.jpg" />
+    <None Include="Resources\SmallLight.jpg" />
+    <None Include="Resources\MyObjectBuilder_Passage.jpg" />
+    <None Include="Resources\MyObjectBuilder_AirtightDoor.jpg" />
+    <None Include="Resources\LargeRefinery.jpg" />
+    <None Include="Resources\LargeProjector.jpg" />
+    <None Include="Resources\LargeInteriorPiller.jpg" />
+    <None Include="Resources\LargeHydrogenTank.jpg" />
+    <None Include="Resources\LargeCoverWall.jpg" />
+    <None Include="Resources\LargeBlockSoundBlock.jpg" />
+    <None Include="Resources\LargeBlockSmallThrust.jpg" />
+    <None Include="Resources\LargeBlockRemoteControl.jpg" />
+    <None Include="Resources\LargeBlockOxygenFarm.jpg" />
+    <None Include="Resources\LargeBlockLaserAntenna.jpg" />
+    <None Include="Resources\LargeBlockLargeThrust.jpg" />
+    <None Include="Resources\LargeBlockLargeGenerator.jpg" />
+    <None Include="Resources\LargeBlockLargeAtmosphericThrust.jpg" />
+    <None Include="Resources\MyObjectBuilder_GravityGeneratorSpherical.jpg" />
+    <None Include="Resources\LargeBlockLandingGear.jpg" />
+    <None Include="Resources\LargeProgrammingBlock.jpg" />
+    <None Include="Resources\LargeLCDPanelWide.jpg" />
+    <None Include="Resources\LargeLCDPanel.jpg" />
+    <None Include="Resources\LargeBlockFrontLight.jpg" />
+    <None Include="Resources\LargeBlockSmallHydrogenThrust.jpg" />
+    <None Include="Resources\LargeBlockLargeHydrogenThrust.jpg" />
+    <None Include="Resources\LargeBlockBeacon.jpg" />
+    <None Include="Resources\1600.png" />
+    <None Include="Resources\open-file-folder-clip-art-folder-with-file-icon-clip-art-kHtMAF-clipart.png" />
+    <None Include="Resources\LargeBlockCockpitSeat.jpg" />
+    <None Include="Resources\LargeBlockSlideDoor.jpg" />
+    <None Include="Resources\LargeBlockSmallGenerator.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
