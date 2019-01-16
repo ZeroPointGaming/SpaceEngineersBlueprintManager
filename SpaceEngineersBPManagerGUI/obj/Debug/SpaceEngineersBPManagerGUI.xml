@@ -1,0 +1,1361 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+SpaceEngineersBPManagerGUI
+</name>
+</assembly>
+<members>
+<member name="T:SpaceEngineersBPManagerGUI.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.BlastFurnace">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.ButtonPanelLarge">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.ButtonPanelSmall">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.CockpitOpen">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.CockpitSmall">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.Collector">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.CollectorSmall">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.Connector">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.ConnectorMedium">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.ConnectorSmall">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.ControlPanel">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.ConveyorCurveSmall">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.ConveyorFrameMedium">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.ConveyorSmall">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.ConveyorSorterMedium">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.ConveyorSorterSmall">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.ConveyorTube">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.ConveyorTubeCurved">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.ConveyorTubeCurvedMedium">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.ConveyorTubeMedium">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.ConveyorTubeSmall">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.ConveyorTubeSmallCurved">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.DBSmallBlockFighterCockpit">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.FighterCockpit">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.Grinder">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.HalfArmorBlock">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.HalfSlopeArmorBlock">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.HangarDoor">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.heavy_armor_cube">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.HeavyHalfArmorBlock">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.HeavyHalfSlopeArmorBlock">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.HydrogenTank">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.InvCorner2x1x1Base">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.InvCorner2x1x1Tip">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.LargeAssembler">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.LargeBlockArmorBlock">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.LargeBlockArmorCorner">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.LargeBlockArmorCorner2Base">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.LargeBlockArmorCorner2Tip">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.LargeBlockArmorCornerInv">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.LargeBlockArmorInvCorner2Base">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.LargeBlockArmorInvCorner2Tip">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.LargeBlockArmorRoundCorner">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.LargeBlockArmorRoundInvCorner">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.LargeBlockArmorRoundSlope">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.LargeBlockArmorSlope">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.LargeBlockArmorSlope2Base">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.LargeBlockArmorSlope2Tip">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.LargeBlockBatteryBlock">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.LargeBlockBeacon">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.LargeBlockCockpit">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.LargeBlockCockpitSeat">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.LargeBlockConveyor">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.LargeBlockConveyorSorter">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.LargeBlockCryoChamber">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.LargeBlockDetector">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.LargeBlockDrill">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.LargeBlockFrontLight">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.LargeBlockGyro">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.LargeBlockInteriorWall">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.LargeBlockLandingGear">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.LargeBlockLargeAtmosphericThrust">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.LargeBlockLargeContainer">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.LargeBlockLargeGenerator">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.LargeBlockLargeHydrogenThrust">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.LargeBlockLargeThrust">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.LargeBlockLaserAntenna">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.LargeBlockLight_1corner">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.LargeBlockLight_2corner">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.LargeBlockOxygenFarm">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.LargeBlockRemoteControl">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.LargeBlockSlideDoor">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.LargeBlockSmallContainer">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.LargeBlockSmallGenerator">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.LargeBlockSmallHydrogenThrust">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.LargeBlockSmallThrust">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.LargeBlockSolarPanel">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.LargeBlockSoundBlock">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.LargeCameraBlock">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.LargeCoverWall">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.LargeDecoy">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.LargeEffectivenessModule">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.LargeEnergyModule">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.LargeGatlingTurret">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.LargeHalfArmorBlock">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.LargeHalfSlopeArmorBlock">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.LargeHeavyBlockArmorBlock">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.LargeHeavyBlockArmorCorner">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.LargeHeavyBlockArmorCorner2Base">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.LargeHeavyBlockArmorCorner2Tip">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.LargeHeavyBlockArmorCornerInv">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.LargeHeavyBlockArmorSlope">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.LargeHeavyBlockArmorSlope2Base">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.LargeHeavyBlockArmorSlope2Tip">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.LargeHeavyHalfArmorBlock">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.LargeHeavyHalfSlopeArmorBlock">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.LargeHydrogenTank">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.LargeInteriorPillar">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.LargeInteriorTurret">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.LargeJumpDrive">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.LargeLCDPanel">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.LargeLCDPanelWide">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.LargeMedicalRoom">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.LargeMissileLauncher">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.LargeMissileTurret">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.LargePistonBase">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.LargeProductivityModule">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.LargeProgrammableBlock">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.LargeProjector">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.LargeRamp">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.LargeRefinery">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.LargeShipGrinder">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.LargeShipMergeBlock">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.LargeShipWelder">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.LargeStairs">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.LargeSteelCatwalk2Sides">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.LargeSteelCatwalkCorner">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.LargeSteelCatwalkPlate">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.LargeTextPanel">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.LargeWarhead">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.LargeWindowEdge">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.LargeWindowSquare">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.MediumBlockConveyorSorter">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.ModdedItem">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.MyObjectBuilder_AirtightHangarDoor">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.MyObjectBuilder_AirVent">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.MyObjectBuilder_Door">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.MyObjectBuilder_GravityGenerator">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.MyObjectBuilder_GravityGeneratorSphere">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.MyObjectBuilder_Passage">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.open">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.OxygenGenerator">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.OxygenGeneratorSmall">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.OxygenTank">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.OxygenTankSmall">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.PassengerSeatLarge">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.PassengerSeatSmall">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.Piston">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.RocketLauncherReload">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.RotorPart">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.Sensor">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.SmallAdvancedStator">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.SmallAirVent">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.SmallArmorCenter">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.SmallArmorCorner">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.SmallArmorInvCorner">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.SmallArmorSide">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.SmallBlockArmorBlock">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.SmallBlockArmorCorner">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.SmallBlockArmorCorner2Base">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.SmallBlockArmorCorner2Tip">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.SmallBlockArmorCornerInv">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.SmallBlockArmorInvCorner2Base">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.SmallBlockArmorInvCorner2Tip">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.SmallBlockArmorRoundCorner">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.SmallBlockArmorRoundInvCorner">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.SmallBlockArmorRoundSlope">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.SmallBlockArmorSlope">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.SmallBlockArmorSlope2Base">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.SmallBlockArmorSlope2Tip">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.SmallBlockBatteryBlock">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.SmallBlockBeacon">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.SmallBlockCockpit">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.SmallBlockConveyor">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.SmallBlockConveyorSorter">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.SmallBlockCorner_LCD_1">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.SmallBlockDrill">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.SmallBlockFrontLight">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.SmallBlockGyro">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.SmallBlockLandingGear">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.SmallBlockLargeAtmosphericThrust">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.SmallBlockLargeContainer">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.SmallBlockLargeGenerator">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.SmallBlockLargeHydrogenThrust">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.SmallBlockLargeThrust">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.SmallBlockLaserAntenna">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.SmallBlockLight_1corner">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.SmallBlockLight_2corner">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.SmallBlockMediumContainer">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.SmallBlockOreDetector">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.SmallBlockRadioAntenna">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.SmallBlockRemoteControl">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.SmallBlockSensor">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.SmallBlockSmallAtmosphericThrust">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.SmallBlockSmallContainer">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.SmallBlockSmallGenerator">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.SmallBlockSmallHydrogenThrust">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.SmallBlockSmallLight">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.SmallBlockSmallThrust">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.SmallBlockSolarPanel">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.SmallBlockSoundBlock">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.SmallCameraBlock">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.SmallControlPanel">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.SmallDecoy">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.SmallGatlingGun">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.SmallGatlingTurret">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.SmallHeavyBlockArmorBlock">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.SmallHeavyBlockArmorCorner">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.SmallHeavyBlockArmorCorner2Base">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.SmallHeavyBlockArmorCorner2Tip">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.SmallHeavyBlockArmorCornerInv">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.SmallHeavyBlockArmorInvCorner2Base">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.SmallHeavyBlockArmorInvCorner2Tip">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.SmallHeavyBlockArmorRoundCorner">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.SmallHeavyBlockArmorRoundCornerInv">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.SmallHeavyBlockArmorRoundSlope">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.SmallHeavyBlockArmorSlope">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.SmallHeavyBlockArmorSlope2Base">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.SmallHeavyBlockArmorSlope2Tip">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.SmallHydrogenTank">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.SmallLCDPanel">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.SmallLight">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.SmallMissileLauncher">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.SmallMissileTurret">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.SmallPistonBase">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.SmallProgrammableBlock">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.SmallProjector">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.SmallRocketLauncherReload">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.SmallShipConveyorHub">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.SmallShipGrinder">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.SmallShipMergeBlock">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.SmallShipWelder">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.SmallStator">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.SmallSuspension1x1">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.SmallSuspension1x1mirrored">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.SmallSuspension3x3">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.SmallSuspension3x3mirrored">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.SmallSuspension5x5">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.SmallSuspension5x5mirrored">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.SmallWarhead">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.SmallWheel1x1">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.SmallWheel3x3">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.SmallWheel5x5">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.SmParachute">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.SpaceBallLarge">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.SpaceBallSmall">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.TextPanel">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.TimerBlockLarge">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.TimerBlockSmall">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.unavailable">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.VirtualMassLarge">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.VirtualMassSmall">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.Window1x1Face">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.Window1x1Flat">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.Window1x1FlatInv">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.Window1x1Inv">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.Window1x1Side">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.Window1x1SideInv">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.Window1x1Slope">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.Window1x2Face">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.Window1x2Flat">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.Window1x2FlatInv">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.Window1x2Inv">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.Window1x2SideLeft">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.Window1x2SideLeftInv">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.Window1x2SideRight">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.Window1x2SideRightInv">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.Window1x2Slope">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.Window2x3Flat">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.Window2x3FlatInv">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.Window3x3Flat">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SpaceEngineersBPManagerGUI.My.Resources.Resources.Window3x3FlatInv">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="T:SpaceEngineersBPManagerGUI.Helpers">
+ <summary>
+ Flat UI Theme
+ Creator: iSynthesis (HF)
+ FIXED BY DUCKIETY FOR NET 4.5.2+ (MAYBE LOWER)!!
+ Version: 1.0.4
+ Date Created: 17/06/2013
+ Date Changed: 26/06/2013
+ UID: 374648
+ For any bugs / errors, PM me.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:SpaceEngineersBPManagerGUI.FlatAlertBox.W">
+ <summary>
+ How to use: FlatAlertBox.ShowControl(Kind, String, Interval)
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:SpaceEngineersBPManagerGUI.FlatAlertBox.H">
+ <summary>
+ How to use: FlatAlertBox.ShowControl(Kind, String, Interval)
+ </summary>
+ <remarks></remarks>
+</member>
+</members>
+</doc>

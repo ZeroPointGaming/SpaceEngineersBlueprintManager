@@ -1,0 +1,14 @@
+c:\users\redaj\documents\visual studio 2015\Projects\SpaceEngineersBPManagerGUI\SpaceEngineersBPManagerGUI\bin\Debug\SpaceEngineersBPManagerGUI.exe.config
+c:\users\redaj\documents\visual studio 2015\Projects\SpaceEngineersBPManagerGUI\SpaceEngineersBPManagerGUI\bin\Debug\SpaceEngineersBPManagerGUI.exe
+c:\users\redaj\documents\visual studio 2015\Projects\SpaceEngineersBPManagerGUI\SpaceEngineersBPManagerGUI\bin\Debug\SpaceEngineersBPManagerGUI.pdb
+c:\users\redaj\documents\visual studio 2015\Projects\SpaceEngineersBPManagerGUI\SpaceEngineersBPManagerGUI\bin\Debug\SpaceEngineersBPManagerGUI.xml
+c:\users\redaj\documents\visual studio 2015\Projects\SpaceEngineersBPManagerGUI\SpaceEngineersBPManagerGUI\obj\Debug\SpaceEngineersBPManagerGUI.vbprojResolveAssemblyReference.cache
+c:\users\redaj\documents\visual studio 2015\Projects\SpaceEngineersBPManagerGUI\SpaceEngineersBPManagerGUI\obj\Debug\SpaceEngineersBPManagerGUI.Resources.resources
+c:\users\redaj\documents\visual studio 2015\Projects\SpaceEngineersBPManagerGUI\SpaceEngineersBPManagerGUI\obj\Debug\SpaceEngineersBPManagerGUI.vbproj.GenerateResource.Cache
+c:\users\redaj\documents\visual studio 2015\Projects\SpaceEngineersBPManagerGUI\SpaceEngineersBPManagerGUI\obj\Debug\SpaceEngineersBPManagerGUI.exe
+c:\users\redaj\documents\visual studio 2015\Projects\SpaceEngineersBPManagerGUI\SpaceEngineersBPManagerGUI\obj\Debug\SpaceEngineersBPManagerGUI.xml
+c:\users\redaj\documents\visual studio 2015\Projects\SpaceEngineersBPManagerGUI\SpaceEngineersBPManagerGUI\obj\Debug\SpaceEngineersBPManagerGUI.pdb
+c:\users\redaj\documents\visual studio 2015\Projects\SpaceEngineersBPManagerGUI\SpaceEngineersBPManagerGUI\bin\Debug\Microsoft.HockeyApp.Core45.dll
+C:\Users\Redaj\Documents\Visual Studio 2015\Projects\SpaceEngineersBPManagerGUI\SpaceEngineersBPManagerGUI\bin\Debug\MetroFramework.dll
+C:\Users\Redaj\Documents\Visual Studio 2015\Projects\SpaceEngineersBPManagerGUI\SpaceEngineersBPManagerGUI\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\Redaj\Documents\Visual Studio 2015\Projects\SpaceEngineersBPManagerGUI\SpaceEngineersBPManagerGUI\obj\Debug\SpaceEngineersBPManagerGUI.Main.resources

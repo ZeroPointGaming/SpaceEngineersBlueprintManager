@@ -1,0 +1,907 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="VirtualMassSmall" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ArtificialMass.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BlastFurnace" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BlastFurnace.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ButtonPanelLarge" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ButtonPanelLarge.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CockpitSmall" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CockpitSmall.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Collector" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Collector.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Connector" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Connector.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ConnectorSmall" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ConnectorSmall.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ControlPanel" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Control Panel.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ConveyorCurveSmall" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ConveyorCurveSmall.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ConveyorFrameMedium" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ConveyorFrameMedium.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ConveyorSmall" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ConveyorSmall.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LargeBlockConveyorSorter" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ConveyorSorterLarge.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ConveyorSorterMedium" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ConveyorSorterMedium.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ConveyorSorterSmall" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ConveyorSorterSmall.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ConveyorTube" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ConveyorTube.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ConveyorTubeCurved" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ConveyorTubeCurved.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ConveyorTubeSmall" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ConveyorTubeSmall.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FighterCockpit" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FighterCockpit.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Grinder" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Grinder.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HangarDoor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HangarDoor.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="heavy_armor_cube" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\heavy_armor_cube.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HydrogenTank" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HydrogenTank.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="InvCorner2x1x1Base" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\InvCorner2x1x1Base.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="InvCorner2x1x1Tip" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\InvCorner2x1x1Tip.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LargeAssembler" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LargeAssembler.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LargeBlockArmorBlock" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LargeBlockArmorBlock.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LargeBlockArmorCorner" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LargeBlockArmorCorner.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LargeBlockArmorCorner2Base" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LargeBlockArmorCorner2Base.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LargeBlockArmorCorner2Tip" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LargeBlockArmorCorner2Tip.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LargeBlockArmorCornerInv" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LargeBlockArmorCornerInv.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LargeBlockArmorInvCorner2Base" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LargeBlockArmorInvCorner2Base.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LargeBlockArmorInvCorner2Tip" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LargeBlockArmorInvCorner2Tip.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LargeBlockArmorRoundCorner" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LargeBlockArmorRoundCorner.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LargeBlockArmorRoundInvCorner" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LargeBlockArmorRoundInvCorner.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LargeBlockArmorRoundSlope" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LargeBlockArmorRoundSlope.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LargeBlockArmorSlope" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LargeBlockArmorSlope.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LargeBlockArmorSlope2Base" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LargeBlockArmorSlope2Base.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LargeBlockArmorSlope2Tip" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LargeBlockArmorSlope2Tip.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LargeBlockBatteryBlock" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LargeBlockBatteryBlock.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LargeBlockConveyor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LargeBlockConveyor.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LargeBlockCryoChamber" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LargeBlockCryoChamber.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LargeBlockDetector" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LargeBlockDetector.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LargeBlockGyro" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LargeBlockGyro.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LargeBlockInteriorWall" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LargeBlockInteriorWall.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LargeBlockLargeContainer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LargeBlockLargeContainer.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LargeBlockSmallContainer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LargeBlockSmallContainer.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LargeBlockSolarPanel" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LargeBlockSolarPanel.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LargeCameraBlock" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LargeCameraBlock.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LargeDecoy" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LargeDecoy.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LargeHeavyBlockArmorBlock" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LargeHeavyBlockArmorBlock.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LargeHeavyBlockArmorCorner" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LargeHeavyBlockArmorCorner.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LargeHeavyBlockArmorCornerInv" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LargeHeavyBlockArmorCornerInv.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LargeHeavyBlockArmorSlope" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LargeHeavyBlockArmorSlope.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LargeJumpDrive" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LargeJumpDrive.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LargeMedicalRoom" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LargeMedicalRoom.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LargeShipGrinder" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LargeShipGrinder.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LargeShipWelder" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LargeShipWelder.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LargeStairs" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LargeStairs.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LargeTextPanel" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LargeTextPanel.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LargeBlockLaserAntenna" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LaserAntenna.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LargeShipMergeBlock" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MergeBlock.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ModdedItem" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\unknown.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="OxygenGenerator" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\OxygenGenerator.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="OxygenGeneratorSmall" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\OxygenGeneratorSmall.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="OxygenTank" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\OxygenTank.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="OxygenTankSmall" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\OxygenTankSmall.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PassengerSeatLarge" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PassengerSeatLarge.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Piston" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Piston.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RocketLauncherReload" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RocketLauncherReload.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RotorPart" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RotorPart.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sensor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Sensor.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TextPanel" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TextPanel.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TimerBlockLarge" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TimerBlockLarge.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LargeEffectivenessModule" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\UpgradeEffectiveness.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LargeEnergyModule" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\UpgradeEnergy.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LargeProductivityModule" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\UpgradeProductivity.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="VirtualMassLarge" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\VirtualMassLarge.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Window1x1Face" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Window1x1Face.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Window1x1Flat" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Window1x1Flat.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Window1x1FlatInv" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Window1x1FlatInv.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Window1x1Inv" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Window1x1Inv.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Window1x1Side" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Window1x1Side.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Window1x1SideInv" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Window1x1SideInv.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Window1x1Slope" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Window1x1Slope.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Window1x2Face" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Window1x2Face.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Window1x2Flat" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Window1x2Flat.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Window1x2FlatInv" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Window1x2FlatInv.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Window1x2Inv" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Window1x2Inv.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Window1x2SideLeft" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Window1x2SideLeft.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Window1x2SideLeftInv" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Window1x2SideLeftInv.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Window1x2SideRight" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Window1x2SideRight.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Window1x2SideRightInv" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Window1x2SideRightInv.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Window1x2Slope" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Window1x2Slope.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Window2x3Flat" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Window2x3Flat.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Window2x3FlatInv" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Window2x3FlatInv.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LargeBlockBeacon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LargeBlockBeacon.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LargeBlockCockpitSeat" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LargeBlockCockpitSeat.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LargeBlockLargeHydrogenThrust" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LargeBlockLargeHydrogenThrust.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LargeBlockSlideDoor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LargeBlockSlideDoor.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LargeBlockSmallGenerator" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LargeBlockSmallGenerator.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LargeBlockSmallHydrogenThrust" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LargeBlockSmallHydrogenThrust.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="open" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\open-file-folder-clip-art-folder-with-file-icon-clip-art-kHtMAF-clipart.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="unavailable" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1600.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LargeBlockFrontLight" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LargeBlockFrontLight.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LargeBlockLandingGear" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LargeBlockLandingGear.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LargeBlockLargeAtmosphericThrust" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LargeBlockLargeAtmosphericThrust.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LargeBlockLargeGenerator" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LargeBlockLargeGenerator.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LargeBlockLargeThrust" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LargeBlockLargeThrust.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LargeBlockLight_1corner" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LargeBlockLight_1corner.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LargeBlockOxygenFarm" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LargeBlockOxygenFarm.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LargeBlockRemoteControl" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LargeBlockRemoteControl.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LargeBlockSmallThrust" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LargeBlockSmallThrust.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LargeBlockSoundBlock" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LargeBlockSoundBlock.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LargeCoverWall" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LargeCoverWall.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LargeHalfArmorBlock" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LargeHalfSlopeArmorBlock.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LargeHalfSlopeArmorBlock" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LargeHalfArmorBlock.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LargeHeavyBlockArmorCorner2Base" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LargeBlockHeavyArmorCorner2Base.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LargeHeavyBlockArmorCorner2Tip" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LargeBlockHeavyArmorCorner2Tip.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LargeHeavyBlockArmorSlope2Base" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LargeHeavyBlockArmorSlope2Base.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LargeHeavyBlockArmorSlope2Tip" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LargeHeavyBlockArmorSlope2Tip.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LargeHeavyHalfArmorBlock" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LargeHeavyHalfArmorBlock.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LargeHeavyHalfSlopeArmorBlock" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LargeHeavyHalfSlopeArmorBlock.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LargeHydrogenTank" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LargeHydrogenTank.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LargeInteriorPillar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LargeInteriorPiller.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LargeLCDPanel" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LargeLCDPanel.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LargeLCDPanelWide" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LargeLCDPanelWide.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LargePistonBase" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LargePistonBase.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LargeProgrammableBlock" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LargeProgrammingBlock.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LargeProjector" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LargeProjector.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LargeRefinery" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LargeRefinery.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SmallBlockLaserAntenna" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LargeBlockLaserAntenna.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MyObjectBuilder_AirtightHangarDoor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MyObjectBuilder_AirtightDoor.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MyObjectBuilder_AirVent" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MyObjectBuilder_AirVent.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MyObjectBuilder_Door" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MyObjectBuilder_Door.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MyObjectBuilder_GravityGenerator" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MyObjectBuilder_GravityGenerator.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MyObjectBuilder_GravityGeneratorSphere" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MyObjectBuilder_GravityGeneratorSpherical.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MyObjectBuilder_Passage" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MyObjectBuilder_Passage.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SmallLight" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SmallLight.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Window3x3Flat" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Window3x3Flat.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Window3x3FlatInv" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Window3x3FlatInv.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HalfArmorBlock" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HalfArmorBlock.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HalfSlopeArmorBlock" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HalfSlopeArmorBlock.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HeavyHalfArmorBlock" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HeavyHalfArmorBlock.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HeavyHalfSlopeArmorBlock" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HeavyHalfSlopeArmorBlock.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SmallAirVent" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\AirVent.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SmallArmorCenter" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SmallArmorCenter.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SmallArmorCorner" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SmallArmorCorner.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SmallArmorInvCorner" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SmallArmorInvCorner.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SmallArmorSide" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SmallArmorSide.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SmallBlockArmorBlock" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SmallBlockArmorBlock.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SmallBlockArmorCorner" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SmallBlockArmorCorner.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SmallBlockArmorCorner2Base" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SmallBlockArmorCorner2Base.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SmallBlockArmorCorner2Tip" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SmallBlockArmorCorner2Tip.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SmallBlockArmorCornerInv" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SmallBlockArmorCornerInv.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SmallBlockArmorInvCorner2Base" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SmallBlockArmorInvCorner2Base.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SmallBlockArmorInvCorner2Tip" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SmallBlockArmorInvCorner2Tip.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SmallBlockArmorRoundCorner" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SmallBlockArmorRoundCorner.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SmallBlockArmorRoundInvCorner" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SmallBlockArmorRoundInvCorner.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SmallBlockArmorRoundSlope" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SmallBlockArmorRoundSlope.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SmallBlockArmorSlope" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SmallBlockArmorSlope.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SmallBlockArmorSlope2Base" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SmallBlockArmorSlope2Base.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SmallBlockArmorSlope2Tip" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SmallBlockArmorSlope2Tip.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SmallHeavyBlockArmorBlock" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SmallHeavyBlockArmorBlock.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SmallHeavyBlockArmorCorner" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SmallHeavyBlockArmorCorner.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SmallHeavyBlockArmorCorner2Base" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SmallHeavyBlockCorner2x1x1Base.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SmallHeavyBlockArmorCorner2Tip" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SmallHeavyBlockCorner2x1x1Tip.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SmallHeavyBlockArmorCornerInv" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SmallHeavyBlockArmorCornerInv.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SmallHeavyBlockArmorInvCorner2Base" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SmallHeavyBlockInvCorner2x1x1Base.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SmallHeavyBlockArmorInvCorner2Tip" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SmallHeavyBlockInvCorner2x1x1Tip.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SmallHeavyBlockArmorRoundCorner" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HeavyRoundArmorCorner.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SmallHeavyBlockArmorRoundCornerInv" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SmallHeavyBlockRoundArmorSlope.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SmallHeavyBlockArmorRoundSlope" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SmallHeavyBlockRoundArmorSlope .jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SmallHeavyBlockArmorSlope" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SmallHeavyBlockArmorSlope.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SmallHeavyBlockArmorSlope2Base" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SmallHeavyBlockArmorSlope2Base.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SmallHeavyBlockArmorSlope2Tip" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SmallHeavyBlockArmorSlope2Tip.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ButtonPanelSmall" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ButtonPanelSmall.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CockpitOpen" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LargeBlockCockpit.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CollectorSmall" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CollectorSmall.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ConnectorMedium" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ConnectorMedium.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ConveyorTubeCurvedMedium" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ConveyorTubeCurvedMedium.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ConveyorTubeMedium" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ConveyorTubeMedium.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ConveyorTubeSmallCurved" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ConbeyorTubeSmallCurved.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DBSmallBlockFighterCockpit" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DBSmallBlockFighterCockpit.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LargeBlockCockpit" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CockpitSmall1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LargeBlockDrill" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LargeBlockDrill.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LargeBlockLight_2corner" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SmallBlockLight_2corner1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LargeGatlingTurret" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LargeGatlingTurret.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LargeInteriorTurret" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LargeInteriorTurret.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LargeMissileLauncher" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LargeMissileLauncher.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LargeMissileTurret" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LargeMissileTurret.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LargeRamp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LargeRamp.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LargeSteelCatwalk2Sides" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LargeSteelCatwalk2Sides.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LargeSteelCatwalkCorner" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LargeSteelCatwalkCorner.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LargeSteelCatwalkPlate" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LargeSteelCatwalk.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LargeWarhead" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LargeWarhead.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LargeWindowEdge" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LargeWindowEdge.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LargeWindowSquare" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LargeWindowSquare.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MediumBlockConveyorSorter" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MediumBlockConveyorSorter.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PassengerSeatSmall" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PassengerSeatSmall.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SmallAdvancedStator" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SmallAdvancedStator.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SmallBlockBatteryBlock" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SmallBlockBatteryBlock.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SmallBlockBeacon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SmallBlockBeacon.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SmallBlockCockpit" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SmallBlockCockpit.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SmallBlockConveyor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SmallBlockConveyor.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SmallBlockConveyorSorter" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SmallBlockConveyorSorter.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SmallBlockCorner_LCD_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SmallBlockCorner_LCD_1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SmallBlockDrill" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SmallBlockDrill.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SmallBlockFrontLight" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SmallBlockFrontLight.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SmallBlockGyro" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SmallBlockGyro.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SmallBlockLandingGear" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SmallBlockLandingGear.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SmallBlockLargeAtmosphericThrust" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LargeBlockLargeAtmosphericThrust2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SmallBlockLargeContainer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SmallBlockLargeContainer.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SmallBlockLargeGenerator" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SmallBlockLargeGenerator.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SmallBlockLargeHydrogenThrust" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LargeBlockLargeHydrogenThrust2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SmallBlockLargeThrust" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LargeBlockLargeThrust2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SmallBlockLight_1corner" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SmallBlockLight_1corner.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SmallBlockLight_2corner" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SmallBlockLight_2corner.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SmallBlockMediumContainer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SmallBlockMediumContainer.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SmallBlockOreDetector" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SmallBlockOreDetector.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SmallBlockRadioAntenna" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SmallBlockRadioAntenna.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SmallBlockRemoteControl" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SmallBlockRemoteControl.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SmallBlockSensor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SmallBlockSensor.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SmallBlockSmallAtmosphericThrust" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SmallBlockSmallAtmosphericThrust.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SmallBlockSmallContainer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LargeBlockSmallContainer1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SmallBlockSmallGenerator" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LargeBlockSmallGenerator1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SmallBlockSmallHydrogenThrust" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LargeBlockSmallHydrogenThrust1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SmallBlockSmallLight" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SmallLight1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SmallBlockSmallThrust" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LargeBlockSmallThrust1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SmallBlockSolarPanel" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LargeBlockSolarPanel1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SmallBlockSoundBlock" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SoundBlock.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SmallCameraBlock" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Camera1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SmallControlPanel" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Control Panel1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SmallDecoy" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LargeDecoy1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SmallGatlingGun" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SmallGatlingGun.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SmallGatlingTurret" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SmallGatlingTurret.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SmallHydrogenTank" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HydrogenTank1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SmallLCDPanel" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LargeLCDPanel1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SmallMissileLauncher" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SmallMissileLauncher.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SmallMissileTurret" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SmallMissileTurret.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SmallPistonBase" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Piston1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SmallProgrammableBlock" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ProgrammingBlock1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SmallProjector" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LargeProjector1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SmallRocketLauncherReload" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SmallRocketLauncherReload.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SmallShipConveyorHub" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SmallShipConveyorHub.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SmallShipGrinder" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SmallShipGrinder.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SmallShipMergeBlock" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SmallShipMergeBlock.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SmallShipWelder" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SmallShipWelder.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SmallStator" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SmallStator.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SmallSuspension1x1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SmallSuspension1x1mirrored1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SmallSuspension1x1mirrored" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SmallSuspension1x1mirrored.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SmallSuspension3x3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SmallSuspension3x3mirrored1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SmallSuspension3x3mirrored" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SmallSuspension3x3mirrored.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SmallSuspension5x5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SmallSuspension5x5mirrored1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SmallSuspension5x5mirrored" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SmallSuspension5x5mirrored.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SmallWarhead" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SmallWarhead.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SmallWheel1x1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SmallWheel1x1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SmallWheel3x3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SmallWheel3x3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SmallWheel5x5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SmallWheel5x5.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SmParachute" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SmParachute.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SpaceBallLarge" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SpaceBallLarge.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SpaceBallSmall" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SpaceBallSmall.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TimerBlockSmall" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TimerBlockSmall.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+</root>
