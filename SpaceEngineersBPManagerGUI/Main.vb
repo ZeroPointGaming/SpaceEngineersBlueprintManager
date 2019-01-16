@@ -839,6 +839,10 @@ Public Class Main
     Private Sub ResetToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles ResetToolStripMenuItem1.Click
         ResetControlSystems()
     End Sub
+    Private Sub ToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem1.Click
+        Me.Hide()
+        Configurator.Show()
+    End Sub
 End Class
 #End Region
 #End Region

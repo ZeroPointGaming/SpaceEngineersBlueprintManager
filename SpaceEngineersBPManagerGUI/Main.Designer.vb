@@ -40,8 +40,9 @@ Partial Class Main
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
         Me.ToolStripDropDownButton1 = New System.Windows.Forms.ToolStripDropDownButton()
-        Me.ResetToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.OpemToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ResetToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.FlatContextMenuStrip1 = New SpaceEngineersBPManagerGUI.FlatContextMenuStrip()
         Me.OpenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ResetToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -96,7 +97,7 @@ Partial Class Main
         Me.FlatTabControl1.Font = New System.Drawing.Font("Segoe UI", 10.0!)
         Me.FlatTabControl1.ItemSize = New System.Drawing.Size(120, 40)
         Me.FlatTabControl1.Location = New System.Drawing.Point(0, 0)
-        Me.FlatTabControl1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.FlatTabControl1.Margin = New System.Windows.Forms.Padding(2)
         Me.FlatTabControl1.Name = "FlatTabControl1"
         Me.FlatTabControl1.SelectedIndex = 0
         Me.FlatTabControl1.Size = New System.Drawing.Size(613, 464)
@@ -108,9 +109,9 @@ Partial Class Main
         Me.TabPage1.BackColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(35, Byte), Integer), CType(CType(35, Byte), Integer))
         Me.TabPage1.Controls.Add(Me.FlowLayoutPanel1)
         Me.TabPage1.Location = New System.Drawing.Point(4, 44)
-        Me.TabPage1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TabPage1.Margin = New System.Windows.Forms.Padding(2)
         Me.TabPage1.Name = "TabPage1"
-        Me.TabPage1.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TabPage1.Padding = New System.Windows.Forms.Padding(2)
         Me.TabPage1.Size = New System.Drawing.Size(605, 416)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Block Overlay"
@@ -120,9 +121,9 @@ Partial Class Main
         Me.TabPage2.BackColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(35, Byte), Integer), CType(CType(35, Byte), Integer))
         Me.TabPage2.Controls.Add(Me.ListBox1)
         Me.TabPage2.Location = New System.Drawing.Point(4, 44)
-        Me.TabPage2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TabPage2.Margin = New System.Windows.Forms.Padding(2)
         Me.TabPage2.Name = "TabPage2"
-        Me.TabPage2.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TabPage2.Padding = New System.Windows.Forms.Padding(2)
         Me.TabPage2.Size = New System.Drawing.Size(605, 416)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Block Type List"
@@ -132,9 +133,9 @@ Partial Class Main
         Me.TabPage3.BackColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(35, Byte), Integer), CType(CType(35, Byte), Integer))
         Me.TabPage3.Controls.Add(Me.ListBox2)
         Me.TabPage3.Location = New System.Drawing.Point(4, 44)
-        Me.TabPage3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TabPage3.Margin = New System.Windows.Forms.Padding(2)
         Me.TabPage3.Name = "TabPage3"
-        Me.TabPage3.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TabPage3.Padding = New System.Windows.Forms.Padding(2)
         Me.TabPage3.Size = New System.Drawing.Size(605, 416)
         Me.TabPage3.TabIndex = 2
         Me.TabPage3.Text = "Component List"
@@ -160,9 +161,9 @@ Partial Class Main
         Me.TabPage4.Controls.Add(Me.ListBox4)
         Me.TabPage4.Controls.Add(Me.ListBox3)
         Me.TabPage4.Location = New System.Drawing.Point(4, 44)
-        Me.TabPage4.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TabPage4.Margin = New System.Windows.Forms.Padding(2)
         Me.TabPage4.Name = "TabPage4"
-        Me.TabPage4.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TabPage4.Padding = New System.Windows.Forms.Padding(2)
         Me.TabPage4.Size = New System.Drawing.Size(605, 416)
         Me.TabPage4.TabIndex = 3
         Me.TabPage4.Text = "Materials List"
@@ -202,9 +203,9 @@ Partial Class Main
         Me.TabPage5.BackColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(35, Byte), Integer), CType(CType(35, Byte), Integer))
         Me.TabPage5.Controls.Add(Me.PictureBox1)
         Me.TabPage5.Location = New System.Drawing.Point(4, 44)
-        Me.TabPage5.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TabPage5.Margin = New System.Windows.Forms.Padding(2)
         Me.TabPage5.Name = "TabPage5"
-        Me.TabPage5.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TabPage5.Padding = New System.Windows.Forms.Padding(2)
         Me.TabPage5.Size = New System.Drawing.Size(605, 416)
         Me.TabPage5.TabIndex = 4
         Me.TabPage5.Text = "Blueprint Image"
@@ -214,7 +215,7 @@ Partial Class Main
         Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.PictureBox1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.PictureBox1.Location = New System.Drawing.Point(2, 2)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(601, 412)
         Me.PictureBox1.TabIndex = 0
@@ -226,7 +227,7 @@ Partial Class Main
         Me.Panel1.Controls.Add(Me.StatusStrip1)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Panel1.Location = New System.Drawing.Point(0, 444)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(613, 20)
         Me.Panel1.TabIndex = 40
@@ -245,21 +246,12 @@ Partial Class Main
         'ToolStripDropDownButton1
         '
         Me.ToolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.ToolStripDropDownButton1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ResetToolStripMenuItem1, Me.OpemToolStripMenuItem})
+        Me.ToolStripDropDownButton1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OpemToolStripMenuItem, Me.ResetToolStripMenuItem1, Me.ToolStripMenuItem1})
         Me.ToolStripDropDownButton1.Image = CType(resources.GetObject("ToolStripDropDownButton1.Image"), System.Drawing.Image)
         Me.ToolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ToolStripDropDownButton1.Name = "ToolStripDropDownButton1"
         Me.ToolStripDropDownButton1.Size = New System.Drawing.Size(29, 20)
         Me.ToolStripDropDownButton1.Text = "Tools"
-        '
-        'ResetToolStripMenuItem1
-        '
-        Me.ResetToolStripMenuItem1.BackColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(49, Byte), Integer))
-        Me.ResetToolStripMenuItem1.BackgroundImage = CType(resources.GetObject("ResetToolStripMenuItem1.BackgroundImage"), System.Drawing.Image)
-        Me.ResetToolStripMenuItem1.ForeColor = System.Drawing.SystemColors.Control
-        Me.ResetToolStripMenuItem1.Name = "ResetToolStripMenuItem1"
-        Me.ResetToolStripMenuItem1.Size = New System.Drawing.Size(103, 22)
-        Me.ResetToolStripMenuItem1.Text = "Reset"
         '
         'OpemToolStripMenuItem
         '
@@ -267,8 +259,26 @@ Partial Class Main
         Me.OpemToolStripMenuItem.BackgroundImage = CType(resources.GetObject("OpemToolStripMenuItem.BackgroundImage"), System.Drawing.Image)
         Me.OpemToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Control
         Me.OpemToolStripMenuItem.Name = "OpemToolStripMenuItem"
-        Me.OpemToolStripMenuItem.Size = New System.Drawing.Size(103, 22)
+        Me.OpemToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.OpemToolStripMenuItem.Text = "Open"
+        '
+        'ResetToolStripMenuItem1
+        '
+        Me.ResetToolStripMenuItem1.BackColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(49, Byte), Integer))
+        Me.ResetToolStripMenuItem1.BackgroundImage = CType(resources.GetObject("ResetToolStripMenuItem1.BackgroundImage"), System.Drawing.Image)
+        Me.ResetToolStripMenuItem1.ForeColor = System.Drawing.SystemColors.Control
+        Me.ResetToolStripMenuItem1.Name = "ResetToolStripMenuItem1"
+        Me.ResetToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
+        Me.ResetToolStripMenuItem1.Text = "Reset"
+        '
+        'ToolStripMenuItem1
+        '
+        Me.ToolStripMenuItem1.BackColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(49, Byte), Integer))
+        Me.ToolStripMenuItem1.BackgroundImage = CType(resources.GetObject("ToolStripMenuItem1.BackgroundImage"), System.Drawing.Image)
+        Me.ToolStripMenuItem1.ForeColor = System.Drawing.SystemColors.Control
+        Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
+        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
+        Me.ToolStripMenuItem1.Text = "Settings"
         '
         'FlatContextMenuStrip1
         '
@@ -302,7 +312,7 @@ Partial Class Main
         Me.Controls.Add(Me.FlatTabControl1)
         Me.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.MinimumSize = New System.Drawing.Size(629, 503)
         Me.Name = "Main"
         Me.Text = "Space Engineers Blueprint Manager"
@@ -336,10 +346,11 @@ Partial Class Main
     Friend WithEvents OpenToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ResetToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ListBox4 As ListBox
-    Friend WithEvents StatusStrip1 As StatusStrip
     Friend WithEvents ToolStripDropDownButton1 As ToolStripDropDownButton
-    Friend WithEvents ResetToolStripMenuItem1 As ToolStripMenuItem
     Friend WithEvents OpemToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents TabPage5 As TabPage
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents StatusStrip1 As StatusStrip
+    Friend WithEvents ResetToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents ToolStripMenuItem1 As ToolStripMenuItem
 End Class

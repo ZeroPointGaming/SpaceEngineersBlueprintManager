@@ -134,6 +134,16 @@
         QmCC
 </value>
   </data>
+  <data name="OpemToolStripMenuItem.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAA3QAAAAfCAIAAAAgKRjoAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAABl0RVh0U29mdHdhcmUAcGFpbnQubmV0IDQuMC4xNzNun2MAAACsSURBVHhe7dZB
+        CQAwDACxGRql/s3VxD0DEZH3ZwEAICGXAABk5BIAgIxcAgCQkUsAADJyCQBARi4BAMjIJQAAGbkEACAj
+        lwAAZOQSAICMXAIAkJFLAAAycgkAQEYuAQDIyCUAABm5BAAgI5cAAGTkEgCAjFwCAJCRSwAAMnIJAEBG
+        LgEAyMglAAAZuQQAICOXAABk5BIAgIxcAgCQkUsAADJyCQBARi4BAIjMHhP/+QPbdqn1AAAAAElFTkSu
+        QmCC
+</value>
+  </data>
   <data name="ResetToolStripMenuItem1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAA3QAAAAfCAIAAAAgKRjoAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
@@ -144,7 +154,7 @@
         QmCC
 </value>
   </data>
-  <data name="OpemToolStripMenuItem.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="ToolStripMenuItem1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAA3QAAAAfCAIAAAAgKRjoAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         wwAADsMBx2+oZAAAABl0RVh0U29mdHdhcmUAcGFpbnQubmV0IDQuMC4xNzNun2MAAACsSURBVHhe7dZB

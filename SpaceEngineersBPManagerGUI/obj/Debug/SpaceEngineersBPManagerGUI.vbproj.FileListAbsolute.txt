@@ -12,3 +12,17 @@ c:\users\redaj\documents\visual studio 2015\Projects\SpaceEngineersBPManagerGUI\
 C:\Users\Redaj\Documents\Visual Studio 2015\Projects\SpaceEngineersBPManagerGUI\SpaceEngineersBPManagerGUI\bin\Debug\MetroFramework.dll
 C:\Users\Redaj\Documents\Visual Studio 2015\Projects\SpaceEngineersBPManagerGUI\SpaceEngineersBPManagerGUI\bin\Debug\MetroFramework.Fonts.dll
 C:\Users\Redaj\Documents\Visual Studio 2015\Projects\SpaceEngineersBPManagerGUI\SpaceEngineersBPManagerGUI\obj\Debug\SpaceEngineersBPManagerGUI.Main.resources
+C:\Users\Redaj\Source\Repos\ZeroPointGaming\SpaceEngineersBlueprintManager\SpaceEngineersBPManagerGUI\bin\Debug\SpaceEngineersBPManagerGUI.exe.config
+C:\Users\Redaj\Source\Repos\ZeroPointGaming\SpaceEngineersBlueprintManager\SpaceEngineersBPManagerGUI\bin\Debug\SpaceEngineersBPManagerGUI.exe
+C:\Users\Redaj\Source\Repos\ZeroPointGaming\SpaceEngineersBlueprintManager\SpaceEngineersBPManagerGUI\bin\Debug\SpaceEngineersBPManagerGUI.pdb
+C:\Users\Redaj\Source\Repos\ZeroPointGaming\SpaceEngineersBlueprintManager\SpaceEngineersBPManagerGUI\bin\Debug\SpaceEngineersBPManagerGUI.xml
+C:\Users\Redaj\Source\Repos\ZeroPointGaming\SpaceEngineersBlueprintManager\SpaceEngineersBPManagerGUI\bin\Debug\MetroFramework.dll
+C:\Users\Redaj\Source\Repos\ZeroPointGaming\SpaceEngineersBlueprintManager\SpaceEngineersBPManagerGUI\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\Redaj\Source\Repos\ZeroPointGaming\SpaceEngineersBlueprintManager\SpaceEngineersBPManagerGUI\bin\Debug\Microsoft.HockeyApp.Core45.dll
+C:\Users\Redaj\Source\Repos\ZeroPointGaming\SpaceEngineersBlueprintManager\SpaceEngineersBPManagerGUI\obj\Debug\SpaceEngineersBPManagerGUI.vbprojResolveAssemblyReference.cache
+C:\Users\Redaj\Source\Repos\ZeroPointGaming\SpaceEngineersBlueprintManager\SpaceEngineersBPManagerGUI\obj\Debug\SpaceEngineersBPManagerGUI.Main.resources
+C:\Users\Redaj\Source\Repos\ZeroPointGaming\SpaceEngineersBlueprintManager\SpaceEngineersBPManagerGUI\obj\Debug\SpaceEngineersBPManagerGUI.Resources.resources
+C:\Users\Redaj\Source\Repos\ZeroPointGaming\SpaceEngineersBlueprintManager\SpaceEngineersBPManagerGUI\obj\Debug\SpaceEngineersBPManagerGUI.vbproj.GenerateResource.Cache
+C:\Users\Redaj\Source\Repos\ZeroPointGaming\SpaceEngineersBlueprintManager\SpaceEngineersBPManagerGUI\obj\Debug\SpaceEngineersBPManagerGUI.exe
+C:\Users\Redaj\Source\Repos\ZeroPointGaming\SpaceEngineersBlueprintManager\SpaceEngineersBPManagerGUI\obj\Debug\SpaceEngineersBPManagerGUI.xml
+C:\Users\Redaj\Source\Repos\ZeroPointGaming\SpaceEngineersBlueprintManager\SpaceEngineersBPManagerGUI\obj\Debug\SpaceEngineersBPManagerGUI.pdb

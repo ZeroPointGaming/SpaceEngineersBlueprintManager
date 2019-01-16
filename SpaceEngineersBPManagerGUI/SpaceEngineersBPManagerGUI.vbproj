@@ -64,7 +64,7 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>Icon_png_32e5b78167c7612f41898bc83e58ea13.ico</ApplicationIcon>
+    <ApplicationIcon>Resources\Icon_png_32e5b78167c7612f41898bc83e58ea13.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
@@ -131,6 +131,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Resources\Configurator.Designer.vb">
+      <DependentUpon>Configurator.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Configurator.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Main.resx">
@@ -141,6 +147,9 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Configurator.resx">
+      <DependentUpon>Configurator.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -590,7 +599,7 @@
     <None Include="Resources\unknown.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Icon_png_32e5b78167c7612f41898bc83e58ea13.ico" />
+    <Content Include="Resources\Icon_png_32e5b78167c7612f41898bc83e58ea13.ico" />
     <None Include="Resources\LargeBlockLargeThrust2.jpg" />
     <None Include="Resources\LargeBlockLargeHydrogenThrust2.jpg" />
     <None Include="Resources\LargeBlockLargeAtmosphericThrust2.jpg" />
