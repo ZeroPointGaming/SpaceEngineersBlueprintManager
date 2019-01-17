@@ -812,8 +812,8 @@ Public Class Main
 
                 'Set default settings
                 My.Settings.SpaceEngineersDirectory = "C:\Program Files (x86)\Steam\steamapps\common\Space Engineers"
-                My.Settings.SpaceEngineersModsDirectory = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "\SpaceEngineers\Mods")
-                My.Settings.SpaceEngineersBPDirectory = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "\SpaceEngineers\Blueprints\Local")
+                My.Settings.SpaceEngineersModsDirectory = (Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) & "\SpaceEngineers\Mods")
+                My.Settings.SpaceEngineersBPDirectory = (Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) & "\SpaceEngineers\Blueprints\Local")
                 My.Settings.SpaceEngineersWorkingDirectory = "C:\SETools\unpacked_mods"
 
                 My.Settings.IdentifeirAplha = 1
