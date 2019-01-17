@@ -192,7 +192,7 @@ Public Class Main
     Dim appData As String = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData)
     Dim sepath As String = appData + "\SpaceEngineers\Mods"
     Dim bppath As String = appData + "\SpaceEngineers\Blueprints\Local"
-    Dim extractto As String = "C:\SETools\unpacked_mods"
+    Dim extractto As String = My.Settings.SpaceEngineersWorkingDirectory
     Function unpackAll(pat As String, Optional destPath As String = "") As Integer 'Unpack all the space engineers mods from %AppData%\Roaming\SpaceEngineers\Mods and to a folder in the root directory of the C drive
         unpackAll = 0
         If Not Directory.Exists(pat) Then Return Nothing
@@ -356,15 +356,12 @@ Public Class Main
         Next
         FlowLayoutPanel1.Controls.Clear() 'Reset the procedural controls collection
 
+        'Clear list of modded blocks
         Try
             For Each Block In ListOfModBlocks
                 ListOfModBlocks.Remove(Block)
             Next Block
-        Catch ex As Exception
-            ex = Nothing
-        End Try
 
-        Try
             ListOfModBlocks.Clear() 'Reset list of modded blocks
         Catch ex As Exception
             ex = Nothing
@@ -384,7 +381,7 @@ Public Class Main
 
 #Region "------------=================== Function to Load ALL modded block data into a list ===================------------"
     Public Sub LoadModDefinitions()
-        Dim modpath As String = "C:\SETools\unpacked_mods\"
+        Dim modpath As String = My.Settings.SpaceEngineersWorkingDirectory
 
         For Each entry In Directory.GetFiles(modpath, "CubeBlocks.sbc") 'For each zipfilename in the given directory extract them to the given folder
             Dim filereader As StreamReader = New StreamReader(modpath)
@@ -803,9 +800,9 @@ Public Class Main
                     End Try
                 End If
                 'Check if the mod extraction directory exists in the C drive & if not then create it
-                If Not Directory.Exists("C:\SETools\unpacked_mods") Then
+                If Not Directory.Exists(My.Settings.SpaceEngineersWorkingDirectory) Then
                     Try
-                        Directory.CreateDirectory("C:\SETools\unpacked_mods")
+                        Directory.CreateDirectory(My.Settings.SpaceEngineersWorkingDirectory)
                     Catch ex As Exception
                     End Try
                 End If
@@ -849,9 +846,9 @@ Public Class Main
                 End Try
             End If
             'Check if the mod extraction directory exists in the C drive & if not then create it
-            If Not Directory.Exists("C:\SETools\unpacked_mods") Then
+            If Not Directory.Exists(My.Settings.SpaceEngineersWorkingDirectory) Then
                 Try
-                    Directory.CreateDirectory("C:\SETools\unpacked_mods")
+                    Directory.CreateDirectory(My.Settings.SpaceEngineersWorkingDirectory)
                 Catch ex As Exception
                 End Try
             End If
