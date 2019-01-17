@@ -22,6 +22,7 @@ Partial Class LocalModManager
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(LocalModManager))
         Me.SuspendLayout()
         '
         'LocalModManager
@@ -31,8 +32,9 @@ Partial Class LocalModManager
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(35, Byte), Integer), CType(CType(35, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(595, 446)
         Me.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "LocalModManager"
-        Me.Text = "LocalModManager"
+        Me.Text = "Mod Manager"
         Me.ResumeLayout(False)
 
     End Sub
