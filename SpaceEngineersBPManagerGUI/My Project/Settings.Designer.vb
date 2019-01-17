@@ -125,6 +125,18 @@ Namespace My
                 Me("ThemeForeColor") = value
             End Set
         End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("0")>  _
+        Public Property IdentifeirAplha() As Integer
+            Get
+                Return CType(Me("IdentifeirAplha"),Integer)
+            End Get
+            Set
+                Me("IdentifeirAplha") = value
+            End Set
+        End Property
     End Class
 End Namespace
 

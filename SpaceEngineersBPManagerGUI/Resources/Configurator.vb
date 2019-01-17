@@ -15,6 +15,11 @@
         TextBox3.BackColor = My.Settings.ThemeBackColor
         TextBox4.ForeColor = My.Settings.ThemeForeColor
         TextBox4.BackColor = My.Settings.ThemeBackColor
+
+        TextBox1.Text = My.Settings.SpaceEngineersDirectory
+        TextBox2.Text = My.Settings.SpaceEngineersBPDirectory
+        TextBox3.Text = My.Settings.SpaceEngineersModsDirectory
+        TextBox4.Text = My.Settings.SpaceEngineersWorkingDirectory
     End Sub
 
     'Save Settings Button

@@ -84,15 +84,18 @@ Partial Class Configurator
         Me.Label4.AutoSize = True
         Me.Label4.Location = New System.Drawing.Point(11, 99)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(39, 13)
+        Me.Label4.Size = New System.Drawing.Size(92, 13)
         Me.Label4.TabIndex = 8
-        Me.Label4.Text = "Label4"
+        Me.Label4.Text = "Working Directory"
         '
         'TextBox4
         '
-        Me.TextBox4.Location = New System.Drawing.Point(56, 96)
+        Me.TextBox4.BackColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(35, Byte), Integer), CType(CType(35, Byte), Integer))
+        Me.TextBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TextBox4.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.TextBox4.Location = New System.Drawing.Point(109, 96)
         Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(489, 20)
+        Me.TextBox4.Size = New System.Drawing.Size(436, 20)
         Me.TextBox4.TabIndex = 7
         '
         'Label3
@@ -100,15 +103,18 @@ Partial Class Configurator
         Me.Label3.AutoSize = True
         Me.Label3.Location = New System.Drawing.Point(11, 72)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(39, 13)
+        Me.Label3.Size = New System.Drawing.Size(73, 13)
         Me.Label3.TabIndex = 6
-        Me.Label3.Text = "Label3"
+        Me.Label3.Text = "Mod Directory"
         '
         'TextBox3
         '
-        Me.TextBox3.Location = New System.Drawing.Point(56, 69)
+        Me.TextBox3.BackColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(35, Byte), Integer), CType(CType(35, Byte), Integer))
+        Me.TextBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TextBox3.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.TextBox3.Location = New System.Drawing.Point(90, 69)
         Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(489, 20)
+        Me.TextBox3.Size = New System.Drawing.Size(455, 20)
         Me.TextBox3.TabIndex = 5
         '
         'Label2
@@ -116,15 +122,18 @@ Partial Class Configurator
         Me.Label2.AutoSize = True
         Me.Label2.Location = New System.Drawing.Point(11, 45)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(39, 13)
+        Me.Label2.Size = New System.Drawing.Size(93, 13)
         Me.Label2.TabIndex = 4
-        Me.Label2.Text = "Label2"
+        Me.Label2.Text = "Blueprint Directory"
         '
         'TextBox2
         '
-        Me.TextBox2.Location = New System.Drawing.Point(56, 42)
+        Me.TextBox2.BackColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(35, Byte), Integer), CType(CType(35, Byte), Integer))
+        Me.TextBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TextBox2.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.TextBox2.Location = New System.Drawing.Point(110, 42)
         Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(489, 20)
+        Me.TextBox2.Size = New System.Drawing.Size(435, 20)
         Me.TextBox2.TabIndex = 3
         '
         'Label1
@@ -132,15 +141,18 @@ Partial Class Configurator
         Me.Label1.AutoSize = True
         Me.Label1.Location = New System.Drawing.Point(11, 18)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(39, 13)
+        Me.Label1.Size = New System.Drawing.Size(80, 13)
         Me.Label1.TabIndex = 2
-        Me.Label1.Text = "Label1"
+        Me.Label1.Text = "Game Directory"
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(56, 15)
+        Me.TextBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(35, Byte), Integer), CType(CType(35, Byte), Integer))
+        Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TextBox1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.TextBox1.Location = New System.Drawing.Point(97, 15)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(489, 20)
+        Me.TextBox1.Size = New System.Drawing.Size(448, 20)
         Me.TextBox1.TabIndex = 1
         '
         'SaveSettingsBtn

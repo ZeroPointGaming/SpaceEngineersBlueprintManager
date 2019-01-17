@@ -792,6 +792,36 @@ Public Class Main
 #Region "------------=================== Main Event Handlers ===================------------"
 #Region "------------=================== MainForm Load Event Handler ===================------------"
     Private Sub Main_Load(sender As System.Object, e As System.EventArgs) Handles Me.Load
+        'Set directory settings first time run
+        If My.Settings.IdentifeirAplha = 0 Then
+            Try
+                'Check if the program directory exists & if not then create it
+                If Not Directory.Exists("C:\SETools") Then
+                    Try
+                        Directory.CreateDirectory("C:\SETools")
+                    Catch ex As Exception
+                    End Try
+                End If
+                'Check if the mod extraction directory exists in the C drive & if not then create it
+                If Not Directory.Exists("C:\SETools\unpacked_mods") Then
+                    Try
+                        Directory.CreateDirectory("C:\SETools\unpacked_mods")
+                    Catch ex As Exception
+                    End Try
+                End If
+
+                'Set default settings
+                My.Settings.SpaceEngineersDirectory = "C:\Program Files (x86)\Steam\steamapps\common\Space Engineers"
+                My.Settings.SpaceEngineersModsDirectory = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "\SpaceEngineers\Mods")
+                My.Settings.SpaceEngineersBPDirectory = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "\SpaceEngineers\Blueprints\Local")
+                My.Settings.SpaceEngineersWorkingDirectory = "C:\SETools\unpacked_mods"
+
+                My.Settings.IdentifeirAplha = 1
+                My.Settings.Save()
+            Catch ex As Exception
+            End Try
+        End If
+
         'List of all controls in Main Form
         FlatTabControl1.BaseColor = My.Settings.ThemeBackColor
         FlatTabControl1.ActiveColor = My.Settings.ThemeForeColor
@@ -809,6 +839,7 @@ Public Class Main
         StatusStrip1.ForeColor = My.Settings.ThemeForeColor
         PictureBox1.BackColor = My.Settings.ThemeBackColor
 
+        'Failsafe if user deletes working folders remake them
         Try
             'Check if the program directory exists & if not then create it
             If Not Directory.Exists("C:\SETools") Then
@@ -821,15 +852,6 @@ Public Class Main
             If Not Directory.Exists("C:\SETools\unpacked_mods") Then
                 Try
                     Directory.CreateDirectory("C:\SETools\unpacked_mods")
-                Catch ex As Exception
-                End Try
-            End If
-            'Check if the file that determins whether or not the program has been run before exists or not & if not then create it
-            If Not File.Exists("C:\SETools\Activated.txt") Then
-                Try
-                    File.CreateText("C:\SETools\Activated.txt")
-                    'Unpack all mods
-                    unpackAll(sepath, extractto)
                 Catch ex As Exception
                 End Try
             End If
