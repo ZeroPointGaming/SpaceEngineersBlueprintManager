@@ -53,6 +53,78 @@ Namespace My
                 Return defaultInstance
             End Get
         End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property SpaceEngineersDirectory() As String
+            Get
+                Return CType(Me("SpaceEngineersDirectory"),String)
+            End Get
+            Set
+                Me("SpaceEngineersDirectory") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property SpaceEngineersBPDirectory() As String
+            Get
+                Return CType(Me("SpaceEngineersBPDirectory"),String)
+            End Get
+            Set
+                Me("SpaceEngineersBPDirectory") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property SpaceEngineersModsDirectory() As String
+            Get
+                Return CType(Me("SpaceEngineersModsDirectory"),String)
+            End Get
+            Set
+                Me("SpaceEngineersModsDirectory") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property SpaceEngineersWorkingDirectory() As String
+            Get
+                Return CType(Me("SpaceEngineersWorkingDirectory"),String)
+            End Get
+            Set
+                Me("SpaceEngineersWorkingDirectory") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("35, 35, 35")>  _
+        Public Property ThemeBackColor() As Global.System.Drawing.Color
+            Get
+                Return CType(Me("ThemeBackColor"),Global.System.Drawing.Color)
+            End Get
+            Set
+                Me("ThemeBackColor") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("White")>  _
+        Public Property ThemeForeColor() As Global.System.Drawing.Color
+            Get
+                Return CType(Me("ThemeForeColor"),Global.System.Drawing.Color)
+            End Get
+            Set
+                Me("ThemeForeColor") = value
+            End Set
+        End Property
     End Class
 End Namespace
 

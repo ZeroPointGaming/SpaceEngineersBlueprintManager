@@ -259,7 +259,7 @@ Partial Class Main
         Me.OpemToolStripMenuItem.BackgroundImage = CType(resources.GetObject("OpemToolStripMenuItem.BackgroundImage"), System.Drawing.Image)
         Me.OpemToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Control
         Me.OpemToolStripMenuItem.Name = "OpemToolStripMenuItem"
-        Me.OpemToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.OpemToolStripMenuItem.Size = New System.Drawing.Size(116, 22)
         Me.OpemToolStripMenuItem.Text = "Open"
         '
         'ResetToolStripMenuItem1
@@ -268,7 +268,7 @@ Partial Class Main
         Me.ResetToolStripMenuItem1.BackgroundImage = CType(resources.GetObject("ResetToolStripMenuItem1.BackgroundImage"), System.Drawing.Image)
         Me.ResetToolStripMenuItem1.ForeColor = System.Drawing.SystemColors.Control
         Me.ResetToolStripMenuItem1.Name = "ResetToolStripMenuItem1"
-        Me.ResetToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
+        Me.ResetToolStripMenuItem1.Size = New System.Drawing.Size(116, 22)
         Me.ResetToolStripMenuItem1.Text = "Reset"
         '
         'ToolStripMenuItem1
@@ -277,7 +277,7 @@ Partial Class Main
         Me.ToolStripMenuItem1.BackgroundImage = CType(resources.GetObject("ToolStripMenuItem1.BackgroundImage"), System.Drawing.Image)
         Me.ToolStripMenuItem1.ForeColor = System.Drawing.SystemColors.Control
         Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
-        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
+        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(116, 22)
         Me.ToolStripMenuItem1.Text = "Settings"
         '
         'FlatContextMenuStrip1

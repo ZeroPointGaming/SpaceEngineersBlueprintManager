@@ -792,7 +792,22 @@ Public Class Main
 #Region "------------=================== Main Event Handlers ===================------------"
 #Region "------------=================== MainForm Load Event Handler ===================------------"
     Private Sub Main_Load(sender As System.Object, e As System.EventArgs) Handles Me.Load
-        'Designer Handling
+        'List of all controls in Main Form
+        FlatTabControl1.BaseColor = My.Settings.ThemeBackColor
+        FlatTabControl1.ActiveColor = My.Settings.ThemeForeColor
+        FlowLayoutPanel1.BackColor = My.Settings.ThemeBackColor
+        FlowLayoutPanel1.ForeColor = My.Settings.ThemeForeColor
+        ListBox1.BackColor = My.Settings.ThemeBackColor
+        ListBox1.ForeColor = My.Settings.ThemeForeColor
+        ListBox2.BackColor = My.Settings.ThemeBackColor
+        ListBox2.ForeColor = My.Settings.ThemeForeColor
+        ListBox3.BackColor = My.Settings.ThemeBackColor
+        ListBox3.ForeColor = My.Settings.ThemeForeColor
+        ListBox4.BackColor = My.Settings.ThemeBackColor
+        ListBox4.ForeColor = My.Settings.ThemeForeColor
+        StatusStrip1.BackColor = My.Settings.ThemeBackColor
+        StatusStrip1.ForeColor = My.Settings.ThemeForeColor
+        PictureBox1.BackColor = My.Settings.ThemeBackColor
 
         Try
             'Check if the program directory exists & if not then create it
@@ -842,6 +857,26 @@ Public Class Main
     Private Sub ToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem1.Click
         Me.Hide()
         Configurator.Show()
+    End Sub
+
+    'Refresh Theme Controls
+    Private Sub Main_Shown(sender As Object, e As EventArgs) Handles Me.Shown
+        'List of all controls in Main Form
+        FlatTabControl1.BaseColor = My.Settings.ThemeBackColor
+        FlatTabControl1.ActiveColor = My.Settings.ThemeForeColor
+        FlowLayoutPanel1.BackColor = My.Settings.ThemeBackColor
+        FlowLayoutPanel1.ForeColor = My.Settings.ThemeForeColor
+        ListBox1.BackColor = My.Settings.ThemeBackColor
+        ListBox1.ForeColor = My.Settings.ThemeForeColor
+        ListBox2.BackColor = My.Settings.ThemeBackColor
+        ListBox2.ForeColor = My.Settings.ThemeForeColor
+        ListBox3.BackColor = My.Settings.ThemeBackColor
+        ListBox3.ForeColor = My.Settings.ThemeForeColor
+        ListBox4.BackColor = My.Settings.ThemeBackColor
+        ListBox4.ForeColor = My.Settings.ThemeForeColor
+        StatusStrip1.BackColor = My.Settings.ThemeBackColor
+        StatusStrip1.ForeColor = My.Settings.ThemeForeColor
+        PictureBox1.BackColor = My.Settings.ThemeBackColor
     End Sub
 End Class
 #End Region

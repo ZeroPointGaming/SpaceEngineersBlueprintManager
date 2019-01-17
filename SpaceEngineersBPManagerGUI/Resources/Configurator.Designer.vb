@@ -24,19 +24,124 @@ Partial Class Configurator
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Configurator))
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.ForeColorBtn = New System.Windows.Forms.Button()
+        Me.BackColorBtn = New System.Windows.Forms.Button()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.SaveSettingsBtn = New System.Windows.Forms.Button()
+        Me.ColorDialog1 = New System.Windows.Forms.ColorDialog()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel1
         '
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel1.Controls.Add(Me.ForeColorBtn)
+        Me.Panel1.Controls.Add(Me.BackColorBtn)
+        Me.Panel1.Controls.Add(Me.Label4)
+        Me.Panel1.Controls.Add(Me.TextBox4)
+        Me.Panel1.Controls.Add(Me.Label3)
+        Me.Panel1.Controls.Add(Me.TextBox3)
+        Me.Panel1.Controls.Add(Me.Label2)
+        Me.Panel1.Controls.Add(Me.TextBox2)
+        Me.Panel1.Controls.Add(Me.Label1)
+        Me.Panel1.Controls.Add(Me.TextBox1)
         Me.Panel1.Controls.Add(Me.SaveSettingsBtn)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(558, 505)
         Me.Panel1.TabIndex = 0
+        '
+        'ForeColorBtn
+        '
+        Me.ForeColorBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.ForeColorBtn.Location = New System.Drawing.Point(346, 151)
+        Me.ForeColorBtn.Name = "ForeColorBtn"
+        Me.ForeColorBtn.Size = New System.Drawing.Size(199, 23)
+        Me.ForeColorBtn.TabIndex = 10
+        Me.ForeColorBtn.Text = "Text Color"
+        Me.ForeColorBtn.UseVisualStyleBackColor = True
+        '
+        'BackColorBtn
+        '
+        Me.BackColorBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.BackColorBtn.Location = New System.Drawing.Point(11, 151)
+        Me.BackColorBtn.Name = "BackColorBtn"
+        Me.BackColorBtn.Size = New System.Drawing.Size(199, 23)
+        Me.BackColorBtn.TabIndex = 9
+        Me.BackColorBtn.Text = "Background Color"
+        Me.BackColorBtn.UseVisualStyleBackColor = True
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(11, 99)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(39, 13)
+        Me.Label4.TabIndex = 8
+        Me.Label4.Text = "Label4"
+        '
+        'TextBox4
+        '
+        Me.TextBox4.Location = New System.Drawing.Point(56, 96)
+        Me.TextBox4.Name = "TextBox4"
+        Me.TextBox4.Size = New System.Drawing.Size(489, 20)
+        Me.TextBox4.TabIndex = 7
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(11, 72)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(39, 13)
+        Me.Label3.TabIndex = 6
+        Me.Label3.Text = "Label3"
+        '
+        'TextBox3
+        '
+        Me.TextBox3.Location = New System.Drawing.Point(56, 69)
+        Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.Size = New System.Drawing.Size(489, 20)
+        Me.TextBox3.TabIndex = 5
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(11, 45)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(39, 13)
+        Me.Label2.TabIndex = 4
+        Me.Label2.Text = "Label2"
+        '
+        'TextBox2
+        '
+        Me.TextBox2.Location = New System.Drawing.Point(56, 42)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(489, 20)
+        Me.TextBox2.TabIndex = 3
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(11, 18)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(39, 13)
+        Me.Label1.TabIndex = 2
+        Me.Label1.Text = "Label1"
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(56, 15)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(489, 20)
+        Me.TextBox1.TabIndex = 1
         '
         'SaveSettingsBtn
         '
@@ -63,10 +168,22 @@ Partial Class Configurator
         Me.Name = "Configurator"
         Me.Text = "Configurator"
         Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
 
     Friend WithEvents Panel1 As Panel
     Friend WithEvents SaveSettingsBtn As Button
+    Friend WithEvents Label4 As Label
+    Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents Label3 As Label
+    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents Label2 As Label
+    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents Label1 As Label
+    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents ForeColorBtn As Button
+    Friend WithEvents BackColorBtn As Button
+    Friend WithEvents ColorDialog1 As ColorDialog
 End Class

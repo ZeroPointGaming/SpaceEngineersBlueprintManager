@@ -26,3 +26,4 @@ C:\Users\Redaj\Source\Repos\ZeroPointGaming\SpaceEngineersBlueprintManager\Space
 C:\Users\Redaj\Source\Repos\ZeroPointGaming\SpaceEngineersBlueprintManager\SpaceEngineersBPManagerGUI\obj\Debug\SpaceEngineersBPManagerGUI.exe
 C:\Users\Redaj\Source\Repos\ZeroPointGaming\SpaceEngineersBlueprintManager\SpaceEngineersBPManagerGUI\obj\Debug\SpaceEngineersBPManagerGUI.xml
 C:\Users\Redaj\Source\Repos\ZeroPointGaming\SpaceEngineersBlueprintManager\SpaceEngineersBPManagerGUI\obj\Debug\SpaceEngineersBPManagerGUI.pdb
+C:\Users\Redaj\Source\Repos\ZeroPointGaming\SpaceEngineersBlueprintManager\SpaceEngineersBPManagerGUI\obj\Debug\SpaceEngineersBPManagerGUI.Configurator.resources
