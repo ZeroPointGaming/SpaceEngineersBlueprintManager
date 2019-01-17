@@ -110,6 +110,18 @@
     <Compile Include="FlatTheme.vb">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="LocalBlueprintManager.Designer.vb">
+      <DependentUpon>LocalBlueprintManager.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LocalBlueprintManager.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LocalModManager.Designer.vb">
+      <DependentUpon>LocalModManager.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LocalModManager.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Main.Designer.vb">
       <DependentUpon>Main.vb</DependentUpon>
     </Compile>
@@ -139,6 +151,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="LocalBlueprintManager.resx">
+      <DependentUpon>LocalBlueprintManager.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalModManager.resx">
+      <DependentUpon>LocalModManager.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.vb</DependentUpon>
     </EmbeddedResource>
