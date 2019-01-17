@@ -143,10 +143,10 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Resources\Configurator.Designer.vb">
+    <Compile Include="Configurator.Designer.vb">
       <DependentUpon>Configurator.vb</DependentUpon>
     </Compile>
-    <Compile Include="Resources\Configurator.vb">
+    <Compile Include="Configurator.vb">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
@@ -166,7 +166,7 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Resources\Configurator.resx">
+    <EmbeddedResource Include="Configurator.resx">
       <DependentUpon>Configurator.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
