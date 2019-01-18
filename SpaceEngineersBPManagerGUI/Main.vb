@@ -6,14 +6,23 @@ Imports System.IO.Compression.ZipFile
 Imports System.Environment
 Imports System.String
 Imports System.Reflection
+Imports System.Xml.Serialization
 
 Public Class Main
 #Region "------------=================== Alpha Update 1.0 - Rework Component and Block Defining System  ===================------------"
-    Public CubeBlocks As XDocument = XDocument.Load(Directory.GetCurrentDirectory & "\CubeBlocks.sbc") 'Prepackaged XML file containing all space engineers block definitions
+    Public CubeBlocks As String = Directory.GetCurrentDirectory & "\SE Resources\CubeBlocks.sbc" 'Prepackaged XML file containing all space engineers block definitions
+
+
 
     'Deserialize Cube Information
     Public Sub DeserializeCubes()
+        Dim DefinitionData As New Definitions()
+        Dim xmlSerializer As XmlSerializer = New XmlSerializer(GetType(Definitions))
 
+        Dim streamread As New StreamReader(CubeBlocks)
+
+        DefinitionData = xmlSerializer.Deserialize(streamread)
+        MessageBox.Show(DefinitionData.CubeBlocks(0).DisplayName.ToString())
     End Sub
 #End Region
 
@@ -906,6 +915,10 @@ Public Class Main
         StatusStrip1.BackColor = My.Settings.ThemeBackColor
         StatusStrip1.ForeColor = My.Settings.ThemeForeColor
         PictureBox1.BackColor = My.Settings.ThemeBackColor
+    End Sub
+
+    Private Sub TestToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles TestToolStripMenuItem.Click
+        DeserializeCubes()
     End Sub
 End Class
 #End Region

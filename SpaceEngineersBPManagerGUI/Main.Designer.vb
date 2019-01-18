@@ -46,6 +46,7 @@ Partial Class Main
         Me.FlatContextMenuStrip1 = New SpaceEngineersBPManagerGUI.FlatContextMenuStrip()
         Me.OpenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ResetToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.TestToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.FlatTabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
@@ -284,22 +285,28 @@ Partial Class Main
         '
         Me.FlatContextMenuStrip1.Font = New System.Drawing.Font("Segoe UI", 8.0!)
         Me.FlatContextMenuStrip1.ForeColor = System.Drawing.Color.White
-        Me.FlatContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OpenToolStripMenuItem, Me.ResetToolStripMenuItem})
+        Me.FlatContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OpenToolStripMenuItem, Me.ResetToolStripMenuItem, Me.TestToolStripMenuItem})
         Me.FlatContextMenuStrip1.Name = "FlatContextMenuStrip1"
         Me.FlatContextMenuStrip1.ShowImageMargin = False
-        Me.FlatContextMenuStrip1.Size = New System.Drawing.Size(79, 48)
+        Me.FlatContextMenuStrip1.Size = New System.Drawing.Size(128, 92)
         '
         'OpenToolStripMenuItem
         '
         Me.OpenToolStripMenuItem.Name = "OpenToolStripMenuItem"
-        Me.OpenToolStripMenuItem.Size = New System.Drawing.Size(78, 22)
+        Me.OpenToolStripMenuItem.Size = New System.Drawing.Size(127, 22)
         Me.OpenToolStripMenuItem.Text = "Open"
         '
         'ResetToolStripMenuItem
         '
         Me.ResetToolStripMenuItem.Name = "ResetToolStripMenuItem"
-        Me.ResetToolStripMenuItem.Size = New System.Drawing.Size(78, 22)
+        Me.ResetToolStripMenuItem.Size = New System.Drawing.Size(127, 22)
         Me.ResetToolStripMenuItem.Text = "Reset"
+        '
+        'TestToolStripMenuItem
+        '
+        Me.TestToolStripMenuItem.Name = "TestToolStripMenuItem"
+        Me.TestToolStripMenuItem.Size = New System.Drawing.Size(127, 22)
+        Me.TestToolStripMenuItem.Text = "Test"
         '
         'Main
         '
@@ -353,4 +360,5 @@ Partial Class Main
     Friend WithEvents StatusStrip1 As StatusStrip
     Friend WithEvents ResetToolStripMenuItem1 As ToolStripMenuItem
     Friend WithEvents ToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents TestToolStripMenuItem As ToolStripMenuItem
 End Class
