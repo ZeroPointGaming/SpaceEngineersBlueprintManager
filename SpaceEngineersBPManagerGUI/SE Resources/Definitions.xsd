@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+   <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+         <!-- XML Schema Generated from XML Document on Thu Jan 17 2019 20:45:25 GMT-0500 (Eastern Standard Time) -->
+         <!-- with XmlGrid.net Free Online Service http://xmlgrid.net -->
+         <xs:element name="Definitions">
+               <xs:complexType>
+                     <xs:sequence>
+                           <xs:element name="CubeBlocks">
+                                 <xs:complexType>
+                                       <xs:sequence>
+                                             <xs:element name="Definition" maxOccurs="unbounded">
+                                                   <xs:complexType>
+                                                         <xs:sequence>
+                                                               <xs:element name="Id">
+                                                                     <xs:complexType>
+                                                                           <xs:sequence>
+                                                                                 <xs:element name="TypeId" type="xs:string"></xs:element>
+                                                                                 <xs:element name="SubtypeId" type="xs:string"></xs:element>
+                                                                           </xs:sequence>
+                                                                     </xs:complexType>
+                                                               </xs:element>
+                                                               <xs:element name="DisplayName" type="xs:string"></xs:element>
+                                                               <xs:element name="Icon" type="xs:string"></xs:element>
+                                                               <xs:element name="Public" type="xs:string"></xs:element>
+                                                               <xs:element name="CubeSize" type="xs:string"></xs:element>
+                                                               <xs:element name="BlockTopology" type="xs:string"></xs:element>
+                                                               <xs:element name="Size">
+                                                                     <xs:complexType>
+                                                                           <xs:attribute name="x" type="xs:int"></xs:attribute>
+                                                                           <xs:attribute name="y" type="xs:int"></xs:attribute>
+                                                                           <xs:attribute name="z" type="xs:int"></xs:attribute>
+                                                                     </xs:complexType>
+                                                               </xs:element>
+                                                               <xs:element name="Center">
+                                                                     <xs:complexType>
+                                                                           <xs:attribute name="x" type="xs:int"></xs:attribute>
+                                                                           <xs:attribute name="y" type="xs:int"></xs:attribute>
+                                                                           <xs:attribute name="z" type="xs:int"></xs:attribute>
+                                                                     </xs:complexType>
+                                                               </xs:element>
+                                                               <xs:element name="ModelOffset">
+                                                                     <xs:complexType>
+                                                                           <xs:attribute name="x" type="xs:int"></xs:attribute>
+                                                                           <xs:attribute name="y" type="xs:int"></xs:attribute>
+                                                                           <xs:attribute name="z" type="xs:int"></xs:attribute>
+                                                                     </xs:complexType>
+                                                               </xs:element>
+                                                               <xs:element name="Model" type="xs:string"></xs:element>
+                                                               <xs:element name="Components">
+                                                                     <xs:complexType>
+                                                                           <xs:sequence>
+                                                                                 <xs:element name="Component" maxOccurs="unbounded">
+                                                                                       <xs:complexType>
+                                                                                             <xs:attribute name="Subtype" type="xs:string"></xs:attribute>
+                                                                                             <xs:attribute name="Count" type="xs:int"></xs:attribute>
+                                                                                       </xs:complexType>
+                                                                                 </xs:element>
+                                                                           </xs:sequence>
+                                                                     </xs:complexType>
+                                                               </xs:element>
+                                                               <xs:element name="CriticalComponent">
+                                                                     <xs:complexType>
+                                                                           <xs:attribute name="Subtype" type="xs:string"></xs:attribute>
+                                                                           <xs:attribute name="Index" type="xs:int"></xs:attribute>
+                                                                     </xs:complexType>
+                                                               </xs:element>
+                                                               <xs:element name="EdgeType" type="xs:string"></xs:element>
+                                                               <xs:element name="BuildTimeSeconds" type="xs:int"></xs:element>
+                                                               <xs:element name="InventorySize">
+                                                                     <xs:complexType>
+                                                                           <xs:sequence>
+                                                                                 <xs:element name="X" type="xs:int"></xs:element>
+                                                                                 <xs:element name="Y" type="xs:int"></xs:element>
+                                                                                 <xs:element name="Z" type="xs:int"></xs:element>
+                                                                           </xs:sequence>
+                                                                     </xs:complexType>
+                                                               </xs:element>
+                                                               <xs:element name="PCU" type="xs:int"></xs:element>
+                                                               <xs:element name="IsAirTight" type="xs:string"></xs:element>
+                                                         </xs:sequence>
+                                                   </xs:complexType>
+                                             </xs:element>
+                                       </xs:sequence>
+                                 </xs:complexType>
+                           </xs:element>
+                           <xs:element name="BlockPositions">
+                                 <xs:complexType>
+                                       <xs:sequence>
+                                             <xs:element name="BlockPosition" maxOccurs="unbounded">
+                                                   <xs:complexType>
+                                                         <xs:sequence>
+                                                               <xs:element name="Name" type="xs:string"></xs:element>
+                                                               <xs:element name="Position">
+                                                                     <xs:complexType>
+                                                                           <xs:sequence>
+                                                                                 <xs:element name="X" type="xs:int"></xs:element>
+                                                                                 <xs:element name="Y" type="xs:int"></xs:element>
+                                                                           </xs:sequence>
+                                                                     </xs:complexType>
+                                                               </xs:element>
+                                                         </xs:sequence>
+                                                   </xs:complexType>
+                                             </xs:element>
+                                       </xs:sequence>
+                                 </xs:complexType>
+                           </xs:element>
+                     </xs:sequence>
+                     <xs:attribute name="xmlns:xsi" type="xs:string"></xs:attribute>
+                     <xs:attribute name="xmlns:xsd" type="xs:string"></xs:attribute>
+               </xs:complexType>
+         </xs:element>
+   </xs:schema>
+ 

@@ -186,6 +186,9 @@
     <None Include="SE Resources\CubeBlocks.sbc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Include="SE Resources\Definitions.xsd">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\heavy_armor_cube.jpg" />

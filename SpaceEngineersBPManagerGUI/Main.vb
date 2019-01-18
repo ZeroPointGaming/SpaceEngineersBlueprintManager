@@ -10,6 +10,11 @@ Imports System.Reflection
 Public Class Main
 #Region "------------=================== Alpha Update 1.0 - Rework Component and Block Defining System  ===================------------"
     Public CubeBlocks As XDocument = XDocument.Load(Directory.GetCurrentDirectory & "\CubeBlocks.sbc") 'Prepackaged XML file containing all space engineers block definitions
+
+    'Deserialize Cube Information
+    Public Sub DeserializeCubes()
+
+    End Sub
 #End Region
 
 
