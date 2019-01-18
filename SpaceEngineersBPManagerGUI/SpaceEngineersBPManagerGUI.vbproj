@@ -149,6 +149,7 @@
     <Compile Include="Configurator.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="CubeBlockSerializer.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="LocalBlueprintManager.resx">
@@ -182,6 +183,9 @@
     </None>
     <None Include="App.config" />
     <None Include="packages.config" />
+    <None Include="SE Resources\CubeBlocks.sbc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\heavy_armor_cube.jpg" />

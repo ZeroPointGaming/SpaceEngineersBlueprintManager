@@ -5,9 +5,14 @@ Imports System.IO.Compression
 Imports System.IO.Compression.ZipFile
 Imports System.Environment
 Imports System.String
-
+Imports System.Reflection
 
 Public Class Main
+#Region "------------=================== Alpha Update 1.0 - Rework Component and Block Defining System  ===================------------"
+    Public CubeBlocks As XDocument = XDocument.Load(Directory.GetCurrentDirectory & "\CubeBlocks.sbc") 'Prepackaged XML file containing all space engineers block definitions
+#End Region
+
+
 #Region "------------=================== REFINERY CALCULATIONS ===================------------"
     'URANIUM CALCULATIONS
     Dim UraniumAmmount As Integer 'Ammount of uranium needed ORE
@@ -901,7 +906,7 @@ End Class
 #End Region
 #End Region
 
-'---------------------------===================== Component Calculations =====================---------------------------' |>>RUDEMENTARY NEEDS REVISION<<|
+#Region "---------------------------===================== Component Calculations =====================--------------------------- |>>RUDEMENTARY NEEDS REVISION<<|"
 
 'Values of SteelPlates per block type
 Public Class CalculateResourcesSteelPlates
@@ -1012,7 +1017,7 @@ Public Class CalculateResourcesSteelPlates
     Private SmallHydrogenTank As Integer = 80
     Private SmallBlockSolarPanel As Integer = 2
     Private SmallBlockSmallGenerator As Integer = 3
-    Private SmallBlockLargeGenerator As Integer =50
+    Private SmallBlockLargeGenerator As Integer = 50
     Private OxygenTankSmall As Integer = 14
 
     'Functional  Blocks
@@ -1045,7 +1050,7 @@ Public Class CalculateResourcesSteelPlates
     Private LargeBlockSensor As Integer = 2
     Private LargePistonBase As Integer = 15
     Private LargePistonTop As Integer = 10
-    Private SmallPistonBase As Integer =4
+    Private SmallPistonBase As Integer = 4
     Private SmallPistonTop As Integer = 4
     Private LargeRotor As Integer = 15
     Private SmallRotor As Integer = 5
@@ -2085,8 +2090,10 @@ Public Class CalculateResourcesBulletproofGlass
         Return _ret
     End Function
 End Class
+#End Region
 
-'---------------------------===================== XML FUNCTIONS =====================---------------------------'
+
+#Region "---------------------------===================== XML FUNCTIONS =====================---------------------------"
 
 'XML INPUT LOADING FUNCTION
 Public Class Model
@@ -2179,3 +2186,4 @@ Public Class CubeBlock
     Public username As String
     Public count As Integer
 End Class
+#End Region
