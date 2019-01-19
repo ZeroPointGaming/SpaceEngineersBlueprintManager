@@ -288,24 +288,24 @@ Partial Class Main
         Me.FlatContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OpenToolStripMenuItem, Me.ResetToolStripMenuItem, Me.TestToolStripMenuItem})
         Me.FlatContextMenuStrip1.Name = "FlatContextMenuStrip1"
         Me.FlatContextMenuStrip1.ShowImageMargin = False
-        Me.FlatContextMenuStrip1.Size = New System.Drawing.Size(128, 92)
+        Me.FlatContextMenuStrip1.Size = New System.Drawing.Size(79, 70)
         '
         'OpenToolStripMenuItem
         '
         Me.OpenToolStripMenuItem.Name = "OpenToolStripMenuItem"
-        Me.OpenToolStripMenuItem.Size = New System.Drawing.Size(127, 22)
+        Me.OpenToolStripMenuItem.Size = New System.Drawing.Size(78, 22)
         Me.OpenToolStripMenuItem.Text = "Open"
         '
         'ResetToolStripMenuItem
         '
         Me.ResetToolStripMenuItem.Name = "ResetToolStripMenuItem"
-        Me.ResetToolStripMenuItem.Size = New System.Drawing.Size(127, 22)
+        Me.ResetToolStripMenuItem.Size = New System.Drawing.Size(78, 22)
         Me.ResetToolStripMenuItem.Text = "Reset"
         '
         'TestToolStripMenuItem
         '
         Me.TestToolStripMenuItem.Name = "TestToolStripMenuItem"
-        Me.TestToolStripMenuItem.Size = New System.Drawing.Size(127, 22)
+        Me.TestToolStripMenuItem.Size = New System.Drawing.Size(78, 22)
         Me.TestToolStripMenuItem.Text = "Test"
         '
         'Main
