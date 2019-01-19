@@ -9,11 +9,11 @@ Imports System.Runtime.InteropServices
 ' Review the values of the assembly attributes
 
 <Assembly: AssemblyTitle("SpaceEngineersBPManagerGUI")>
-<Assembly: AssemblyDescription("Beta Version 1.3")>
-<Assembly: AssemblyCompany("HedrickDevelopmentSolutions")>
+<Assembly: AssemblyDescription("Beta Version 1.5")>
+<Assembly: AssemblyCompany("ZeroPointGaming - R&D")>
 <Assembly: AssemblyProduct("SpaceEngineersBPManagerGUI")>
-<Assembly: AssemblyCopyright("Copyright ©  2017")>
-<Assembly: AssemblyTrademark("HDS")>
+<Assembly: AssemblyCopyright("Copyright ©  2019")>
+<Assembly: AssemblyTrademark("ZeroPointGaming")>
 
 <Assembly: ComVisible(False)>
 
@@ -31,5 +31,5 @@ Imports System.Runtime.InteropServices
 ' by using the '*' as shown below:
 ' <Assembly: AssemblyVersion("1.0.*")> 
 
-<Assembly: AssemblyVersion("1.3.0.0")>
-<Assembly: AssemblyFileVersion("1.3.0.0")>
+<Assembly: AssemblyVersion("1.5.0.0")>
+<Assembly: AssemblyFileVersion("1.5.0.0")>
