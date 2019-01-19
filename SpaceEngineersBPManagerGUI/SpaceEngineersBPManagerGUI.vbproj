@@ -718,7 +718,6 @@
     <None Include="Resources\LargeGatlingTurret.jpg" />
     <None Include="Resources\LargeBlockDrill.jpg" />
     <None Include="Resources\SmallRocketLauncherReload.jpg" />
-    <None Include="Resources\RocketLauncherReload.dds" />
     <None Include="Resources\LargeWindowSquare.jpg" />
     <None Include="Resources\LargeWindowEdge.jpg" />
     <None Include="Resources\LargeInteriorTurret.jpg" />
