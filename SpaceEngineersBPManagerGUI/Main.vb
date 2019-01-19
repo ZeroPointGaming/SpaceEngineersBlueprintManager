@@ -517,6 +517,9 @@ Public Class Main
             ex = Nothing
         End Try
 
+        'Reset Form Title
+        Me.Text = "Space Engineers Blueprint Manager"
+
         GC.Collect() 'Finalize Cleanup with a garbage collector call
     End Sub
 #End Region
@@ -753,7 +756,7 @@ Public Class Main
             TotalBlockCount += newPanel.count
 
             'Add items to the list box for information output
-            ListBox1.Items.Add(newPanel.username.ToString & "|" & newPanel.SubtypeName & "|" & " (" & newPanel.count.ToString & ")")
+            ListBox1.Items.Add(newPanel.SubtypeName & " | BlockCount: " & " (" & newPanel.count.ToString & ")")
         Next panelNumber
         'Add total block count to the form name
         Me.Text += " | Block Count: " + TotalBlockCount.ToString("N0")
