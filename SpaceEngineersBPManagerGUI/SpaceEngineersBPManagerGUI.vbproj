@@ -620,6 +620,11 @@
     <None Include="Resources\unknown.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\LargeSteelCatwalkPlate.jpg" />
+    <None Include="Resources\LargeSteelCatwalk.jpg" />
+    <None Include="Resources\LargeBlockSmallAtmosphericThruster.jpg" />
+    <None Include="Resources\LargeBlockRadioAntenna.jpg" />
+    <None Include="Resources\ArmorInvCorner.jpg" />
     <Content Include="Resources\Icon_png_32e5b78167c7612f41898bc83e58ea13.ico" />
     <None Include="Resources\LargeBlockLargeThrust2.jpg" />
     <None Include="Resources\LargeBlockLargeHydrogenThrust2.jpg" />
@@ -679,7 +684,6 @@
     <None Include="Resources\SmallSuspension5x5mirrored.jpg" />
     <None Include="Resources\SmallSuspension3x3mirrored.jpg" />
     <None Include="Resources\SmallSuspension1x1mirrored.jpg" />
-    <None Include="Resources\LargeSteelCatwalk.jpg" />
     <None Include="Resources\SpaceBallSmall.jpg" />
     <None Include="Resources\SpaceBallLarge.jpg" />
     <None Include="Resources\SmallShipMergeBlock.jpg" />
