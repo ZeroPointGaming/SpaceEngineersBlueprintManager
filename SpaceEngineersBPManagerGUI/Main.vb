@@ -237,11 +237,17 @@ Public Class Main
     'Beta Version for new Dictionary Search
     Function CalculateResourcesSteelPlates(inputblock As String, inputcount As Integer) 'WIP WIP WIP WIP WIP WIP
         Dim SteelPlate As Integer = 0
-        For Each component In BlockDefinitionDictonary(inputblock).Components()
-            If component.Subtype.ToString().Contains("SteelPlate") Then
-                SteelPlate = (component.Count * inputcount)
-            End If
-        Next
+
+        'Debug
+        Try
+            For Each component In BlockDefinitionDictonary(inputblock).Components()
+                If component.Subtype.ToString().Contains("SteelPlate") Then
+                    SteelPlate = (component.Count * inputcount)
+                End If
+            Next
+        Catch ex As Exception
+            MessageBox.Show(inputblock.ToString())
+        End Try
         Return SteelPlate
     End Function
     Function CalculateResourcesInteriorPlates(inputblock As String, inputcount As Integer) 'WIP WIP WIP WIP WIP WIP
@@ -713,31 +719,35 @@ Public Class Main
             newPicture.Controls.Add(newLabel)
 
             'Calculate the ammount of components needed per set of blocks |>>FINISHED<<|
-            SteelPlateCount += CalculateResourcesSteelPlates(newPanel.SubtypeName, newPanel.count) 'Steel Plates
-            InteriorPlateCount += CalculateResourcesInteriorPlates(newPanel.SubtypeName, newPanel.count)
-            Computer += CalculateResourcesComputers(newPanel.SubtypeName, newPanel.count)
-            Superconducter += CalculateResourcesSuperConducters(newPanel.SubtypeName, newPanel.count)
-            Canvas += CalculateResourcesCanvas(newPanel.SubtypeName, newPanel.count)
-            Girder += CalculateResourcesGirders(newPanel.SubtypeName, newPanel.count)
-            BulletproofGlass += CalculateResourcesBulletproofGlass(newPanel.SubtypeName, newPanel.count)
-            ConstructionComponent += CalculateResourcesConstructionComponents(newPanel.SubtypeName, newPanel.count)
-            DetectorComponent += CalculateResourcesDetectorComponents(newPanel.SubtypeName, newPanel.count)
-            Displays += CalculateResourcesDisplays(newPanel.SubtypeName, newPanel.count)
-            Explosives += 0
-            GravityGeneratorComponents += CalculateResourcesGravityComponents(newPanel.SubtypeName, newPanel.count)
-            LargeSteelTube += CalculateResourcesLargeSteelTubes(newPanel.SubtypeName, newPanel.count)
-            SmallSteelTube += CalculateResourcesSmallSteelTubes(newPanel.SubtypeName, newPanel.count)
-            MedicalComponents += CalculateResourcesMedicalComponents(newPanel.SubtypeName, newPanel.count)
-            MetalGrid += CalculateResourcesMetalGrids(newPanel.SubtypeName, newPanel.count)
-            TwoHundredMMMissileContainer += 0
-            Motor += CalculateResourcesMotors(newPanel.SubtypeName, newPanel.count)
-            NATOAmmoContainer += 0
-            NATOAmmoMagazine += 0
-            PowerCell += CalculateResourcesPowerCells(newPanel.SubtypeName, newPanel.count)
-            RadioCommunicationComponents += CalculateResourcesRadioComponents(newPanel.SubtypeName, newPanel.count)
-            ReactorComponents += CalculateResourcesReactorComponents(newPanel.SubtypeName, newPanel.count)
-            SolarCell += CalculateResourcesSolarCells(newPanel.SubtypeName, newPanel.count)
-            ThrusterComponents += CalculateResourcesThrusterComponents(newPanel.SubtypeName, newPanel.count)
+            For Each block In ListOfVanillaBlocks
+                If newPanel.SubtypeName = block Then
+                    SteelPlateCount += CalculateResourcesSteelPlates(newPanel.SubtypeName, newPanel.count) 'Steel Plates
+                    InteriorPlateCount += CalculateResourcesInteriorPlates(newPanel.SubtypeName, newPanel.count)
+                    Computer += CalculateResourcesComputers(newPanel.SubtypeName, newPanel.count)
+                    Superconducter += CalculateResourcesSuperConducters(newPanel.SubtypeName, newPanel.count)
+                    Canvas += CalculateResourcesCanvas(newPanel.SubtypeName, newPanel.count)
+                    Girder += CalculateResourcesGirders(newPanel.SubtypeName, newPanel.count)
+                    BulletproofGlass += CalculateResourcesBulletproofGlass(newPanel.SubtypeName, newPanel.count)
+                    ConstructionComponent += CalculateResourcesConstructionComponents(newPanel.SubtypeName, newPanel.count)
+                    DetectorComponent += CalculateResourcesDetectorComponents(newPanel.SubtypeName, newPanel.count)
+                    Displays += CalculateResourcesDisplays(newPanel.SubtypeName, newPanel.count)
+                    Explosives += 0
+                    GravityGeneratorComponents += CalculateResourcesGravityComponents(newPanel.SubtypeName, newPanel.count)
+                    LargeSteelTube += CalculateResourcesLargeSteelTubes(newPanel.SubtypeName, newPanel.count)
+                    SmallSteelTube += CalculateResourcesSmallSteelTubes(newPanel.SubtypeName, newPanel.count)
+                    MedicalComponents += CalculateResourcesMedicalComponents(newPanel.SubtypeName, newPanel.count)
+                    MetalGrid += CalculateResourcesMetalGrids(newPanel.SubtypeName, newPanel.count)
+                    TwoHundredMMMissileContainer += 0
+                    Motor += CalculateResourcesMotors(newPanel.SubtypeName, newPanel.count)
+                    NATOAmmoContainer += 0
+                    NATOAmmoMagazine += 0
+                    PowerCell += CalculateResourcesPowerCells(newPanel.SubtypeName, newPanel.count)
+                    RadioCommunicationComponents += CalculateResourcesRadioComponents(newPanel.SubtypeName, newPanel.count)
+                    ReactorComponents += CalculateResourcesReactorComponents(newPanel.SubtypeName, newPanel.count)
+                    SolarCell += CalculateResourcesSolarCells(newPanel.SubtypeName, newPanel.count)
+                    ThrusterComponents += CalculateResourcesThrusterComponents(newPanel.SubtypeName, newPanel.count)
+                End If
+            Next
 
             'add count of current block to total block count
             TotalBlockCount += newPanel.count
