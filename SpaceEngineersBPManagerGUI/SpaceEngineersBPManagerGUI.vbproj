@@ -183,8 +183,10 @@
     </None>
     <None Include="App.config" />
     <None Include="packages.config" />
-    <None Include="SE Resources\CubeBlocks.sbc">
+    <None Include="..\..\..\..\..\Downloads\CubeBlocks.sbc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Link>SE Resources\CubeBlocks.sbc</Link>
+      <SubType>Designer</SubType>
     </None>
     <None Include="SE Resources\Definitions.xsd">
       <SubType>Designer</SubType>

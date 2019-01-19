@@ -12,17 +12,21 @@ Public Class Main
 #Region "------------=================== Alpha Update 1.0 - Rework Component and Block Defining System  ===================------------"
     Public CubeBlocks As String = Directory.GetCurrentDirectory & "\SE Resources\CubeBlocks.sbc" 'Prepackaged XML file containing all space engineers block definitions
 
-
+    Public BlockDefinitionDictonary As New Dictionary(Of String, DefinitionsDefinition)
 
     'Deserialize Cube Information
-    Public Sub DeserializeCubes()
+    Public Sub DeserializeCubes(blockname As String)
         Dim DefinitionData As New Definitions()
         Dim xmlSerializer As XmlSerializer = New XmlSerializer(GetType(Definitions))
 
         Dim streamread As New StreamReader(CubeBlocks)
 
         DefinitionData = xmlSerializer.Deserialize(streamread)
-        MessageBox.Show(DefinitionData.CubeBlocks(0).DisplayName.ToString())
+
+        For Each BlockDefinition In DefinitionData.CubeBlocks()
+            MessageBox.Show(BlockDefinition.Id.SubtypeId.ToString())
+            BlockDefinitionDictonary.Add(BlockDefinition.Id.SubtypeId.ToString(), BlockDefinition)
+        Next
     End Sub
 #End Region
 
@@ -918,7 +922,7 @@ Public Class Main
     End Sub
 
     Private Sub TestToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles TestToolStripMenuItem.Click
-        DeserializeCubes()
+        DeserializeCubes("OxygenGenerator")
     End Sub
 End Class
 #End Region
