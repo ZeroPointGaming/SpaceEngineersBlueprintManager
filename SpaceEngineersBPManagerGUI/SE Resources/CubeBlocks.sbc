@@ -1736,7 +1736,7 @@
     <Definition>
       <Id>
         <TypeId>Refinery</TypeId>
-        <SubtypeId>Blast Furnace</SubtypeId>
+        <SubtypeId>BlastFurnace</SubtypeId>
       </Id>
       <DisplayName>DisplayName_Block_Arc_Furnace</DisplayName>
       <Icon>Textures\GUI\Icons\Cubes\Blastfurnace.dds</Icon>
