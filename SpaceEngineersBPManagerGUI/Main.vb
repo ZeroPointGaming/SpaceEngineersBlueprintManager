@@ -235,7 +235,7 @@ Public Class Main
 
 #Region "------------=================== Functions to Calculate Component Counts ===================------------ |FINISHED|"
     'Beta Version for new Dictionary Search
-    Function CalculateResourcesSteelPlates(inputblock As String, inputcount As Integer) 'WIP WIP WIP WIP WIP WIP
+    Function CalculateResourcesSteelPlates(inputblock As String, inputcount As Integer)
         Dim SteelPlate As Integer = 0
 
         'Debug
@@ -250,7 +250,7 @@ Public Class Main
         End Try
         Return SteelPlate
     End Function
-    Function CalculateResourcesInteriorPlates(inputblock As String, inputcount As Integer) 'WIP WIP WIP WIP WIP WIP
+    Function CalculateResourcesInteriorPlates(inputblock As String, inputcount As Integer)
         Dim InteriorPlate As Integer = 0
         For Each component In BlockDefinitionDictonary(inputblock).Components()
             If component.Subtype.ToString().Contains("InteriorPlate") Then
@@ -259,7 +259,7 @@ Public Class Main
         Next
         Return InteriorPlate
     End Function
-    Function CalculateResourcesMetalGrids(inputblock As String, inputcount As Integer) 'WIP WIP WIP WIP WIP WIP
+    Function CalculateResourcesMetalGrids(inputblock As String, inputcount As Integer)
         Dim MetalGrid As Integer = 0
         For Each component In BlockDefinitionDictonary(inputblock).Components()
             If component.Subtype.ToString().Contains("MetalGrid") Then
@@ -268,7 +268,7 @@ Public Class Main
         Next
         Return MetalGrid
     End Function
-    Function CalculateResourcesSmallSteelTubes(inputblock As String, inputcount As Integer) 'WIP WIP WIP WIP WIP WIP
+    Function CalculateResourcesSmallSteelTubes(inputblock As String, inputcount As Integer)
         Dim SmallTube As Integer = 0
         For Each component In BlockDefinitionDictonary(inputblock).Components()
             If component.Subtype.ToString().Contains("SmallTube") Then
@@ -277,7 +277,7 @@ Public Class Main
         Next
         Return SmallTube
     End Function
-    Function CalculateResourcesLargeSteelTubes(inputblock As String, inputcount As Integer) 'WIP WIP WIP WIP WIP WIP
+    Function CalculateResourcesLargeSteelTubes(inputblock As String, inputcount As Integer)
         Dim LargeTube As Integer = 0
         For Each component In BlockDefinitionDictonary(inputblock).Components()
             If component.Subtype.ToString().Contains("LargeTube") Then
@@ -286,7 +286,7 @@ Public Class Main
         Next
         Return LargeTube
     End Function
-    Function CalculateResourcesComputers(inputblock As String, inputcount As Integer) 'WIP WIP WIP WIP WIP WIP
+    Function CalculateResourcesComputers(inputblock As String, inputcount As Integer)
         Dim Computer As Integer = 0
         For Each component In BlockDefinitionDictonary(inputblock).Components()
             If component.Subtype.ToString().Contains("Computer") Then
@@ -295,7 +295,7 @@ Public Class Main
         Next
         Return Computer
     End Function
-    Function CalculateResourcesConstructionComponents(inputblock As String, inputcount As Integer) 'WIP WIP WIP WIP WIP WIP
+    Function CalculateResourcesConstructionComponents(inputblock As String, inputcount As Integer)
         Dim Construction As Integer = 0
         For Each component In BlockDefinitionDictonary(inputblock).Components()
             If component.Subtype.ToString().Contains("Construction") Then
@@ -304,7 +304,7 @@ Public Class Main
         Next
         Return Construction
     End Function
-    Function CalculateResourcesDetectorComponents(inputblock As String, inputcount As Integer) 'WIP WIP WIP WIP WIP WIP
+    Function CalculateResourcesDetectorComponents(inputblock As String, inputcount As Integer)
         Dim Detector As Integer = 0
         For Each component In BlockDefinitionDictonary(inputblock).Components()
             If component.Subtype.ToString().Contains("Detector") Then
@@ -313,7 +313,7 @@ Public Class Main
         Next
         Return Detector
     End Function
-    Function CalculateResourcesGravityComponents(inputblock As String, inputcount As Integer) 'WIP WIP WIP WIP WIP WIP
+    Function CalculateResourcesGravityComponents(inputblock As String, inputcount As Integer)
         Dim GravityGenerator As Integer = 0
         For Each component In BlockDefinitionDictonary(inputblock).Components()
             If component.Subtype.ToString().Contains("GravityGenerator") Then
@@ -322,7 +322,7 @@ Public Class Main
         Next
         Return GravityGenerator
     End Function
-    Function CalculateResourcesMedicalComponents(inputblock As String, inputcount As Integer) 'WIP WIP WIP WIP WIP WIP
+    Function CalculateResourcesMedicalComponents(inputblock As String, inputcount As Integer)
         Dim Medical As Integer = 0
         For Each component In BlockDefinitionDictonary(inputblock).Components()
             If component.Subtype.ToString().Contains("Medical") Then
@@ -331,7 +331,7 @@ Public Class Main
         Next
         Return Medical
     End Function
-    Function CalculateResourcesRadioComponents(inputblock As String, inputcount As Integer) 'WIP WIP WIP WIP WIP WIP
+    Function CalculateResourcesRadioComponents(inputblock As String, inputcount As Integer)
         Dim RadioCommunication As Integer = 0
         For Each component In BlockDefinitionDictonary(inputblock).Components()
             If component.Subtype.ToString().Contains("RadioCommunication") Then
@@ -340,7 +340,7 @@ Public Class Main
         Next
         Return RadioCommunication
     End Function
-    Function CalculateResourcesReactorComponents(inputblock As String, inputcount As Integer) 'WIP WIP WIP WIP WIP WIP
+    Function CalculateResourcesReactorComponents(inputblock As String, inputcount As Integer)
         Dim Reactor As Integer = 0
         For Each component In BlockDefinitionDictonary(inputblock).Components()
             If component.Subtype.ToString().Contains("Reactor") Then
@@ -349,7 +349,7 @@ Public Class Main
         Next
         Return Reactor
     End Function
-    Function CalculateResourcesThrusterComponents(inputblock As String, inputcount As Integer) 'WIP WIP WIP WIP WIP WIP
+    Function CalculateResourcesThrusterComponents(inputblock As String, inputcount As Integer)
         Dim Thrust As Integer = 0
         For Each component In BlockDefinitionDictonary(inputblock).Components()
             If component.Subtype.ToString().Contains("Thrust") Then
@@ -358,7 +358,7 @@ Public Class Main
         Next
         Return Thrust
     End Function
-    Function CalculateResourcesCanvas(inputblock As String, inputcount As Integer) 'WIP WIP WIP WIP WIP WIP
+    Function CalculateResourcesCanvas(inputblock As String, inputcount As Integer)
         Dim Canvas As Integer = 0
         For Each component In BlockDefinitionDictonary(inputblock).Components()
             If component.Subtype.ToString().Contains("Canvas") Then
@@ -367,7 +367,7 @@ Public Class Main
         Next
         Return Canvas
     End Function
-    Function CalculateResourcesDisplays(inputblock As String, inputcount As Integer) 'WIP WIP WIP WIP WIP WIP
+    Function CalculateResourcesDisplays(inputblock As String, inputcount As Integer)
         Dim Display As Integer = 0
         For Each component In BlockDefinitionDictonary(inputblock).Components()
             If component.Subtype.ToString().Contains("Display") Then
@@ -376,7 +376,7 @@ Public Class Main
         Next
         Return Display
     End Function
-    Function CalculateResourcesGirders(inputblock As String, inputcount As Integer) 'WIP WIP WIP WIP WIP WIP
+    Function CalculateResourcesGirders(inputblock As String, inputcount As Integer)
         Dim Girder As Integer = 0
         For Each component In BlockDefinitionDictonary(inputblock).Components()
             If component.Subtype.ToString().Contains("Girder") Then
@@ -385,7 +385,7 @@ Public Class Main
         Next
         Return Girder
     End Function
-    Function CalculateResourcesMotors(inputblock As String, inputcount As Integer) 'WIP WIP WIP WIP WIP WIP
+    Function CalculateResourcesMotors(inputblock As String, inputcount As Integer)
         Dim Motor As Integer = 0
         For Each component In BlockDefinitionDictonary(inputblock).Components()
             If component.Subtype.ToString().Contains("Motor") Then
@@ -394,7 +394,7 @@ Public Class Main
         Next
         Return Motor
     End Function
-    Function CalculateResourcesPowerCells(inputblock As String, inputcount As Integer) 'WIP WIP WIP WIP WIP WIP
+    Function CalculateResourcesPowerCells(inputblock As String, inputcount As Integer)
         Dim PowerCell As Integer = 0
         For Each component In BlockDefinitionDictonary(inputblock).Components()
             If component.Subtype.ToString().Contains("PowerCell") Then
