@@ -26,7 +26,6 @@ Public Class Main
     End Sub
 #End Region
 
-
 #Region "------------=================== REFINERY CALCULATIONS ===================------------"
     'URANIUM CALCULATIONS
     Dim UraniumAmmount As Integer 'Ammount of uranium needed ORE
