@@ -20,7 +20,7 @@
     <Setting Name="ThemeForeColor" Type="System.Drawing.Color" Scope="User">
       <Value Profile="(Default)">White</Value>
     </Setting>
-    <Setting Name="IdentifeirAplha" Type="System.Int32" Scope="User">
+    <Setting Name="IdentifierAplha" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">0</Value>
     </Setting>
   </Settings>

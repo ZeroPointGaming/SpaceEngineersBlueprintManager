@@ -534,11 +534,11 @@ Public Class Main
             Dim folder_complete As String = folder.ToString() + "\Data"
 
             For Each file In Directory.GetFiles(folder_complete, "CubeBlocks.sbc") 'For each zipfilename in the given directory extract them to the given folder
-                MessageBox.Show(file.ToString())
+                'MessageBox.Show(file.ToString())
                 Dim originxml As String = System.IO.File.ReadAllText(file)
                 Dim moddedxml As String = Cleaner.CleanXML(originxml)
 
-                MessageBox.Show(moddedxml.ToString())
+                'MessageBox.Show(moddedxml.ToString())
 
                 ModdedCubeblockDefinitions.Add(id, moddedxml)
 
@@ -777,8 +777,8 @@ Public Class Main
             Next
 
             'Calculate components for modded blocks
-            For Each block In ListOfModBlocks
-                If newPanel.SubtypeName = block Then
+            For Each block In ModBlockDefinitionDictionary
+                If block.Key.ToString() = newPanel.SubtypeName.ToString() Then
 
                 End If
             Next
@@ -969,7 +969,7 @@ Public Class Main
 #Region "------------=================== MainForm Load Event Handler ===================------------"
     Private Sub Main_Load(sender As System.Object, e As System.EventArgs) Handles Me.Load
         'Set directory settings first time run
-        If My.Settings.IdentifeirAplha = 0 Then
+        If My.Settings.IdentifierAplha = 0 Then
             Try
                 'Check if the program directory exists & if not then create it
                 If Not Directory.Exists("C:\SETools") Then
@@ -992,7 +992,7 @@ Public Class Main
                 My.Settings.SpaceEngineersBPDirectory = (Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) & "\SpaceEngineers\Blueprints\Local")
                 My.Settings.SpaceEngineersWorkingDirectory = "C:\SETools\unpacked_mods"
 
-                My.Settings.IdentifeirAplha = 1
+                My.Settings.IdentifierAplha = 1
                 My.Settings.Save()
             Catch ex As Exception
             End Try
@@ -1017,13 +1017,6 @@ Public Class Main
 
         'Failsafe if user deletes working folders remake them
         Try
-            'Check if the program directory exists & if not then create it
-            If Not Directory.Exists("C:\SETools") Then
-                Try
-                    Directory.CreateDirectory("C:\SETools")
-                Catch ex As Exception
-                End Try
-            End If
             'Check if the mod extraction directory exists in the C drive & if not then create it
             If Not Directory.Exists(My.Settings.SpaceEngineersWorkingDirectory) Then
                 Try
@@ -1034,11 +1027,11 @@ Public Class Main
         Catch ex As Exception
         End Try
 
-        'Load modded block definitions
-        LoadModDefinitions()
-
         'Load Vanilla Block Definitions
         DeserializeCubes()
+
+        'Load modded block definitions
+        LoadModDefinitions()
     End Sub
 #End Region
 
