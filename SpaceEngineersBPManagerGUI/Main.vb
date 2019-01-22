@@ -10,6 +10,42 @@ Imports System.Xml.Serialization
 
 Public Class Main
 #Region "------------=================== Alpha Update 1.0 - Rework Component and Block Defining System  ===================------------"
+    'Class Declerations
+    Public FILENAME As String = String.Empty 'Set the filename variable to an empty string
+    Public models As Model 'Set the access of the model class through models
+    Public TotalBlockCount As Integer = 0
+    Public fileloader As New OpenFileDialog 'Set the open dialog as an accessible variable
+    Public Shared WorkingPath As String = Nothing
+    Public _model As New Model 'Grant access to the model class through _model
+    Public subPanels As New List(Of CubeBlock) 'Set a new variable subpanels as a list of cube blocks through the cubeblock class
+
+    'Component Delecrations
+    Public SteelPlateCount As Integer = 0
+    Public InteriorPlateCount As Integer = 0
+    Public Computer As Integer = 0
+    Public Superconducter As Integer = 0
+    Public Canvas As Integer = 0
+    Public Girder As Integer = 0
+    Public BulletproofGlass As Integer = 0
+    Public ConstructionComponent As Integer = 0
+    Public DetectorComponent As Integer = 0
+    Public Displays As Integer = 0
+    Public Explosives As Integer = 0
+    Public GravityGeneratorComponents As Integer = 0
+    Public LargeSteelTube As Integer = 0
+    Public SmallSteelTube As Integer = 0
+    Public MedicalComponents As Integer = 0
+    Public MetalGrid As Integer = 0
+    Public TwoHundredMMMissileContainer As Integer = 0
+    Public Motor As Integer = 0
+    Public NATOAmmoContainer As Integer = 0
+    Public NATOAmmoMagazine As Integer = 0
+    Public PowerCell As Integer = 0
+    Public RadioCommunicationComponents As Integer = 0
+    Public ReactorComponents As Integer = 0
+    Public SolarCell As Integer = 0
+    Public ThrusterComponents As Integer = 0
+
     Public CubeBlocks As String = Directory.GetCurrentDirectory & "\SE Resources\CubeBlocks.sbc" 'Prepackaged XML file containing all space engineers block definitions
     Public BlockDefinitionDictonary As New Dictionary(Of String, DefinitionsDefinition)
     Public ModBlockDefinitionDictionary As New Dictionary(Of String, DefinitionsDefinition)
@@ -109,15 +145,7 @@ Public Class Main
 #End Region
 
 #Region "------------=================== Public Class Declerations ===================------------"
-    Public FILENAME As String = String.Empty 'Set the filename variable to an empty string
-    Public models As Model 'Set the access of the model class through models
-    Public productionBlocks As New Panel
-    Public gridsinfo As CubeGrid 'Set access to cubegrid class through gridsinfo
-    Public TotalBlockCount As Integer = 0
-    Public fileloader As New OpenFileDialog 'Set the open dialog as an accessible variable
-    Public Shared WorkingPath As String = Nothing
-    Public _model As Model 'Grant access to the model class through _model
-    Public subPanels As New List(Of CubeBlock) 'Set a new variable subpanels as a list of cube blocks through the cubeblock class
+
 #End Region
 
 #Region "------------=================== Initilize List Definitions ===================------------"
@@ -150,33 +178,8 @@ Public Class Main
 #End Region
 
 #Region "------------=================== Initialize Component Constants ===================------------"
-    Public SteelPlateCount As Integer = 0
-    Public InteriorPlateCount As Integer = 0
-    Public Computer As Integer = 0
-    Public Superconducter As Integer = 0
-    Public Canvas As Integer = 0
-    Public Girder As Integer = 0
-    Public BulletproofGlass As Integer = 0
-    Public ConstructionComponent As Integer = 0
-    Public DetectorComponent As Integer = 0
-    Public Displays As Integer = 0
-    Public Explosives As Integer = 0
-    Public GravityGeneratorComponents As Integer = 0
-    Public LargeSteelTube As Integer = 0
-    Public SmallSteelTube As Integer = 0
-    Public MedicalComponents As Integer = 0
-    Public MetalGrid As Integer = 0
-    Public TwoHundredMMMissileContainer As Integer = 0
-    Public Motor As Integer = 0
-    Public NATOAmmoContainer As Integer = 0
-    Public NATOAmmoMagazine As Integer = 0
-    Public PowerCell As Integer = 0
-    Public RadioCommunicationComponents As Integer = 0
-    Public ReactorComponents As Integer = 0
-    Public SolarCell As Integer = 0
-    Public ThrusterComponents As Integer = 0
-#End Region
 
+#End Region
 
 #Region "------------=================== Main Functions ===================------------"
 #Region "------------=================== Function to recalculate control sizes for the flow layout panel ===================------------"
@@ -189,21 +192,6 @@ Public Class Main
         LABEL_HEIGHT = 0.1 * PANEL_HEIGHT
         LABEL_TOP = PICTURE_BOX_HEIGHT + PANEL_HEIGHT_MARGIN
     End Sub
-#End Region
-
-#Region "------------=================== Function to search strings ===================------------"
-    Private Function FindWords(ByVal TextSearched As String, ByVal Paragraph As String) As Integer
-        Dim location As Integer = 0
-        Dim occurances As Integer = 0
-        Do
-            location = TextSearched.IndexOf(Paragraph, location)
-            If location <> -1 Then
-                occurances += 1
-                location += Paragraph.Length
-            End If
-        Loop Until location = -1
-        Return occurances
-    End Function
 #End Region
 
 #Region "------------=================== Function To Unzip Mod Files to the Temp Folder ===================------------"
@@ -596,22 +584,15 @@ Public Class Main
         Dim ownername As String = models.print._id.subtype 'returns the name of the blueprint
 
         'Load the information about the blueprint (ownername, grid name, grid type) into the title of the form
-        Dim OwnerVariable As String
-        Dim DisplayVariable As String
-        Try
-            OwnerVariable = ownername.ToString
-        Catch ex As Exception
-            OwnerVariable = "Blueprint Name Not Found"
-        End Try
-        Try
-            DisplayVariable = display.ToString()
-        Catch ex As Exception
-            DisplayVariable = "Username Not Found"
-        End Try
-        Me.Text = OwnerVariable.ToString + " | " + gridsizeenum.ToString + " Grid | " + DisplayVariable.ToString
+        If ownername.ToString = "" Then
+            ownername = "Blueprint Name Not Found"
+        End If
+        If display.ToString = "" Then
+            display = "Username Not Found"
+        End If
+        Me.Text = ownername.ToString + " | " + gridsizeenum.ToString + " Grid | " + display.ToString
 
         'Procedural Control Generation
-        _model = New Model()
         _model.Load(FILENAME)
         NUMBER_OF_PANELS = _model.print.cubes.cubeBlocks.Count
         CalulateControlSizes(NUMBER_OF_PANELS) 'Run the calculate control sizes function to properly size the control surfaces
@@ -959,7 +940,6 @@ Public Class Main
     End Sub
 #End Region
 
-
 #Region "------------=================== Main Event Handlers ===================------------"
 #Region "------------=================== MainForm Load Event Handler ===================------------"
     Private Sub Main_Load(sender As System.Object, e As System.EventArgs) Handles Me.Load
@@ -1090,9 +1070,7 @@ End Class
 #End Region
 #End Region
 
-
 #Region "---------------------------===================== XML FUNCTIONS =====================---------------------------"
-
 'XML INPUT LOADING FUNCTION
 Public Class Model
     Public print As Model
