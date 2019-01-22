@@ -146,6 +146,7 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CubeBlockSerializer.vb" />
+    <Compile Include="XMLCleaner.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="LocalBlueprintManager.resx">
@@ -181,6 +182,7 @@
     <None Include="packages.config" />
     <None Include="SE Resources\CubeBlocks.sbc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
     </None>
     <None Include="SE Resources\Definitions.xsd">
       <SubType>Designer</SubType>

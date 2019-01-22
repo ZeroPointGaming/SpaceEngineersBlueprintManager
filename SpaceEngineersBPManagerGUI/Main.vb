@@ -12,6 +12,7 @@ Public Class Main
 #Region "------------=================== Alpha Update 1.0 - Rework Component and Block Defining System  ===================------------"
     Public CubeBlocks As String = Directory.GetCurrentDirectory & "\SE Resources\CubeBlocks.sbc" 'Prepackaged XML file containing all space engineers block definitions
     Public BlockDefinitionDictonary As New Dictionary(Of String, DefinitionsDefinition)
+    Public ModBlockDefinitionDictionary As New Dictionary(Of String, DefinitionsDefinition)
 
     'Deserialize Cube Information
     Public Sub DeserializeCubes()
@@ -122,7 +123,7 @@ Public Class Main
 
 #Region "------------=================== Initilize List Definitions ===================------------"
     Public ListOfModBlocks As List(Of String) = Nothing
-    Public ModdedCubeblockDefinitions As List(Of String) = Nothing
+    Public ModdedCubeblockDefinitions As New Dictionary(Of Integer, String)
     Public ListOfVanillaBlocks() As String = {"LargeSteelCatwalkCorner", "SmallSuspension1x1mirrored", "SmallSuspension3x3mirrored", "SmallSuspension5x5mirrored", "SmParachute", "HalfArmorBlock", "HalfSlopeArmorBlock", "HeavyHalfArmorBlock", "HeavyHalfSlopeArmorBlock", "LargeHalfSlopeArmorBlock", "LargeHeavyHalfSlopeArmorBlock", "LargeHeavyHalfArmorBlock", "Window1x2SideRightInv", "MyObjectBuilder_Door", "MyObjectBuilder_AirVent", "MyObjectBuilder_GravityGenerator", "MyObjectBuilder_AirtightHangarDoor", "MyObjectBuilder_Passage", "MyObjectBuilder_GravityGeneratorSphere", "LargeHalfArmorBlock", "SmallHalfArmorBlock", "LargeBlockBatteryBlock", "SmallBlockBatteryBlock", "LargeBlockArmorBlock", "LargeBlockArmorSlope", "LargeBlockArmorCorner", "LargeBlockArmorCornerInv", "LargeRoundArmor_Slope", "LargeRoundArmor_Corner", "LargeRoundArmor_CornerInv", "LargeHeavyBlockArmorBlock", "LargeHeavyBlockArmorSlope", "LargeHeavyBlockArmorCorner", "LargeHeavyBlockArmorCornerInv", "SmallBlockArmorBlock", "SmallBlockArmorSlope", "SmallBlockArmorCorner", "SmallBlockArmorCornerInv", "SmallHeavyBlockArmorBlock", "SmallHeavyBlockArmorSlope", "SmallHeavyBlockArmorCorner", "SmallHeavyBlockArmorCornerInv", "LargeBlockArmorRoundedSlope", "LargeBlockArmorRoundedCorner", "LargeBlockArmorAngledSlope", "LargeBlockArmorAngledCorner", "LargeHeavyBlockArmorRoundedSlope", "LargeHeavyBlockArmorRoundedCorner", "LargeHeavyBlockArmorAngledSlope", "LargeHeavyBlockArmorAngledCorner", "SmallBlockArmorRoundedSlope", "SmallBlockArmorRoundedCorner", "SmallBlockArmorAngledSlope", "SmallBlockArmorAngledCorner", "SmallHeavyBlockArmorRoundedSlope", "SmallHeavyBlockArmorRoundedCorner", "SmallHeavyBlockArmorAngledSlope", "SmallHeavyBlockArmorAngledCorner", "LargeBlockArmorRoundSlope", "LargeBlockArmorRoundCorner", "LargeBlockArmorRoundCornerInv", "LargeHeavyBlockArmorRoundSlope", "LargeHeavyBlockArmorRoundCorner", "LargeHeavyBlockArmorRoundCornerInv", "SmallBlockArmorRoundSlope", "SmallBlockArmorRoundCorner", "SmallBlockArmorRoundCornerInv", "SmallHeavyBlockArmorRoundSlope", "SmallHeavyBlockArmorRoundCorner", "SmallHeavyBlockArmorRoundCornerInv", "LargeBlockArmorSlope2BaseSmooth", "LargeBlockArmorSlope2TipSmooth", "LargeBlockArmorCorner2BaseSmooth", "LargeBlockArmorCorner2TipSmooth", "LargeBlockArmorInvCorner2BaseSmooth", "LargeBlockArmorInvCorner2TipSmooth", "LargeHeavyBlockArmorSlope2BaseSmooth", "LargeHeavyBlockArmorSlope2TipSmooth", "LargeHeavyBlockArmorCorner2BaseSmooth", "LargeHeavyBlockArmorCorner2TipSmooth", "LargeHeavyBlockArmorInvCorner2BaseSmooth", "LargeHeavyBlockArmorInvCorner2TipSmooth", "SmallBlockArmorSlope2BaseSmooth", "SmallBlockArmorSlope2TipSmooth", "SmallBlockArmorCorner2BaseSmooth", "SmallBlockArmorCorner2TipSmooth", "SmallBlockArmorInvCorner2BaseSmooth", "SmallBlockArmorInvCorner2TipSmooth", "SmallHeavyBlockArmorSlope2BaseSmooth", "SmallHeavyBlockArmorSlope2TipSmooth", "SmallHeavyBlockArmorCorner2BaseSmooth", "SmallHeavyBlockArmorCorner2TipSmooth", "SmallHeavyBlockArmorInvCorner2BaseSmooth", "SmallHeavyBlockArmorInvCorner2TipSmooth", "LargeBlockArmorSlope2Base", "LargeBlockArmorSlope2Tip", "LargeBlockArmorCorner2Base", "LargeBlockArmorCorner2Tip", "LargeBlockArmorInvCorner2Base", "LargeBlockArmorInvCorner2Tip", "LargeHeavyBlockArmorSlope2Base", "LargeHeavyBlockArmorSlope2Tip", "LargeHeavyBlockArmorCorner2Base", "LargeHeavyBlockArmorCorner2Tip", "LargeHeavyBlockArmorInvCorner2Base", "LargeHeavyBlockArmorInvCorner2Tip", "SmallBlockArmorSlope2Base", "SmallBlockArmorSlope2Tip", "SmallBlockArmorCorner2Base", "SmallBlockArmorCorner2Tip", "SmallBlockArmorInvCorner2Base", "SmallBlockArmorInvCorner2Tip", "SmallHeavyBlockArmorSlope2Base", "SmallHeavyBlockArmorSlope2Tip", "SmallHeavyBlockArmorCorner2Base", "SmallHeavyBlockArmorCorner2Tip", "SmallHeavyBlockArmorInvCorner2Base", "SmallHeavyBlockArmorInvCorner2Tip", "ControlPanel", "SmallProgrammableBlock", "SmallControlPanel", "LargeGatlingTurret", "SmallGatlingTurret", "LargeMissileTurret", "SmallMissileTurret", "LargeInteriorTurret", "Passage", "Door", "LargeBlockRadioAntenna", "LargeBlockBeacon", "SmallBlockBeacon", "LargeBlockFrontLight", "SmallLight", "SmallBlockSmallLight", "LargeBlockLight_1corner", "LargeBlockLight_2corner", "SmallBlockLight_1corner", "SmallBlockLight_2corner", "LargeWindowSquare", "LargeWindowEdge", "LargeStairs", "LargeRamp", "LargeSteelCatwalk", "LargeSteelCatwalk2Sides", "LargeSteelCatwalkPlate", "LargeCoverWall", "LargeCoverWallHalf", "LargeWarhead", "SmallWarhead", "LargeDecoy", "SmallDecoy", "LargeBlockInteriorWall", "LargeInteriorPillar", "LargeBlockLandingGear", "LargeProjector", "SmallProjector", "LargeRefinery", "Blast Furnace", "BlastFurnace", "OxygenGenerator", "LargeAssembler", "LargeOreDetector", "LargeMedicalRoom", "GravityGenerator", "GravityGeneratorSphere", "LargeJumpDrive", "LargeBlockCockpit", "LargeBlockCockpitSeat", "SmallBlockCockpit", "DBSmallBlockFighterCockpit", "CockpitOpen", "PassengerSeatLarge", "PassengerSeatSmall", "LargeBlockCryoChamber", "SmallBlockLandingGear", "SmallBlockFrontLight", "SmallMissileLauncher", "LargeMissileLauncher", "MediumMissileLauncher", "SmallRocketLauncherReload", "SmallGatlingGun", "SmallBlockDrill", "LargeBlockDrill", "SmallBlockOreDetector", "SmallBlockSensor", "LargeBlockSensor", "SmallBlockSoundBlock", "LargeBlockSoundBlock", "SmallTextPanel", "SmallLCDPanelWide", "SmallLCDPanel", "LargeBlockCorner_LCD_1", "LargeBlockCorner_LCD_2", "LargeBlockCorner_LCD_Flat_1", "LargeBlockCorner_LCD_Flat_2", "SmallBlockCorner_LCD_1", "SmallBlockCorner_LCD_2", "SmallBlockCorner_LCD_Flat_1", "SmallBlockCorner_LCD_Flat_2", "OxygenTankSmall", "OxygenGeneratorSmall", "LargeTextPanel", "LargeLCDPanel", "LargeLCDPanelWide", "SmallBlockRadioAntenna", "LargeBlockRemoteControl", "SmallBlockRemoteControl", "AirVent", "SmallAirVent", "OxygenTank", "LargeHydrogenTank", "SmallHydrogenTank", "LargeProductivityModule", "LargeEffectivenessModule", "LargeEnergyModule", "SmallBlockSmallContainer", "SmallBlockMediumContainer", "SmallBlockLargeContainer", "LargeBlockSmallContainer", "LargeBlockLargeContainer", "SmallBlockSmallThrust", "SmallBlockLargeThrust", "LargeBlockSmallThrust", "LargeBlockLargeThrust", "LargeBlockLargeHydrogenThrust", "LargeBlockSmallHydrogenThrust", "SmallBlockLargeHydrogenThrust", "SmallBlockSmallHydrogenThrust", "LargeBlockLargeAtmosphericThrust", "LargeBlockSmallAtmosphericThrust", "SmallBlockLargeAtmosphericThrust", "SmallBlockSmallAtmosphericThrust", "SmallCameraBlock", "LargeCameraBlock", "LargeBlockGyro", "SmallBlockGyro", "SmallBlockSmallGenerator", "SmallBlockLargeGenerator", "LargeBlockSmallGenerator", "LargeBlockLargeGenerator", "LargePistonBase", "LargePistonTop", "SmallPistonBase", "SmallPistonTop", "LargeStator", "Suspension3x3", "Suspension5x5", "Suspension1x1", "SmallSuspension3x3", "SmallSuspension5x5", "SmallSuspension1x1", "LargeRotor", "SmallStator", "SmallRotor", "LargeAdvancedStator", "LargeAdvancedRotor", "SmallAdvancedStator", "SmallAdvancedRotor", "ButtonPanelLarge", "ButtonPanelSmall", "TimerBlockLarge", "TimerBlockSmall", "LargeRailStraight", "LargeBlockSolarPanel", "SmallBlockSolarPanel", "LargeBlockOxygenFarm", "Oxygen", "Window1x2Slope", "Window1x2Inv", "Window1x2Face", "Window1x2SideLeft", "Window1x2SideRight", "Window1x1Slope", "Window1x1Face", "Window1x1Side", "Window1x1Inv", "Window1x2Flat", "Window1x2FlatInv", "Window1x1Flat", "Window1x1FlatInv", "Window3x3Flat", "Window3x3FlatInv", "Window2x3Flat", "Window2x3FlatInv", "SmallBlockConveyor", "LargeBlockConveyor", "Collector", "CollectorSmall", "Connector", "ConnectorSmall", "ConnectorMedium", "ConveyorTube", "ConveyorTubeSmall", "ConveyorTubeMedium", "ConveyorFrameMedium", "ConveyorTubeCurved", "ConveyorTubeSmallCurved", "ConveyorTubeCurvedMedium", "SmallShipConveyorHub", "LargeBlockConveyorSorter", "MediumBlockConveyorSorter", "SmallBlockConveyorSorter", "VirtualMassLarge", "VirtualMassSmall", "SpaceBallLarge", "SpaceBallSmall", "SmallRealWheel1x1", "SmallRealWheel", "SmallRealWheel5x5", "RealWheel1x1", "RealWheel", "RealWheel5x5", "Wheel1x1", "SmallWheel1x1", "Wheel3x3", "SmallWheel3x3", "Wheel5x5", "SmallWheel5x5", "LargeShipGrinder", "SmallShipGrinder", "LargeShipWelder", "SmallShipWelder", "LargeShipMergeBlock", "SmallShipMergeBlock", "ArmorAlpha", "ArmorCenter", "LargeProgrammableBlock", "ArmorCorner", "ArmorInvCorner", "ArmorSide", "SmallArmorCenter", "SmallArmorCorner", "SmallArmorInvCorner", "SmallArmorSide", "LargeBlockLaserAntenna", "SmallBlockLaserAntenna", "AirtightHangarDoor", "LargeBlockSlideDoor", "DebugSphereLarge"}
 #End Region
 
@@ -524,28 +525,52 @@ Public Class Main
     End Sub
 #End Region
 
-#Region "------------=================== Function to search modded block definitions for the subtype name inputted, find which definition it is, and return some information back ===================------------"
-    Public Function SearchModdedCubeDefinitions(subtypesearch As String) 'WIP WIP WIP WIP WIP WIP
-        Dim BlockToSearch As String = subtypesearch
-
-        Return Nothing
-    End Function
-#End Region
-
 #Region "------------=================== Function to Load ALL modded block data into a list ===================------------"
     Public Sub LoadModDefinitions()
         Dim modpath As String = My.Settings.SpaceEngineersWorkingDirectory
+        Dim id As Integer = 0
+        Dim Cleaner As New XMLCleaner()
 
-        For Each entry In Directory.GetFiles(modpath, "CubeBlocks.sbc") 'For each zipfilename in the given directory extract them to the given folder
-            Dim filereader As StreamReader = New StreamReader(modpath)
-            For Each block In entry
-                ModdedCubeblockDefinitions.Add(filereader.ReadToEnd(modpath))
-            Next block
+        For Each folder In Directory.GetDirectories(modpath)
+            Dim folder_complete As String = folder.ToString() + "\Data"
+
+            For Each file In Directory.GetFiles(folder_complete, "CubeBlocks.sbc") 'For each zipfilename in the given directory extract them to the given folder
+                MessageBox.Show(file.ToString())
+                Dim originxml As String = System.IO.File.ReadAllText(file)
+                Dim moddedxml As String = Cleaner.CleanXML(originxml)
+
+                MessageBox.Show(moddedxml.ToString())
+
+                ModdedCubeblockDefinitions.Add(id, moddedxml)
+
+                Dim DefinitionData As New Definitions()
+                Dim xmlSerializer As XmlSerializer = New XmlSerializer(GetType(Definitions))
+
+                Try
+                    Dim streamread As New StringReader(moddedxml)
+                    DefinitionData = xmlSerializer.Deserialize(streamread)
+                Catch ex As Exception
+
+                End Try
+
+                For Each BlockDefinition In DefinitionData.CubeBlocks()
+                    Try
+                        If Not ModBlockDefinitionDictionary(BlockDefinition.Id.SubtypeId.ToString()) Is Nothing Then
+                            'Block already exists dont add it
+                        Else
+                            ModBlockDefinitionDictionary.Add(BlockDefinition.Id.SubtypeId.ToString(), BlockDefinition)
+                        End If
+                    Catch ex As Exception
+
+                    End Try
+                Next
+            Next
+
+            id += 1
         Next
     End Sub
 #End Region
 #End Region
-
 
 #Region "------------=================== Primary Function to load the blueprint ===================------------"
     Public Sub OpenFileFunction()
@@ -749,6 +774,13 @@ Public Class Main
                     ReactorComponents += CalculateResourcesReactorComponents(newPanel.SubtypeName, newPanel.count)
                     SolarCell += CalculateResourcesSolarCells(newPanel.SubtypeName, newPanel.count)
                     ThrusterComponents += CalculateResourcesThrusterComponents(newPanel.SubtypeName, newPanel.count)
+                End If
+            Next
+
+            'Calculate components for modded blocks
+            For Each block In ListOfModBlocks
+                If newPanel.SubtypeName = block Then
+
                 End If
             Next
 
@@ -1124,17 +1156,17 @@ Public Class CubeGrid
     Inherits Panel
     Public id As String
     Public persistentFlags As String
-    Public position As location
-    Public forward As location
-    Public up As location
-    Public orientation As location
+    Public position As Location
+    Public forward As Location
+    Public up As Location
+    Public orientation As Location
     Public cubeBlocks As List(Of CubeBlock)
     Public displayname As String
     Public SubTypeID As String
     Public ownername As String
     Public enumerator As String
 End Class
-Public Class location
+Public Class Location
     Public w As Double
     Public x As Double
     Public y As Double
