@@ -586,7 +586,7 @@ Public Class Main
             models = New Model 'Create a reference to the Model class
             models.Load(FILENAME) 'Initiate the loading sequence to get the information from the XML file
         Catch ex As Exception
-
+            MessageBox.Show("Error: No file selected!")
         End Try
 
         'Grabbing information from XML file
@@ -609,11 +609,6 @@ Public Class Main
             DisplayVariable = "Username Not Found"
         End Try
         Me.Text = OwnerVariable.ToString + " | " + gridsizeenum.ToString + " Grid | " + DisplayVariable.ToString
-
-        'Declare functions for reading the information
-        Dim reader As New StreamReader(FILENAME) 'Set the second xml reader to the original file name
-        Dim doc As XDocument = XDocument.Load(reader) 'Read the xml file to get custom data
-        Dim xmlstring As String = doc.ToString 'Read the xml into a string
 
         'Procedural Control Generation
         _model = New Model()
@@ -1017,12 +1012,31 @@ Public Class Main
 
         'Failsafe if user deletes working folders remake them
         Try
-            'Check if the mod extraction directory exists in the C drive & if not then create it
+            'Check if the app directory exists in the filesystem & if not then create it
             If Not Directory.Exists(My.Settings.SpaceEngineersWorkingDirectory) Then
                 Try
+                    MessageBox.Show("Failed to locate the application's working directory " + My.Settings.SpaceEngineersWorkingDirectory.ToString() + ", Creating directory now!")
                     Directory.CreateDirectory(My.Settings.SpaceEngineersWorkingDirectory)
                 Catch ex As Exception
+                    MessageBox.Show("There was an error creating the directory " + My.Settings.SpaceEngineersWorkingDirectory.ToString() + " try restarting the application in administrator mode.")
                 End Try
+            End If
+            'Check if the space engineers game installation directory exists
+            If Not Directory.Exists(My.Settings.SpaceEngineersDirectory) Then
+                Try
+                    MessageBox.Show("Failed to locate Space Engineers game directory at " + My.Settings.SpaceEngineersDirectory.ToString() + ", Creating directory now!")
+                    Directory.CreateDirectory(My.Settings.SpaceEngineersDirectory)
+                Catch ex As Exception
+                    MessageBox.Show("There was an error creating the directory " + My.Settings.SpaceEngineersDirectory.ToString() + " try restarting the application in administrator mode.")
+                End Try
+            End If
+            'Check if the space engineers mod folder exists
+            If Not Directory.Exists(My.Settings.SpaceEngineersModsDirectory) Then
+                MessageBox.Show("Cannot find the space engineers mod directory " + My.Settings.SpaceEngineersModsDirectory.ToString() + ", Check application settings")
+            End If
+
+            If Not Directory.Exists(My.Settings.SpaceEngineersBPDirectory) Then
+                MessageBox.Show("Cannot find the space engineers bp directory " + My.Settings.SpaceEngineersBPDirectory.ToString() + ", Check application settings")
             End If
         Catch ex As Exception
         End Try
