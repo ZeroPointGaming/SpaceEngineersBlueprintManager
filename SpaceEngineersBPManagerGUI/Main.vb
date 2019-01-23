@@ -628,6 +628,7 @@ Public Class Main
             Flag = True
         Else
             Flag = False
+            MessageBox.Show("Updates are available!" + vbNewLine + "Visit the github to download the latest version!" + vbNewLine + "https://github.com/ZeroPointGaming/SpaceEngineersBlueprintManager/releases")
         End If
 
         Return Flag
