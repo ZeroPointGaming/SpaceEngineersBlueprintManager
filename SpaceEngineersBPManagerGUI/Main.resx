@@ -154,7 +154,57 @@
         QmCC
 </value>
   </data>
-  <data name="ToolStripMenuItem1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="SettingsStatusBarMenu.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAA3QAAAAfCAIAAAAgKRjoAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAABl0RVh0U29mdHdhcmUAcGFpbnQubmV0IDQuMC4xNzNun2MAAACsSURBVHhe7dZB
+        CQAwDACxGRql/s3VxD0DEZH3ZwEAICGXAABk5BIAgIxcAgCQkUsAADJyCQBARi4BAMjIJQAAGbkEACAj
+        lwAAZOQSAICMXAIAkJFLAAAycgkAQEYuAQDIyCUAABm5BAAgI5cAAGTkEgCAjFwCAJCRSwAAMnIJAEBG
+        LgEAyMglAAAZuQQAICOXAABk5BIAgIxcAgCQkUsAADJyCQBARi4BAIjMHhP/+QPbdqn1AAAAAElFTkSu
+        QmCC
+</value>
+  </data>
+  <data name="ToolsStatusBarBtn.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAA3QAAAAfCAIAAAAgKRjoAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAABl0RVh0U29mdHdhcmUAcGFpbnQubmV0IDQuMC4xNzNun2MAAACsSURBVHhe7dZB
+        CQAwDACxGRql/s3VxD0DEZH3ZwEAICGXAABk5BIAgIxcAgCQkUsAADJyCQBARi4BAMjIJQAAGbkEACAj
+        lwAAZOQSAICMXAIAkJFLAAAycgkAQEYuAQDIyCUAABm5BAAgI5cAAGTkEgCAjFwCAJCRSwAAMnIJAEBG
+        LgEAyMglAAAZuQQAICOXAABk5BIAgIxcAgCQkUsAADJyCQBARi4BAIjMHhP/+QPbdqn1AAAAAElFTkSu
+        QmCC
+</value>
+  </data>
+  <data name="OpenModManagerStatusBarBtn.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAA3QAAAAfCAIAAAAgKRjoAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAABl0RVh0U29mdHdhcmUAcGFpbnQubmV0IDQuMC4xNzNun2MAAACsSURBVHhe7dZB
+        CQAwDACxGRql/s3VxD0DEZH3ZwEAICGXAABk5BIAgIxcAgCQkUsAADJyCQBARi4BAMjIJQAAGbkEACAj
+        lwAAZOQSAICMXAIAkJFLAAAycgkAQEYuAQDIyCUAABm5BAAgI5cAAGTkEgCAjFwCAJCRSwAAMnIJAEBG
+        LgEAyMglAAAZuQQAICOXAABk5BIAgIxcAgCQkUsAADJyCQBARi4BAIjMHhP/+QPbdqn1AAAAAElFTkSu
+        QmCC
+</value>
+  </data>
+  <data name="OpenBPManagerStatusBarBtn.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAA3QAAAAfCAIAAAAgKRjoAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAABl0RVh0U29mdHdhcmUAcGFpbnQubmV0IDQuMC4xNzNun2MAAACsSURBVHhe7dZB
+        CQAwDACxGRql/s3VxD0DEZH3ZwEAICGXAABk5BIAgIxcAgCQkUsAADJyCQBARi4BAMjIJQAAGbkEACAj
+        lwAAZOQSAICMXAIAkJFLAAAycgkAQEYuAQDIyCUAABm5BAAgI5cAAGTkEgCAjFwCAJCRSwAAMnIJAEBG
+        LgEAyMglAAAZuQQAICOXAABk5BIAgIxcAgCQkUsAADJyCQBARi4BAIjMHhP/+QPbdqn1AAAAAElFTkSu
+        QmCC
+</value>
+  </data>
+  <data name="HelpStatusBarBtn.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAA3QAAAAfCAIAAAAgKRjoAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAABl0RVh0U29mdHdhcmUAcGFpbnQubmV0IDQuMC4xNzNun2MAAACsSURBVHhe7dZB
+        CQAwDACxGRql/s3VxD0DEZH3ZwEAICGXAABk5BIAgIxcAgCQkUsAADJyCQBARi4BAMjIJQAAGbkEACAj
+        lwAAZOQSAICMXAIAkJFLAAAycgkAQEYuAQDIyCUAABm5BAAgI5cAAGTkEgCAjFwCAJCRSwAAMnIJAEBG
+        LgEAyMglAAAZuQQAICOXAABk5BIAgIxcAgCQkUsAADJyCQBARi4BAIjMHhP/+QPbdqn1AAAAAElFTkSu
+        QmCC
+</value>
+  </data>
+  <data name="UpdateStatusBarBtn.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAA3QAAAAfCAIAAAAgKRjoAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         wwAADsMBx2+oZAAAABl0RVh0U29mdHdhcmUAcGFpbnQubmV0IDQuMC4xNzNun2MAAACsSURBVHhe7dZB

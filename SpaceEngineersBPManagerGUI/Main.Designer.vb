@@ -42,11 +42,21 @@ Partial Class Main
         Me.ToolStripDropDownButton1 = New System.Windows.Forms.ToolStripDropDownButton()
         Me.OpemToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ResetToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SettingsStatusBarMenu = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolsStatusBarBtn = New System.Windows.Forms.ToolStripMenuItem()
+        Me.OpenModManagerStatusBarBtn = New System.Windows.Forms.ToolStripMenuItem()
+        Me.OpenBPManagerStatusBarBtn = New System.Windows.Forms.ToolStripMenuItem()
+        Me.HelpStatusBarBtn = New System.Windows.Forms.ToolStripMenuItem()
+        Me.UpdateStatusBarBtn = New System.Windows.Forms.ToolStripMenuItem()
         Me.FlatContextMenuStrip1 = New SpaceEngineersBPManagerGUI.FlatContextMenuStrip()
         Me.OpenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ResetToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.TestToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SettingsContextMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolsContextMenuBtn = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ModManagerContextMenuBtn = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BlueprintManagerContextMenuBtn = New System.Windows.Forms.ToolStripMenuItem()
+        Me.HelpContextMenuBtn = New System.Windows.Forms.ToolStripMenuItem()
+        Me.UpdateContextMenuBtn = New System.Windows.Forms.ToolStripMenuItem()
         Me.FlatTabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
@@ -247,7 +257,7 @@ Partial Class Main
         'ToolStripDropDownButton1
         '
         Me.ToolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.ToolStripDropDownButton1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OpemToolStripMenuItem, Me.ResetToolStripMenuItem1, Me.ToolStripMenuItem1})
+        Me.ToolStripDropDownButton1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OpemToolStripMenuItem, Me.ResetToolStripMenuItem1, Me.SettingsStatusBarMenu, Me.ToolsStatusBarBtn})
         Me.ToolStripDropDownButton1.Image = CType(resources.GetObject("ToolStripDropDownButton1.Image"), System.Drawing.Image)
         Me.ToolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ToolStripDropDownButton1.Name = "ToolStripDropDownButton1"
@@ -260,7 +270,7 @@ Partial Class Main
         Me.OpemToolStripMenuItem.BackgroundImage = CType(resources.GetObject("OpemToolStripMenuItem.BackgroundImage"), System.Drawing.Image)
         Me.OpemToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Control
         Me.OpemToolStripMenuItem.Name = "OpemToolStripMenuItem"
-        Me.OpemToolStripMenuItem.Size = New System.Drawing.Size(116, 22)
+        Me.OpemToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.OpemToolStripMenuItem.Text = "Open"
         '
         'ResetToolStripMenuItem1
@@ -269,44 +279,125 @@ Partial Class Main
         Me.ResetToolStripMenuItem1.BackgroundImage = CType(resources.GetObject("ResetToolStripMenuItem1.BackgroundImage"), System.Drawing.Image)
         Me.ResetToolStripMenuItem1.ForeColor = System.Drawing.SystemColors.Control
         Me.ResetToolStripMenuItem1.Name = "ResetToolStripMenuItem1"
-        Me.ResetToolStripMenuItem1.Size = New System.Drawing.Size(116, 22)
+        Me.ResetToolStripMenuItem1.Size = New System.Drawing.Size(180, 22)
         Me.ResetToolStripMenuItem1.Text = "Reset"
         '
-        'ToolStripMenuItem1
+        'SettingsStatusBarMenu
         '
-        Me.ToolStripMenuItem1.BackColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(49, Byte), Integer))
-        Me.ToolStripMenuItem1.BackgroundImage = CType(resources.GetObject("ToolStripMenuItem1.BackgroundImage"), System.Drawing.Image)
-        Me.ToolStripMenuItem1.ForeColor = System.Drawing.SystemColors.Control
-        Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
-        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(116, 22)
-        Me.ToolStripMenuItem1.Text = "Settings"
+        Me.SettingsStatusBarMenu.BackColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(49, Byte), Integer))
+        Me.SettingsStatusBarMenu.BackgroundImage = CType(resources.GetObject("SettingsStatusBarMenu.BackgroundImage"), System.Drawing.Image)
+        Me.SettingsStatusBarMenu.ForeColor = System.Drawing.SystemColors.Control
+        Me.SettingsStatusBarMenu.Name = "SettingsStatusBarMenu"
+        Me.SettingsStatusBarMenu.Size = New System.Drawing.Size(180, 22)
+        Me.SettingsStatusBarMenu.Text = "Settings"
+        '
+        'ToolsStatusBarBtn
+        '
+        Me.ToolsStatusBarBtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(49, Byte), Integer))
+        Me.ToolsStatusBarBtn.BackgroundImage = CType(resources.GetObject("ToolsStatusBarBtn.BackgroundImage"), System.Drawing.Image)
+        Me.ToolsStatusBarBtn.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OpenModManagerStatusBarBtn, Me.OpenBPManagerStatusBarBtn, Me.HelpStatusBarBtn, Me.UpdateStatusBarBtn})
+        Me.ToolsStatusBarBtn.ForeColor = System.Drawing.SystemColors.Control
+        Me.ToolsStatusBarBtn.Name = "ToolsStatusBarBtn"
+        Me.ToolsStatusBarBtn.Size = New System.Drawing.Size(180, 22)
+        Me.ToolsStatusBarBtn.Text = "Tools"
+        '
+        'OpenModManagerStatusBarBtn
+        '
+        Me.OpenModManagerStatusBarBtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(49, Byte), Integer))
+        Me.OpenModManagerStatusBarBtn.BackgroundImage = CType(resources.GetObject("OpenModManagerStatusBarBtn.BackgroundImage"), System.Drawing.Image)
+        Me.OpenModManagerStatusBarBtn.ForeColor = System.Drawing.SystemColors.Control
+        Me.OpenModManagerStatusBarBtn.Name = "OpenModManagerStatusBarBtn"
+        Me.OpenModManagerStatusBarBtn.Size = New System.Drawing.Size(173, 22)
+        Me.OpenModManagerStatusBarBtn.Text = "Mod Manager"
+        '
+        'OpenBPManagerStatusBarBtn
+        '
+        Me.OpenBPManagerStatusBarBtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(49, Byte), Integer))
+        Me.OpenBPManagerStatusBarBtn.BackgroundImage = CType(resources.GetObject("OpenBPManagerStatusBarBtn.BackgroundImage"), System.Drawing.Image)
+        Me.OpenBPManagerStatusBarBtn.ForeColor = System.Drawing.SystemColors.Control
+        Me.OpenBPManagerStatusBarBtn.Name = "OpenBPManagerStatusBarBtn"
+        Me.OpenBPManagerStatusBarBtn.Size = New System.Drawing.Size(173, 22)
+        Me.OpenBPManagerStatusBarBtn.Text = "Blueprint Manager"
+        '
+        'HelpStatusBarBtn
+        '
+        Me.HelpStatusBarBtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(49, Byte), Integer))
+        Me.HelpStatusBarBtn.BackgroundImage = CType(resources.GetObject("HelpStatusBarBtn.BackgroundImage"), System.Drawing.Image)
+        Me.HelpStatusBarBtn.ForeColor = System.Drawing.SystemColors.Control
+        Me.HelpStatusBarBtn.Name = "HelpStatusBarBtn"
+        Me.HelpStatusBarBtn.Size = New System.Drawing.Size(173, 22)
+        Me.HelpStatusBarBtn.Text = "Help"
+        '
+        'UpdateStatusBarBtn
+        '
+        Me.UpdateStatusBarBtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(45, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(49, Byte), Integer))
+        Me.UpdateStatusBarBtn.BackgroundImage = CType(resources.GetObject("UpdateStatusBarBtn.BackgroundImage"), System.Drawing.Image)
+        Me.UpdateStatusBarBtn.ForeColor = System.Drawing.SystemColors.Control
+        Me.UpdateStatusBarBtn.Name = "UpdateStatusBarBtn"
+        Me.UpdateStatusBarBtn.Size = New System.Drawing.Size(173, 22)
+        Me.UpdateStatusBarBtn.Text = "Check For Updates"
         '
         'FlatContextMenuStrip1
         '
         Me.FlatContextMenuStrip1.Font = New System.Drawing.Font("Segoe UI", 8.0!)
         Me.FlatContextMenuStrip1.ForeColor = System.Drawing.Color.White
-        Me.FlatContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OpenToolStripMenuItem, Me.ResetToolStripMenuItem, Me.TestToolStripMenuItem})
+        Me.FlatContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OpenToolStripMenuItem, Me.ResetToolStripMenuItem, Me.SettingsContextMenuItem, Me.ToolsContextMenuBtn})
         Me.FlatContextMenuStrip1.Name = "FlatContextMenuStrip1"
         Me.FlatContextMenuStrip1.ShowImageMargin = False
-        Me.FlatContextMenuStrip1.Size = New System.Drawing.Size(79, 70)
+        Me.FlatContextMenuStrip1.Size = New System.Drawing.Size(92, 92)
         '
         'OpenToolStripMenuItem
         '
         Me.OpenToolStripMenuItem.Name = "OpenToolStripMenuItem"
-        Me.OpenToolStripMenuItem.Size = New System.Drawing.Size(78, 22)
+        Me.OpenToolStripMenuItem.Size = New System.Drawing.Size(91, 22)
         Me.OpenToolStripMenuItem.Text = "Open"
         '
         'ResetToolStripMenuItem
         '
         Me.ResetToolStripMenuItem.Name = "ResetToolStripMenuItem"
-        Me.ResetToolStripMenuItem.Size = New System.Drawing.Size(78, 22)
+        Me.ResetToolStripMenuItem.Size = New System.Drawing.Size(91, 22)
         Me.ResetToolStripMenuItem.Text = "Reset"
         '
-        'TestToolStripMenuItem
+        'SettingsContextMenuItem
         '
-        Me.TestToolStripMenuItem.Name = "TestToolStripMenuItem"
-        Me.TestToolStripMenuItem.Size = New System.Drawing.Size(78, 22)
-        Me.TestToolStripMenuItem.Text = "Test"
+        Me.SettingsContextMenuItem.Name = "SettingsContextMenuItem"
+        Me.SettingsContextMenuItem.Size = New System.Drawing.Size(91, 22)
+        Me.SettingsContextMenuItem.Text = "Settings"
+        '
+        'ToolsContextMenuBtn
+        '
+        Me.ToolsContextMenuBtn.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ModManagerContextMenuBtn, Me.BlueprintManagerContextMenuBtn, Me.HelpContextMenuBtn, Me.UpdateContextMenuBtn})
+        Me.ToolsContextMenuBtn.Name = "ToolsContextMenuBtn"
+        Me.ToolsContextMenuBtn.Size = New System.Drawing.Size(91, 22)
+        Me.ToolsContextMenuBtn.Text = "Tools"
+        '
+        'ModManagerContextMenuBtn
+        '
+        Me.ModManagerContextMenuBtn.ForeColor = System.Drawing.Color.White
+        Me.ModManagerContextMenuBtn.Name = "ModManagerContextMenuBtn"
+        Me.ModManagerContextMenuBtn.Size = New System.Drawing.Size(171, 22)
+        Me.ModManagerContextMenuBtn.Text = "Mod Manager"
+        '
+        'BlueprintManagerContextMenuBtn
+        '
+        Me.BlueprintManagerContextMenuBtn.ForeColor = System.Drawing.Color.White
+        Me.BlueprintManagerContextMenuBtn.Name = "BlueprintManagerContextMenuBtn"
+        Me.BlueprintManagerContextMenuBtn.Size = New System.Drawing.Size(171, 22)
+        Me.BlueprintManagerContextMenuBtn.Text = "Blueprint Manager"
+        '
+        'HelpContextMenuBtn
+        '
+        Me.HelpContextMenuBtn.ForeColor = System.Drawing.Color.White
+        Me.HelpContextMenuBtn.Name = "HelpContextMenuBtn"
+        Me.HelpContextMenuBtn.Size = New System.Drawing.Size(171, 22)
+        Me.HelpContextMenuBtn.Text = "Help"
+        '
+        'UpdateContextMenuBtn
+        '
+        Me.UpdateContextMenuBtn.ForeColor = System.Drawing.Color.White
+        Me.UpdateContextMenuBtn.Name = "UpdateContextMenuBtn"
+        Me.UpdateContextMenuBtn.Size = New System.Drawing.Size(171, 22)
+        Me.UpdateContextMenuBtn.Text = "Check For Updates"
         '
         'Main
         '
@@ -359,6 +450,16 @@ Partial Class Main
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents StatusStrip1 As StatusStrip
     Friend WithEvents ResetToolStripMenuItem1 As ToolStripMenuItem
-    Friend WithEvents ToolStripMenuItem1 As ToolStripMenuItem
-    Friend WithEvents TestToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents SettingsStatusBarMenu As ToolStripMenuItem
+    Friend WithEvents SettingsContextMenuItem As ToolStripMenuItem
+    Friend WithEvents ToolsContextMenuBtn As ToolStripMenuItem
+    Friend WithEvents ToolsStatusBarBtn As ToolStripMenuItem
+    Friend WithEvents OpenModManagerStatusBarBtn As ToolStripMenuItem
+    Friend WithEvents OpenBPManagerStatusBarBtn As ToolStripMenuItem
+    Friend WithEvents HelpStatusBarBtn As ToolStripMenuItem
+    Friend WithEvents UpdateStatusBarBtn As ToolStripMenuItem
+    Friend WithEvents ModManagerContextMenuBtn As ToolStripMenuItem
+    Friend WithEvents BlueprintManagerContextMenuBtn As ToolStripMenuItem
+    Friend WithEvents HelpContextMenuBtn As ToolStripMenuItem
+    Friend WithEvents UpdateContextMenuBtn As ToolStripMenuItem
 End Class

@@ -7,6 +7,7 @@ Imports System.Environment
 Imports System.String
 Imports System.Reflection
 Imports System.Xml.Serialization
+Imports System.Net
 
 Public Class Main
 #Region "------------=================== Alpha Update 1.0 - Rework Component and Block Defining System  ===================------------"
@@ -613,6 +614,25 @@ Public Class Main
         Next
     End Sub
 #End Region
+
+#Region "------------=================== Function to check for updates of the program ===================------------"
+    Public Function CheckUpdates(version As String)
+        Dim Flag As Boolean
+
+        Dim wr As HttpWebRequest = CType(WebRequest.Create(""), HttpWebRequest)
+        Dim ws As HttpWebResponse = CType(wr.GetResponse(), HttpWebResponse)
+        Dim SR As StreamReader = New StreamReader(ws.GetResponseStream())
+        Dim vers As String = SR.ReadToEnd()
+
+        If vers = Assembly.GetExecutingAssembly().GetName().Version.ToString() Then
+            Flag = True
+        Else
+            Flag = False
+        End If
+
+        Return Flag
+    End Function
+#End Region
 #End Region
 
 #Region "------------=================== Primary Function to load the blueprint ===================------------"
@@ -1103,23 +1123,6 @@ Public Class Main
 #End Region
 
 #Region "------------=================== Context Menu And Toolbar Event Handlers ===================------------"
-    Private Sub OpenToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OpenToolStripMenuItem.Click
-        OpenFileFunction()
-    End Sub
-    Private Sub ResetToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ResetToolStripMenuItem.Click
-        ResetControlSystems()
-    End Sub
-    Private Sub OpemToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OpemToolStripMenuItem.Click
-        OpenFileFunction()
-    End Sub
-    Private Sub ResetToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles ResetToolStripMenuItem1.Click
-        ResetControlSystems()
-    End Sub
-    Private Sub ToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem1.Click
-        Me.Hide()
-        Configurator.Show()
-    End Sub
-
     'Refresh Theme Controls
     Private Sub Main_Shown(sender As Object, e As EventArgs) Handles Me.Shown
         'List of all controls in Main Form
@@ -1138,6 +1141,55 @@ Public Class Main
         StatusStrip1.BackColor = My.Settings.ThemeBackColor
         StatusStrip1.ForeColor = My.Settings.ThemeForeColor
         PictureBox1.BackColor = My.Settings.ThemeBackColor
+    End Sub
+
+    'Context Menu And Status Menu Items
+    Private Sub OpenToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OpenToolStripMenuItem.Click
+        OpenFileFunction()
+    End Sub
+    Private Sub ResetToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ResetToolStripMenuItem.Click
+        ResetControlSystems()
+    End Sub
+    Private Sub OpemToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OpemToolStripMenuItem.Click
+        OpenFileFunction()
+    End Sub
+    Private Sub ResetToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles ResetToolStripMenuItem1.Click
+        ResetControlSystems()
+    End Sub
+    Private Sub SettingsStatusBarMenu_Click(sender As Object, e As EventArgs) Handles SettingsStatusBarMenu.Click
+        Me.Hide()
+        Configurator.Show()
+    End Sub
+    Private Sub SettingsContextMenuItem_Click(sender As Object, e As EventArgs) Handles SettingsContextMenuItem.Click
+        Me.Hide()
+        Configurator.Show()
+    End Sub
+    Private Sub UpdateContextMenuBtn_Click(sender As Object, e As EventArgs) Handles UpdateContextMenuBtn.Click
+        CheckUpdates(Assembly.GetExecutingAssembly().GetName().Version.ToString())
+    End Sub
+    Private Sub UpdateStatusBarBtn_Click(sender As Object, e As EventArgs) Handles UpdateStatusBarBtn.Click
+        CheckUpdates(Assembly.GetExecutingAssembly().GetName().Version.ToString())
+    End Sub
+
+    Private Sub ModManagerContextMenuBtn_Click(sender As Object, e As EventArgs) Handles ModManagerContextMenuBtn.Click
+
+    End Sub
+    Private Sub OpenModManagerStatusBarBtn_Click(sender As Object, e As EventArgs) Handles OpenModManagerStatusBarBtn.Click
+
+    End Sub
+
+    Private Sub BlueprintManagerContextMenuBtn_Click(sender As Object, e As EventArgs) Handles BlueprintManagerContextMenuBtn.Click
+
+    End Sub
+    Private Sub OpenBPManagerStatusBarBtn_Click(sender As Object, e As EventArgs) Handles OpenBPManagerStatusBarBtn.Click
+
+    End Sub
+
+    Private Sub HelpContextMenuBtn_Click(sender As Object, e As EventArgs) Handles HelpContextMenuBtn.Click
+
+    End Sub
+    Private Sub HelpStatusBarBtn_Click(sender As Object, e As EventArgs) Handles HelpStatusBarBtn.Click
+
     End Sub
 End Class
 #End Region
@@ -1172,22 +1224,22 @@ Public Class Model
                                                       .id = y.Element("EntityId"),
                                                       .SubTypeID = y.Element("SubtypeId"),
                                                       .persistentFlags = y.Element("PersistentFlags"),
-                                                      .position = y.Descendants("Position").Select(Function(z) New location() With {
+                                                      .position = y.Descendants("Position").Select(Function(z) New Location() With {
                                                         .x = CType(z.Attribute("x"), Double),
                                                         .y = CType(z.Attribute("y"), Double),
                                                         .z = CType(z.Attribute("z"), Double)
                                                       }).FirstOrDefault(),
-                                                      .forward = y.Descendants("Forward").Select(Function(z) New location() With {
+                                                      .forward = y.Descendants("Forward").Select(Function(z) New Location() With {
                                                         .x = CType(z.Attribute("x"), Double),
                                                         .y = CType(z.Attribute("y"), Double),
                                                         .z = CType(z.Attribute("z"), Double)
                                                       }).FirstOrDefault(),
-                                                      .up = y.Descendants("Up").Select(Function(z) New location() With {
+                                                      .up = y.Descendants("Up").Select(Function(z) New Location() With {
                                                         .x = CType(z.Attribute("x"), Double),
                                                         .y = CType(z.Attribute("y"), Double),
                                                         .z = CType(z.Attribute("z"), Double)
                                                       }).FirstOrDefault(),
-                                                      .orientation = y.Descendants("Orientation").Select(Function(z) New location() With {
+                                                      .orientation = y.Descendants("Orientation").Select(Function(z) New Location() With {
                                                         .w = CType(z.Element("W"), Double),
                                                         .x = CType(z.Element("X"), Double),
                                                         .y = CType(z.Element("Y"), Double),
