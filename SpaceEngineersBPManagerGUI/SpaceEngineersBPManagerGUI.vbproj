@@ -146,6 +146,7 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CubeBlockSerializer.vb" />
+    <Compile Include="SE Resources\ComponentsDeserializer.vb" />
     <Compile Include="XMLCleaner.vb" />
   </ItemGroup>
   <ItemGroup>
