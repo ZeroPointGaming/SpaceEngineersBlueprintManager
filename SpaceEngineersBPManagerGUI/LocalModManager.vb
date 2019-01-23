@@ -5,5 +5,7 @@
         Me.ForeColor = My.Settings.ThemeForeColor
     End Sub
 
-
+    Private Sub LocalModManager_Closed(sender As Object, e As EventArgs) Handles Me.Closed
+        Main.Show()
+    End Sub
 End Class

@@ -181,7 +181,9 @@
     </None>
     <None Include="App.config" />
     <None Include="packages.config" />
-    <None Include="SE Resources\Components.sbc" />
+    <None Include="SE Resources\Components.sbc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="SE Resources\Components.xsd">
       <SubType>Designer</SubType>
     </None>

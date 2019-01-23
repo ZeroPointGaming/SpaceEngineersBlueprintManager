@@ -1172,19 +1172,21 @@ Public Class Main
     Private Sub UpdateStatusBarBtn_Click(sender As Object, e As EventArgs) Handles UpdateStatusBarBtn.Click
         CheckUpdates(Assembly.GetExecutingAssembly().GetName().Version.ToString())
     End Sub
-
     Private Sub ModManagerContextMenuBtn_Click(sender As Object, e As EventArgs) Handles ModManagerContextMenuBtn.Click
-
+        Me.Hide()
+        LocalModManager.Show()
     End Sub
     Private Sub OpenModManagerStatusBarBtn_Click(sender As Object, e As EventArgs) Handles OpenModManagerStatusBarBtn.Click
-
+        Me.Hide()
+        LocalModManager.Show()
     End Sub
-
     Private Sub BlueprintManagerContextMenuBtn_Click(sender As Object, e As EventArgs) Handles BlueprintManagerContextMenuBtn.Click
-
+        Me.Hide()
+        LocalBlueprintManager.Show()
     End Sub
     Private Sub OpenBPManagerStatusBarBtn_Click(sender As Object, e As EventArgs) Handles OpenBPManagerStatusBarBtn.Click
-
+        Me.Hide()
+        LocalBlueprintManager.Show()
     End Sub
 
     Private Sub HelpContextMenuBtn_Click(sender As Object, e As EventArgs) Handles HelpContextMenuBtn.Click
