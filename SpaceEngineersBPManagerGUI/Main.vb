@@ -355,7 +355,134 @@ Public Class Main
                         Next
                 End Select
             ElseIf flag = False Then 'Modded Blocks
-
+                Select Case search
+                    Case "SteelPlate"
+                        For Each component In ModBlockDefinitionDictionary(inputblock).Components()
+                            If component.Subtype.ToString().Contains("SteelPlate") Then
+                                count = (component.Count * inputcount)
+                            End If
+                        Next
+                    Case "InteriorPlate"
+                        For Each component In ModBlockDefinitionDictionary(inputblock).Components()
+                            If component.Subtype.ToString().Contains("InteriorPlate") Then
+                                count = (component.Count * inputcount)
+                            End If
+                        Next
+                    Case "SmallTube"
+                        For Each component In ModBlockDefinitionDictionary(inputblock).Components()
+                            If component.Subtype.ToString().Contains("SmallTube") Then
+                                count = (component.Count * inputcount)
+                            End If
+                        Next
+                    Case "LargeTube"
+                        For Each component In ModBlockDefinitionDictionary(inputblock).Components()
+                            If component.Subtype.ToString().Contains("LargeTube") Then
+                                count = (component.Count * inputcount)
+                            End If
+                        Next
+                    Case "Computer"
+                        For Each component In ModBlockDefinitionDictionary(inputblock).Components()
+                            If component.Subtype.ToString().Contains("Computer") Then
+                                count = (component.Count * inputcount)
+                            End If
+                        Next
+                    Case "Construction"
+                        For Each component In ModBlockDefinitionDictionary(inputblock).Components()
+                            If component.Subtype.ToString().Contains("Construction") Then
+                                count = (component.Count * inputcount)
+                            End If
+                        Next
+                    Case "Detector"
+                        For Each component In ModBlockDefinitionDictionary(inputblock).Components()
+                            If component.Subtype.ToString().Contains("Detector") Then
+                                count = (component.Count * inputcount)
+                            End If
+                        Next
+                    Case "GravityGenerator"
+                        For Each component In ModBlockDefinitionDictionary(inputblock).Components()
+                            If component.Subtype.ToString().Contains("GravityGenerator") Then
+                                count = (component.Count * inputcount)
+                            End If
+                        Next
+                    Case "Medical"
+                        For Each component In ModBlockDefinitionDictionary(inputblock).Components()
+                            If component.Subtype.ToString().Contains("Medical") Then
+                                count = (component.Count * inputcount)
+                            End If
+                        Next
+                    Case "MetalGrid"
+                        For Each component In ModBlockDefinitionDictionary(inputblock).Components()
+                            If component.Subtype.ToString().Contains("MetalGrid") Then
+                                count = (component.Count * inputcount)
+                            End If
+                        Next
+                    Case "RadioCommunication"
+                        For Each component In ModBlockDefinitionDictionary(inputblock).Components()
+                            If component.Subtype.ToString().Contains("RadioCommunication") Then
+                                count = (component.Count * inputcount)
+                            End If
+                        Next
+                    Case "Reactor"
+                        For Each component In ModBlockDefinitionDictionary(inputblock).Components()
+                            If component.Subtype.ToString().Contains("Reactor") Then
+                                count = (component.Count * inputcount)
+                            End If
+                        Next
+                    Case "Thrust"
+                        For Each component In ModBlockDefinitionDictionary(inputblock).Components()
+                            If component.Subtype.ToString().Contains("Thrust") Then
+                                count = (component.Count * inputcount)
+                            End If
+                        Next
+                    Case "Canvas"
+                        For Each component In ModBlockDefinitionDictionary(inputblock).Components()
+                            If component.Subtype.ToString().Contains("Canvas") Then
+                                count = (component.Count * inputcount)
+                            End If
+                        Next
+                    Case "Display"
+                        For Each component In ModBlockDefinitionDictionary(inputblock).Components()
+                            If component.Subtype.ToString().Contains("Display") Then
+                                count = (component.Count * inputcount)
+                            End If
+                        Next
+                    Case "Girder"
+                        For Each component In ModBlockDefinitionDictionary(inputblock).Components()
+                            If component.Subtype.ToString().Contains("Girder") Then
+                                count = (component.Count * inputcount)
+                            End If
+                        Next
+                    Case "Motor"
+                        For Each component In ModBlockDefinitionDictionary(inputblock).Components()
+                            If component.Subtype.ToString().Contains("Motor") Then
+                                count = (component.Count * inputcount)
+                            End If
+                        Next
+                    Case "PowerCell"
+                        For Each component In ModBlockDefinitionDictionary(inputblock).Components()
+                            If component.Subtype.ToString().Contains("PowerCell") Then
+                                count = (component.Count * inputcount)
+                            End If
+                        Next
+                    Case "SolarCell"
+                        For Each component In ModBlockDefinitionDictionary(inputblock).Components()
+                            If component.Subtype.ToString().Contains("SolarCell") Then
+                                count = (component.Count * inputcount)
+                            End If
+                        Next
+                    Case "Superconductor"
+                        For Each component In ModBlockDefinitionDictionary(inputblock).Components()
+                            If component.Subtype.ToString().Contains("Superconductor") Then
+                                count = (component.Count * inputcount)
+                            End If
+                        Next
+                    Case "BulletproofGlass"
+                        For Each component In ModBlockDefinitionDictionary(inputblock).Components()
+                            If component.Subtype.ToString().Contains("BulletproofGlass") Then
+                                count = (component.Count * inputcount)
+                            End If
+                        Next
+                End Select
             End If
         Catch ex As Exception
             'Debug stack trace
