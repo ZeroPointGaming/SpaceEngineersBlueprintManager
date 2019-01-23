@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+   <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+         <!-- XML Schema Generated from XML Document on Wed Jan 23 2019 18:06:01 GMT-0500 (Eastern Standard Time) -->
+         <!-- with XmlGrid.net Free Online Service http://xmlgrid.net -->
+         <xs:element name="Definitions">
+               <xs:complexType>
+                     <xs:sequence>
+                           <xs:element name="Components">
+                                 <xs:complexType>
+                                       <xs:sequence>
+                                             <xs:element name="Component" maxOccurs="unbounded">
+                                                   <xs:complexType>
+                                                         <xs:sequence>
+                                                               <xs:element name="Id">
+                                                                     <xs:complexType>
+                                                                           <xs:sequence>
+                                                                                 <xs:element name="TypeId" type="xs:string"></xs:element>
+                                                                                 <xs:element name="SubtypeId" type="xs:string"></xs:element>
+                                                                           </xs:sequence>
+                                                                     </xs:complexType>
+                                                               </xs:element>
+                                                               <xs:element name="DisplayName" type="xs:string"></xs:element>
+                                                               <xs:element name="Icon" type="xs:string"></xs:element>
+                                                               <xs:element name="Size">
+                                                                     <xs:complexType>
+                                                                           <xs:sequence>
+                                                                                 <xs:element name="X" type="xs:double"></xs:element>
+                                                                                 <xs:element name="Y" type="xs:double"></xs:element>
+                                                                                 <xs:element name="Z" type="xs:double"></xs:element>
+                                                                           </xs:sequence>
+                                                                     </xs:complexType>
+                                                               </xs:element>
+                                                               <xs:element name="Mass" type="xs:int"></xs:element>
+                                                               <xs:element name="Volume" type="xs:int"></xs:element>
+                                                               <xs:element name="Model" type="xs:string"></xs:element>
+                                                               <xs:element name="PhysicalMaterial" type="xs:string"></xs:element>
+                                                               <xs:element name="MaxIntegrity" type="xs:int"></xs:element>
+                                                               <xs:element name="DropProbability" type="xs:double"></xs:element>
+                                                               <xs:element name="Health" type="xs:int"></xs:element>
+                                                         </xs:sequence>
+                                                   </xs:complexType>
+                                             </xs:element>
+                                       </xs:sequence>
+                                 </xs:complexType>
+                           </xs:element>
+                     </xs:sequence>
+               </xs:complexType>
+         </xs:element>
+   </xs:schema>
