@@ -220,7 +220,7 @@ Public Class Main
     End Function
 #End Region
 
-#Region "------------=================== Functions to Calculate Component Counts ===================------------ |Updating|"
+#Region "------------=================== Functions to Calculate Component Counts ===================------------ |> FINISHED <|"
     Public Function CalculateComponents(inputblock As String, inputcount As Integer, flag As Boolean, search As String)
         Dim count As Integer = 0
 
