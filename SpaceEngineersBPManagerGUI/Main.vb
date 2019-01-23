@@ -619,13 +619,14 @@ Public Class Main
     Public Function CheckUpdates(version As String)
         Dim Flag As Boolean
 
-        Dim wr As HttpWebRequest = CType(WebRequest.Create(""), HttpWebRequest)
+        Dim wr As HttpWebRequest = CType(WebRequest.Create("https://raw.githubusercontent.com/ZeroPointGaming/SpaceEngineersBlueprintManager/master/version.ver?token=AV6lG4xuqBa2bDFZpCPap3JWo9wnuK7Tks5cSOZ6wA%3D%3D"), HttpWebRequest)
         Dim ws As HttpWebResponse = CType(wr.GetResponse(), HttpWebResponse)
         Dim SR As StreamReader = New StreamReader(ws.GetResponseStream())
         Dim vers As String = SR.ReadToEnd()
 
         If vers = Assembly.GetExecutingAssembly().GetName().Version.ToString() Then
             Flag = True
+            MessageBox.Show(vers + " Is the latest version, your all up to date!")
         Else
             Flag = False
             MessageBox.Show("Updates are available!" + vbNewLine + "Visit the github to download the latest version!" + vbNewLine + "https://github.com/ZeroPointGaming/SpaceEngineersBlueprintManager/releases")
