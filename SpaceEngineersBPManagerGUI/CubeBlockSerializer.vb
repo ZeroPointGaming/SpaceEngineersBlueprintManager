@@ -22,7 +22,6 @@ Partial Public Class Definitions
     End Property
 End Class
 
-'''<remarks/>
 <System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.7.3081.0"),
  System.SerializableAttribute(),
  System.Diagnostics.DebuggerStepThroughAttribute(),

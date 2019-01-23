@@ -149,8 +149,7 @@ Public Class Main
 #End Region
 
 #Region "------------=================== Initilize List Definitions ===================------------"
-    Public ListOfModBlocks As List(Of String) = Nothing
-    Public ModdedCubeblockDefinitions As New Dictionary(Of Integer, String)
+    Public ModdedCubeblockDefinitions As New Dictionary(Of Integer, String) 'a dictonary containing the cubeblock.sbc files from all the mods a user has installed
     Public ListOfVanillaBlocks() As String = {"LargeSteelCatwalkCorner", "SmallSuspension1x1mirrored", "SmallSuspension3x3mirrored", "SmallSuspension5x5mirrored", "SmParachute", "HalfArmorBlock", "HalfSlopeArmorBlock", "HeavyHalfArmorBlock", "HeavyHalfSlopeArmorBlock", "LargeHalfSlopeArmorBlock", "LargeHeavyHalfSlopeArmorBlock", "LargeHeavyHalfArmorBlock", "Window1x2SideRightInv", "MyObjectBuilder_Door", "MyObjectBuilder_AirVent", "MyObjectBuilder_GravityGenerator", "MyObjectBuilder_AirtightHangarDoor", "MyObjectBuilder_Passage", "MyObjectBuilder_GravityGeneratorSphere", "LargeHalfArmorBlock", "SmallHalfArmorBlock", "LargeBlockBatteryBlock", "SmallBlockBatteryBlock", "LargeBlockArmorBlock", "LargeBlockArmorSlope", "LargeBlockArmorCorner", "LargeBlockArmorCornerInv", "LargeRoundArmor_Slope", "LargeRoundArmor_Corner", "LargeRoundArmor_CornerInv", "LargeHeavyBlockArmorBlock", "LargeHeavyBlockArmorSlope", "LargeHeavyBlockArmorCorner", "LargeHeavyBlockArmorCornerInv", "SmallBlockArmorBlock", "SmallBlockArmorSlope", "SmallBlockArmorCorner", "SmallBlockArmorCornerInv", "SmallHeavyBlockArmorBlock", "SmallHeavyBlockArmorSlope", "SmallHeavyBlockArmorCorner", "SmallHeavyBlockArmorCornerInv", "LargeBlockArmorRoundedSlope", "LargeBlockArmorRoundedCorner", "LargeBlockArmorAngledSlope", "LargeBlockArmorAngledCorner", "LargeHeavyBlockArmorRoundedSlope", "LargeHeavyBlockArmorRoundedCorner", "LargeHeavyBlockArmorAngledSlope", "LargeHeavyBlockArmorAngledCorner", "SmallBlockArmorRoundedSlope", "SmallBlockArmorRoundedCorner", "SmallBlockArmorAngledSlope", "SmallBlockArmorAngledCorner", "SmallHeavyBlockArmorRoundedSlope", "SmallHeavyBlockArmorRoundedCorner", "SmallHeavyBlockArmorAngledSlope", "SmallHeavyBlockArmorAngledCorner", "LargeBlockArmorRoundSlope", "LargeBlockArmorRoundCorner", "LargeBlockArmorRoundCornerInv", "LargeHeavyBlockArmorRoundSlope", "LargeHeavyBlockArmorRoundCorner", "LargeHeavyBlockArmorRoundCornerInv", "SmallBlockArmorRoundSlope", "SmallBlockArmorRoundCorner", "SmallBlockArmorRoundCornerInv", "SmallHeavyBlockArmorRoundSlope", "SmallHeavyBlockArmorRoundCorner", "SmallHeavyBlockArmorRoundCornerInv", "LargeBlockArmorSlope2BaseSmooth", "LargeBlockArmorSlope2TipSmooth", "LargeBlockArmorCorner2BaseSmooth", "LargeBlockArmorCorner2TipSmooth", "LargeBlockArmorInvCorner2BaseSmooth", "LargeBlockArmorInvCorner2TipSmooth", "LargeHeavyBlockArmorSlope2BaseSmooth", "LargeHeavyBlockArmorSlope2TipSmooth", "LargeHeavyBlockArmorCorner2BaseSmooth", "LargeHeavyBlockArmorCorner2TipSmooth", "LargeHeavyBlockArmorInvCorner2BaseSmooth", "LargeHeavyBlockArmorInvCorner2TipSmooth", "SmallBlockArmorSlope2BaseSmooth", "SmallBlockArmorSlope2TipSmooth", "SmallBlockArmorCorner2BaseSmooth", "SmallBlockArmorCorner2TipSmooth", "SmallBlockArmorInvCorner2BaseSmooth", "SmallBlockArmorInvCorner2TipSmooth", "SmallHeavyBlockArmorSlope2BaseSmooth", "SmallHeavyBlockArmorSlope2TipSmooth", "SmallHeavyBlockArmorCorner2BaseSmooth", "SmallHeavyBlockArmorCorner2TipSmooth", "SmallHeavyBlockArmorInvCorner2BaseSmooth", "SmallHeavyBlockArmorInvCorner2TipSmooth", "LargeBlockArmorSlope2Base", "LargeBlockArmorSlope2Tip", "LargeBlockArmorCorner2Base", "LargeBlockArmorCorner2Tip", "LargeBlockArmorInvCorner2Base", "LargeBlockArmorInvCorner2Tip", "LargeHeavyBlockArmorSlope2Base", "LargeHeavyBlockArmorSlope2Tip", "LargeHeavyBlockArmorCorner2Base", "LargeHeavyBlockArmorCorner2Tip", "LargeHeavyBlockArmorInvCorner2Base", "LargeHeavyBlockArmorInvCorner2Tip", "SmallBlockArmorSlope2Base", "SmallBlockArmorSlope2Tip", "SmallBlockArmorCorner2Base", "SmallBlockArmorCorner2Tip", "SmallBlockArmorInvCorner2Base", "SmallBlockArmorInvCorner2Tip", "SmallHeavyBlockArmorSlope2Base", "SmallHeavyBlockArmorSlope2Tip", "SmallHeavyBlockArmorCorner2Base", "SmallHeavyBlockArmorCorner2Tip", "SmallHeavyBlockArmorInvCorner2Base", "SmallHeavyBlockArmorInvCorner2Tip", "ControlPanel", "SmallProgrammableBlock", "SmallControlPanel", "LargeGatlingTurret", "SmallGatlingTurret", "LargeMissileTurret", "SmallMissileTurret", "LargeInteriorTurret", "Passage", "Door", "LargeBlockRadioAntenna", "LargeBlockBeacon", "SmallBlockBeacon", "LargeBlockFrontLight", "SmallLight", "SmallBlockSmallLight", "LargeBlockLight_1corner", "LargeBlockLight_2corner", "SmallBlockLight_1corner", "SmallBlockLight_2corner", "LargeWindowSquare", "LargeWindowEdge", "LargeStairs", "LargeRamp", "LargeSteelCatwalk", "LargeSteelCatwalk2Sides", "LargeSteelCatwalkPlate", "LargeCoverWall", "LargeCoverWallHalf", "LargeWarhead", "SmallWarhead", "LargeDecoy", "SmallDecoy", "LargeBlockInteriorWall", "LargeInteriorPillar", "LargeBlockLandingGear", "LargeProjector", "SmallProjector", "LargeRefinery", "Blast Furnace", "BlastFurnace", "OxygenGenerator", "LargeAssembler", "LargeOreDetector", "LargeMedicalRoom", "GravityGenerator", "GravityGeneratorSphere", "LargeJumpDrive", "LargeBlockCockpit", "LargeBlockCockpitSeat", "SmallBlockCockpit", "DBSmallBlockFighterCockpit", "CockpitOpen", "PassengerSeatLarge", "PassengerSeatSmall", "LargeBlockCryoChamber", "SmallBlockLandingGear", "SmallBlockFrontLight", "SmallMissileLauncher", "LargeMissileLauncher", "MediumMissileLauncher", "SmallRocketLauncherReload", "SmallGatlingGun", "SmallBlockDrill", "LargeBlockDrill", "SmallBlockOreDetector", "SmallBlockSensor", "LargeBlockSensor", "SmallBlockSoundBlock", "LargeBlockSoundBlock", "SmallTextPanel", "SmallLCDPanelWide", "SmallLCDPanel", "LargeBlockCorner_LCD_1", "LargeBlockCorner_LCD_2", "LargeBlockCorner_LCD_Flat_1", "LargeBlockCorner_LCD_Flat_2", "SmallBlockCorner_LCD_1", "SmallBlockCorner_LCD_2", "SmallBlockCorner_LCD_Flat_1", "SmallBlockCorner_LCD_Flat_2", "OxygenTankSmall", "OxygenGeneratorSmall", "LargeTextPanel", "LargeLCDPanel", "LargeLCDPanelWide", "SmallBlockRadioAntenna", "LargeBlockRemoteControl", "SmallBlockRemoteControl", "AirVent", "SmallAirVent", "OxygenTank", "LargeHydrogenTank", "SmallHydrogenTank", "LargeProductivityModule", "LargeEffectivenessModule", "LargeEnergyModule", "SmallBlockSmallContainer", "SmallBlockMediumContainer", "SmallBlockLargeContainer", "LargeBlockSmallContainer", "LargeBlockLargeContainer", "SmallBlockSmallThrust", "SmallBlockLargeThrust", "LargeBlockSmallThrust", "LargeBlockLargeThrust", "LargeBlockLargeHydrogenThrust", "LargeBlockSmallHydrogenThrust", "SmallBlockLargeHydrogenThrust", "SmallBlockSmallHydrogenThrust", "LargeBlockLargeAtmosphericThrust", "LargeBlockSmallAtmosphericThrust", "SmallBlockLargeAtmosphericThrust", "SmallBlockSmallAtmosphericThrust", "SmallCameraBlock", "LargeCameraBlock", "LargeBlockGyro", "SmallBlockGyro", "SmallBlockSmallGenerator", "SmallBlockLargeGenerator", "LargeBlockSmallGenerator", "LargeBlockLargeGenerator", "LargePistonBase", "LargePistonTop", "SmallPistonBase", "SmallPistonTop", "LargeStator", "Suspension3x3", "Suspension5x5", "Suspension1x1", "SmallSuspension3x3", "SmallSuspension5x5", "SmallSuspension1x1", "LargeRotor", "SmallStator", "SmallRotor", "LargeAdvancedStator", "LargeAdvancedRotor", "SmallAdvancedStator", "SmallAdvancedRotor", "ButtonPanelLarge", "ButtonPanelSmall", "TimerBlockLarge", "TimerBlockSmall", "LargeRailStraight", "LargeBlockSolarPanel", "SmallBlockSolarPanel", "LargeBlockOxygenFarm", "Oxygen", "Window1x2Slope", "Window1x2Inv", "Window1x2Face", "Window1x2SideLeft", "Window1x2SideRight", "Window1x1Slope", "Window1x1Face", "Window1x1Side", "Window1x1Inv", "Window1x2Flat", "Window1x2FlatInv", "Window1x1Flat", "Window1x1FlatInv", "Window3x3Flat", "Window3x3FlatInv", "Window2x3Flat", "Window2x3FlatInv", "SmallBlockConveyor", "LargeBlockConveyor", "Collector", "CollectorSmall", "Connector", "ConnectorSmall", "ConnectorMedium", "ConveyorTube", "ConveyorTubeSmall", "ConveyorTubeMedium", "ConveyorFrameMedium", "ConveyorTubeCurved", "ConveyorTubeSmallCurved", "ConveyorTubeCurvedMedium", "SmallShipConveyorHub", "LargeBlockConveyorSorter", "MediumBlockConveyorSorter", "SmallBlockConveyorSorter", "VirtualMassLarge", "VirtualMassSmall", "SpaceBallLarge", "SpaceBallSmall", "SmallRealWheel1x1", "SmallRealWheel", "SmallRealWheel5x5", "RealWheel1x1", "RealWheel", "RealWheel5x5", "Wheel1x1", "SmallWheel1x1", "Wheel3x3", "SmallWheel3x3", "Wheel5x5", "SmallWheel5x5", "LargeShipGrinder", "SmallShipGrinder", "LargeShipWelder", "SmallShipWelder", "LargeShipMergeBlock", "SmallShipMergeBlock", "ArmorAlpha", "ArmorCenter", "LargeProgrammableBlock", "ArmorCorner", "ArmorInvCorner", "ArmorSide", "SmallArmorCenter", "SmallArmorCorner", "SmallArmorInvCorner", "SmallArmorSide", "LargeBlockLaserAntenna", "SmallBlockLaserAntenna", "AirtightHangarDoor", "LargeBlockSlideDoor", "DebugSphereLarge"}
 #End Region
 
@@ -221,202 +220,150 @@ Public Class Main
     End Function
 #End Region
 
-#Region "------------=================== Functions to Calculate Component Counts ===================------------ |FINISHED|"
-    'Beta Version for new Dictionary Search
-    Function CalculateResourcesSteelPlates(inputblock As String, inputcount As Integer)
-        Dim SteelPlate As Integer = 0
+#Region "------------=================== Functions to Calculate Component Counts ===================------------ |Updating|"
+    Public Function CalculateComponents(inputblock As String, inputcount As Integer, flag As Boolean, search As String)
+        Dim count As Integer = 0
 
-        'Debug
         Try
-            For Each component In BlockDefinitionDictonary(inputblock).Components()
-                If component.Subtype.ToString().Contains("SteelPlate") Then
-                    SteelPlate = (component.Count * inputcount)
-                End If
-            Next
+            If flag = True Then 'Vanilla Blocks
+                Select Case search
+                    Case "SteelPlate"
+                        For Each component In BlockDefinitionDictonary(inputblock).Components()
+                            If component.Subtype.ToString().Contains("SteelPlate") Then
+                                count = (component.Count * inputcount)
+                            End If
+                        Next
+                    Case "InteriorPlate"
+                        For Each component In BlockDefinitionDictonary(inputblock).Components()
+                            If component.Subtype.ToString().Contains("InteriorPlate") Then
+                                count = (component.Count * inputcount)
+                            End If
+                        Next
+                    Case "SmallTube"
+                        For Each component In BlockDefinitionDictonary(inputblock).Components()
+                            If component.Subtype.ToString().Contains("SmallTube") Then
+                                count = (component.Count * inputcount)
+                            End If
+                        Next
+                    Case "LargeTube"
+                        For Each component In BlockDefinitionDictonary(inputblock).Components()
+                            If component.Subtype.ToString().Contains("LargeTube") Then
+                                count = (component.Count * inputcount)
+                            End If
+                        Next
+                    Case "Computer"
+                        For Each component In BlockDefinitionDictonary(inputblock).Components()
+                            If component.Subtype.ToString().Contains("Computer") Then
+                                count = (component.Count * inputcount)
+                            End If
+                        Next
+                    Case "Construction"
+                        For Each component In BlockDefinitionDictonary(inputblock).Components()
+                            If component.Subtype.ToString().Contains("Construction") Then
+                                count = (component.Count * inputcount)
+                            End If
+                        Next
+                    Case "Detector"
+                        For Each component In BlockDefinitionDictonary(inputblock).Components()
+                            If component.Subtype.ToString().Contains("Detector") Then
+                                count = (component.Count * inputcount)
+                            End If
+                        Next
+                    Case "GravityGenerator"
+                        For Each component In BlockDefinitionDictonary(inputblock).Components()
+                            If component.Subtype.ToString().Contains("GravityGenerator") Then
+                                count = (component.Count * inputcount)
+                            End If
+                        Next
+                    Case "Medical"
+                        For Each component In BlockDefinitionDictonary(inputblock).Components()
+                            If component.Subtype.ToString().Contains("Medical") Then
+                                count = (component.Count * inputcount)
+                            End If
+                        Next
+                    Case "MetalGrid"
+                        For Each component In BlockDefinitionDictonary(inputblock).Components()
+                            If component.Subtype.ToString().Contains("MetalGrid") Then
+                                count = (component.Count * inputcount)
+                            End If
+                        Next
+                    Case "RadioCommunication"
+                        For Each component In BlockDefinitionDictonary(inputblock).Components()
+                            If component.Subtype.ToString().Contains("RadioCommunication") Then
+                                count = (component.Count * inputcount)
+                            End If
+                        Next
+                    Case "Reactor"
+                        For Each component In BlockDefinitionDictonary(inputblock).Components()
+                            If component.Subtype.ToString().Contains("Reactor") Then
+                                count = (component.Count * inputcount)
+                            End If
+                        Next
+                    Case "Thrust"
+                        For Each component In BlockDefinitionDictonary(inputblock).Components()
+                            If component.Subtype.ToString().Contains("Thrust") Then
+                                count = (component.Count * inputcount)
+                            End If
+                        Next
+                    Case "Canvas"
+                        For Each component In BlockDefinitionDictonary(inputblock).Components()
+                            If component.Subtype.ToString().Contains("Canvas") Then
+                                count = (component.Count * inputcount)
+                            End If
+                        Next
+                    Case "Display"
+                        For Each component In BlockDefinitionDictonary(inputblock).Components()
+                            If component.Subtype.ToString().Contains("Display") Then
+                                count = (component.Count * inputcount)
+                            End If
+                        Next
+                    Case "Girder"
+                        For Each component In BlockDefinitionDictonary(inputblock).Components()
+                            If component.Subtype.ToString().Contains("Girder") Then
+                                count = (component.Count * inputcount)
+                            End If
+                        Next
+                    Case "Motor"
+                        For Each component In BlockDefinitionDictonary(inputblock).Components()
+                            If component.Subtype.ToString().Contains("Motor") Then
+                                count = (component.Count * inputcount)
+                            End If
+                        Next
+                    Case "PowerCell"
+                        For Each component In BlockDefinitionDictonary(inputblock).Components()
+                            If component.Subtype.ToString().Contains("PowerCell") Then
+                                count = (component.Count * inputcount)
+                            End If
+                        Next
+                    Case "SolarCell"
+                        For Each component In BlockDefinitionDictonary(inputblock).Components()
+                            If component.Subtype.ToString().Contains("SolarCell") Then
+                                count = (component.Count * inputcount)
+                            End If
+                        Next
+                    Case "Superconductor"
+                        For Each component In BlockDefinitionDictonary(inputblock).Components()
+                            If component.Subtype.ToString().Contains("Superconductor") Then
+                                count = (component.Count * inputcount)
+                            End If
+                        Next
+                    Case "BulletproofGlass"
+                        For Each component In BlockDefinitionDictonary(inputblock).Components()
+                            If component.Subtype.ToString().Contains("BulletproofGlass") Then
+                                count = (component.Count * inputcount)
+                            End If
+                        Next
+                End Select
+            ElseIf flag = False Then 'Modded Blocks
+
+            End If
         Catch ex As Exception
-            MessageBox.Show(inputblock.ToString())
+            'Debug stack trace
+            MessageBox.Show("Error Occurred - Stack Trace" + vbNewLine + "Block Name: " + inputblock.ToString() + vbNewLine + ex.ToString())
         End Try
-        Return SteelPlate
-    End Function
-    Function CalculateResourcesInteriorPlates(inputblock As String, inputcount As Integer)
-        Dim InteriorPlate As Integer = 0
-        For Each component In BlockDefinitionDictonary(inputblock).Components()
-            If component.Subtype.ToString().Contains("InteriorPlate") Then
-                InteriorPlate = (component.Count * inputcount)
-            End If
-        Next
-        Return InteriorPlate
-    End Function
-    Function CalculateResourcesMetalGrids(inputblock As String, inputcount As Integer)
-        Dim MetalGrid As Integer = 0
-        For Each component In BlockDefinitionDictonary(inputblock).Components()
-            If component.Subtype.ToString().Contains("MetalGrid") Then
-                MetalGrid = (component.Count * inputcount)
-            End If
-        Next
-        Return MetalGrid
-    End Function
-    Function CalculateResourcesSmallSteelTubes(inputblock As String, inputcount As Integer)
-        Dim SmallTube As Integer = 0
-        For Each component In BlockDefinitionDictonary(inputblock).Components()
-            If component.Subtype.ToString().Contains("SmallTube") Then
-                SmallTube = (component.Count * inputcount)
-            End If
-        Next
-        Return SmallTube
-    End Function
-    Function CalculateResourcesLargeSteelTubes(inputblock As String, inputcount As Integer)
-        Dim LargeTube As Integer = 0
-        For Each component In BlockDefinitionDictonary(inputblock).Components()
-            If component.Subtype.ToString().Contains("LargeTube") Then
-                LargeTube = (component.Count * inputcount)
-            End If
-        Next
-        Return LargeTube
-    End Function
-    Function CalculateResourcesComputers(inputblock As String, inputcount As Integer)
-        Dim Computer As Integer = 0
-        For Each component In BlockDefinitionDictonary(inputblock).Components()
-            If component.Subtype.ToString().Contains("Computer") Then
-                Computer = (component.Count * inputcount)
-            End If
-        Next
-        Return Computer
-    End Function
-    Function CalculateResourcesConstructionComponents(inputblock As String, inputcount As Integer)
-        Dim Construction As Integer = 0
-        For Each component In BlockDefinitionDictonary(inputblock).Components()
-            If component.Subtype.ToString().Contains("Construction") Then
-                Construction = (component.Count * inputcount)
-            End If
-        Next
-        Return Construction
-    End Function
-    Function CalculateResourcesDetectorComponents(inputblock As String, inputcount As Integer)
-        Dim Detector As Integer = 0
-        For Each component In BlockDefinitionDictonary(inputblock).Components()
-            If component.Subtype.ToString().Contains("Detector") Then
-                Detector = (component.Count * inputcount)
-            End If
-        Next
-        Return Detector
-    End Function
-    Function CalculateResourcesGravityComponents(inputblock As String, inputcount As Integer)
-        Dim GravityGenerator As Integer = 0
-        For Each component In BlockDefinitionDictonary(inputblock).Components()
-            If component.Subtype.ToString().Contains("GravityGenerator") Then
-                GravityGenerator = (component.Count * inputcount)
-            End If
-        Next
-        Return GravityGenerator
-    End Function
-    Function CalculateResourcesMedicalComponents(inputblock As String, inputcount As Integer)
-        Dim Medical As Integer = 0
-        For Each component In BlockDefinitionDictonary(inputblock).Components()
-            If component.Subtype.ToString().Contains("Medical") Then
-                Medical = (component.Count * inputcount)
-            End If
-        Next
-        Return Medical
-    End Function
-    Function CalculateResourcesRadioComponents(inputblock As String, inputcount As Integer)
-        Dim RadioCommunication As Integer = 0
-        For Each component In BlockDefinitionDictonary(inputblock).Components()
-            If component.Subtype.ToString().Contains("RadioCommunication") Then
-                RadioCommunication = (component.Count * inputcount)
-            End If
-        Next
-        Return RadioCommunication
-    End Function
-    Function CalculateResourcesReactorComponents(inputblock As String, inputcount As Integer)
-        Dim Reactor As Integer = 0
-        For Each component In BlockDefinitionDictonary(inputblock).Components()
-            If component.Subtype.ToString().Contains("Reactor") Then
-                Reactor = (component.Count * inputcount)
-            End If
-        Next
-        Return Reactor
-    End Function
-    Function CalculateResourcesThrusterComponents(inputblock As String, inputcount As Integer)
-        Dim Thrust As Integer = 0
-        For Each component In BlockDefinitionDictonary(inputblock).Components()
-            If component.Subtype.ToString().Contains("Thrust") Then
-                Thrust = (component.Count * inputcount)
-            End If
-        Next
-        Return Thrust
-    End Function
-    Function CalculateResourcesCanvas(inputblock As String, inputcount As Integer)
-        Dim Canvas As Integer = 0
-        For Each component In BlockDefinitionDictonary(inputblock).Components()
-            If component.Subtype.ToString().Contains("Canvas") Then
-                Canvas = (component.Count * inputcount)
-            End If
-        Next
-        Return Canvas
-    End Function
-    Function CalculateResourcesDisplays(inputblock As String, inputcount As Integer)
-        Dim Display As Integer = 0
-        For Each component In BlockDefinitionDictonary(inputblock).Components()
-            If component.Subtype.ToString().Contains("Display") Then
-                Display = (component.Count * inputcount)
-            End If
-        Next
-        Return Display
-    End Function
-    Function CalculateResourcesGirders(inputblock As String, inputcount As Integer)
-        Dim Girder As Integer = 0
-        For Each component In BlockDefinitionDictonary(inputblock).Components()
-            If component.Subtype.ToString().Contains("Girder") Then
-                Girder = (component.Count * inputcount)
-            End If
-        Next
-        Return Girder
-    End Function
-    Function CalculateResourcesMotors(inputblock As String, inputcount As Integer)
-        Dim Motor As Integer = 0
-        For Each component In BlockDefinitionDictonary(inputblock).Components()
-            If component.Subtype.ToString().Contains("Motor") Then
-                Motor = (component.Count * inputcount)
-            End If
-        Next
-        Return Motor
-    End Function
-    Function CalculateResourcesPowerCells(inputblock As String, inputcount As Integer)
-        Dim PowerCell As Integer = 0
-        For Each component In BlockDefinitionDictonary(inputblock).Components()
-            If component.Subtype.ToString().Contains("PowerCell") Then
-                PowerCell = (component.Count * inputcount)
-            End If
-        Next
-        Return PowerCell
-    End Function
-    Function CalculateResourcesSolarCells(inputblock As String, inputcount As Integer)
-        Dim SolarCell As Integer = 0
-        For Each component In BlockDefinitionDictonary(inputblock).Components()
-            If component.Subtype.ToString().Contains("SolarCell") Then
-                SolarCell = (component.Count * inputcount)
-            End If
-        Next
-        Return SolarCell
-    End Function
-    Function CalculateResourcesSuperConducters(inputblock As String, inputcount As Integer)
-        Dim Superconductor As Integer = 0
-        For Each component In BlockDefinitionDictonary(inputblock).Components()
-            If component.Subtype.ToString().Contains("Superconductor") Then
-                Superconductor = (component.Count * inputcount)
-            End If
-        Next
-        Return Superconductor
-    End Function
-    Function CalculateResourcesBulletproofGlass(inputblock As String, inputcount As Integer)
-        Dim BulletproofGlass As Integer = 0
-        For Each component In BlockDefinitionDictonary(inputblock).Components()
-            If component.Subtype.ToString().Contains("BulletproofGlass") Then
-                BulletproofGlass = (component.Count * inputcount)
-            End If
-        Next
-        Return BulletproofGlass
+
+        'Return the counted component
+        Return count
     End Function
 #End Region
 
@@ -494,17 +441,6 @@ Public Class Main
         Next
         FlowLayoutPanel1.Controls.Clear() 'Reset the procedural controls collection
 
-        'Clear list of modded blocks
-        Try
-            For Each Block In ListOfModBlocks
-                ListOfModBlocks.Remove(Block)
-            Next Block
-
-            ListOfModBlocks.Clear() 'Reset list of modded blocks
-        Catch ex As Exception
-            ex = Nothing
-        End Try
-
         'Reset Form Title
         Me.Text = "Space Engineers Blueprint Manager"
 
@@ -522,14 +458,7 @@ Public Class Main
             Dim folder_complete As String = folder.ToString() + "\Data"
 
             For Each file In Directory.GetFiles(folder_complete, "CubeBlocks.sbc") 'For each zipfilename in the given directory extract them to the given folder
-                'MessageBox.Show(file.ToString())
-                Dim originxml As String = System.IO.File.ReadAllText(file)
-                Dim moddedxml As String = Cleaner.CleanXML(originxml)
-
-                'MessageBox.Show(moddedxml.ToString())
-
-                ModdedCubeblockDefinitions.Add(id, moddedxml)
-
+                Dim moddedxml As String = Cleaner.CleanXML(System.IO.File.ReadAllText(file))
                 Dim DefinitionData As New Definitions()
                 Dim xmlSerializer As XmlSerializer = New XmlSerializer(GetType(Definitions))
 
@@ -584,15 +513,22 @@ Public Class Main
         Dim ownername As String = models.print._id.subtype 'returns the name of the blueprint
 
         'Load the information about the blueprint (ownername, grid name, grid type) into the title of the form
-        If ownername.ToString = "" Then
-            ownername = "Blueprint Name Not Found"
-        End If
-        If display.ToString = "" Then
-            display = "Username Not Found"
-        End If
-        Me.Text = ownername.ToString + " | " + gridsizeenum.ToString + " Grid | " + display.ToString
+        Dim OwnerVariable As String
+        Dim DisplayVariable As String
+        Try
+            OwnerVariable = ownername.ToString
+        Catch ex As Exception
+            OwnerVariable = "Blueprint Name Not Found"
+        End Try
+        Try
+            DisplayVariable = display.ToString()
+        Catch ex As Exception
+            DisplayVariable = "Username Not Found"
+        End Try
+        Me.Text = OwnerVariable.ToString + " | " + gridsizeenum.ToString + " Grid | " + DisplayVariable.ToString
 
         'Procedural Control Generation
+        _model = New Model()
         _model.Load(FILENAME)
         NUMBER_OF_PANELS = _model.print.cubes.cubeBlocks.Count
         CalulateControlSizes(NUMBER_OF_PANELS) 'Run the calculate control sizes function to properly size the control surfaces
@@ -613,13 +549,13 @@ Public Class Main
             'simplified query to save code
             Dim blockname As String = newPanel.SubtypeName
             Dim newPicture As New PictureBox()
-            newPicture.Height = 80
-            newPicture.Width = 80
+            newPicture.Height = 120
+            newPicture.Width = 120
             newPicture.Top = PICTURE_BOX_TOP
             newPicture.Left = PICTURE_BOX_LEFT
             newPicture.BackgroundImageLayout = ImageLayout.Stretch
 
-            'Workaround for blocks with no subtype names
+            'Workaround for blocks with no/wrong subtype names
             Dim avar2 = newPanel.username
             If avar2 = "MyObjectBuilder_OxygenGenerator" And newPanel.SubtypeName = "" Then
                 newPanel.SubtypeName = "OxygenGenerator"
@@ -702,66 +638,76 @@ Public Class Main
             Dim newLabel As New Label
             newLabel.Height = LABEL_HEIGHT
             newLabel.Width = LABEL_WIDTH
-            'newLabel.Top = LABEL_TOP
-            'newLabel.Left = LABEL_LEFT
             newLabel.BackColor = Color.Transparent
             newLabel.ForeColor = Color.Orange
             newLabel.Font = New Font("Segoe UI", 8, FontStyle.Regular)
-
             'If block is not vanilla then give it its default block name
             If Not ListOfVanillaBlocks.Contains(newPanel.SubtypeName) Then
                 newLabel.Text = newPanel.SubtypeName & "(" & newPanel.count & ")"
             ElseIf newPanel.SubtypeName = "" Then
                 newPanel.SubtypeName = newPanel.username
             End If
-
             'Temporary Block Naming Function
-            newLabel.Text = newPanel.SubtypeName & "(" & newPanel.count & ")"
-
+            newLabel.Text = newPanel.SubtypeName & " | Count: (" & newPanel.count & ")"
             'Append the label of the block name and its count to the image generated before
             newPicture.Controls.Add(newLabel)
 
             'Calculate the ammount of components needed per set of blocks |>>FINISHED<<|
             For Each block In ListOfVanillaBlocks
                 If newPanel.SubtypeName = block Then
-                    SteelPlateCount += CalculateResourcesSteelPlates(newPanel.SubtypeName, newPanel.count) 'Steel Plates
-                    InteriorPlateCount += CalculateResourcesInteriorPlates(newPanel.SubtypeName, newPanel.count)
-                    Computer += CalculateResourcesComputers(newPanel.SubtypeName, newPanel.count)
-                    Superconducter += CalculateResourcesSuperConducters(newPanel.SubtypeName, newPanel.count)
-                    Canvas += CalculateResourcesCanvas(newPanel.SubtypeName, newPanel.count)
-                    Girder += CalculateResourcesGirders(newPanel.SubtypeName, newPanel.count)
-                    BulletproofGlass += CalculateResourcesBulletproofGlass(newPanel.SubtypeName, newPanel.count)
-                    ConstructionComponent += CalculateResourcesConstructionComponents(newPanel.SubtypeName, newPanel.count)
-                    DetectorComponent += CalculateResourcesDetectorComponents(newPanel.SubtypeName, newPanel.count)
-                    Displays += CalculateResourcesDisplays(newPanel.SubtypeName, newPanel.count)
-                    Explosives += 0
-                    GravityGeneratorComponents += CalculateResourcesGravityComponents(newPanel.SubtypeName, newPanel.count)
-                    LargeSteelTube += CalculateResourcesLargeSteelTubes(newPanel.SubtypeName, newPanel.count)
-                    SmallSteelTube += CalculateResourcesSmallSteelTubes(newPanel.SubtypeName, newPanel.count)
-                    MedicalComponents += CalculateResourcesMedicalComponents(newPanel.SubtypeName, newPanel.count)
-                    MetalGrid += CalculateResourcesMetalGrids(newPanel.SubtypeName, newPanel.count)
-                    TwoHundredMMMissileContainer += 0
-                    Motor += CalculateResourcesMotors(newPanel.SubtypeName, newPanel.count)
-                    NATOAmmoContainer += 0
-                    NATOAmmoMagazine += 0
-                    PowerCell += CalculateResourcesPowerCells(newPanel.SubtypeName, newPanel.count)
-                    RadioCommunicationComponents += CalculateResourcesRadioComponents(newPanel.SubtypeName, newPanel.count)
-                    ReactorComponents += CalculateResourcesReactorComponents(newPanel.SubtypeName, newPanel.count)
-                    SolarCell += CalculateResourcesSolarCells(newPanel.SubtypeName, newPanel.count)
-                    ThrusterComponents += CalculateResourcesThrusterComponents(newPanel.SubtypeName, newPanel.count)
+                    SteelPlateCount += CalculateComponents(newPanel.SubtypeName, newPanel.count, True, "SteelPlate")
+                    InteriorPlateCount += CalculateComponents(newPanel.SubtypeName, newPanel.count, True, "InteriorPlate")
+                    Computer += CalculateComponents(newPanel.SubtypeName, newPanel.count, True, "Computer")
+                    Superconducter += CalculateComponents(newPanel.SubtypeName, newPanel.count, True, "Superconductor")
+                    Canvas += CalculateComponents(newPanel.SubtypeName, newPanel.count, True, "Canvas")
+                    Girder += CalculateComponents(newPanel.SubtypeName, newPanel.count, True, "Girder")
+                    BulletproofGlass += CalculateComponents(newPanel.SubtypeName, newPanel.count, True, "BulletproofGlass")
+                    ConstructionComponent += CalculateComponents(newPanel.SubtypeName, newPanel.count, True, "Construction")
+                    DetectorComponent += CalculateComponents(newPanel.SubtypeName, newPanel.count, True, "Detector")
+                    Displays += CalculateComponents(newPanel.SubtypeName, newPanel.count, True, "Display")
+                    MetalGrid += CalculateComponents(newPanel.SubtypeName, newPanel.count, True, "MetalGrid")
+                    SmallSteelTube += CalculateComponents(newPanel.SubtypeName, newPanel.count, True, "SmallTube")
+                    GravityGeneratorComponents += CalculateComponents(newPanel.SubtypeName, newPanel.count, True, "GravityGenerator")
+                    LargeSteelTube += CalculateComponents(newPanel.SubtypeName, newPanel.count, True, "LargeTube")
+                    MedicalComponents += CalculateComponents(newPanel.SubtypeName, newPanel.count, True, "Medical")
+                    Motor += CalculateComponents(newPanel.SubtypeName, newPanel.count, True, "Motor")
+                    PowerCell += CalculateComponents(newPanel.SubtypeName, newPanel.count, True, "PowerCell")
+                    RadioCommunicationComponents += CalculateComponents(newPanel.SubtypeName, newPanel.count, True, "RadioCommunication")
+                    ReactorComponents += CalculateComponents(newPanel.SubtypeName, newPanel.count, True, "Reactor")
+                    SolarCell += CalculateComponents(newPanel.SubtypeName, newPanel.count, True, "SolarCell")
+                    ThrusterComponents += CalculateComponents(newPanel.SubtypeName, newPanel.count, True, "Thrust")
                 End If
             Next
 
             'Calculate components for modded blocks
             For Each block In ModBlockDefinitionDictionary
                 If block.Key.ToString() = newPanel.SubtypeName.ToString() Then
-
+                    SteelPlateCount += CalculateComponents(newPanel.SubtypeName, newPanel.count, False, "SteelPlate")
+                    InteriorPlateCount += CalculateComponents(newPanel.SubtypeName, newPanel.count, False, "InteriorPlate")
+                    Computer += CalculateComponents(newPanel.SubtypeName, newPanel.count, False, "Computer")
+                    Superconducter += CalculateComponents(newPanel.SubtypeName, newPanel.count, False, "Superconductor")
+                    Canvas += CalculateComponents(newPanel.SubtypeName, newPanel.count, False, "Canvas")
+                    Girder += CalculateComponents(newPanel.SubtypeName, newPanel.count, False, "Girder")
+                    BulletproofGlass += CalculateComponents(newPanel.SubtypeName, newPanel.count, False, "BulletproofGlass")
+                    ConstructionComponent += CalculateComponents(newPanel.SubtypeName, newPanel.count, False, "Construction")
+                    DetectorComponent += CalculateComponents(newPanel.SubtypeName, newPanel.count, False, "Detector")
+                    Displays += CalculateComponents(newPanel.SubtypeName, newPanel.count, False, "Display")
+                    MetalGrid += CalculateComponents(newPanel.SubtypeName, newPanel.count, False, "MetalGrid")
+                    SmallSteelTube += CalculateComponents(newPanel.SubtypeName, newPanel.count, False, "SmallTube")
+                    GravityGeneratorComponents += CalculateComponents(newPanel.SubtypeName, newPanel.count, False, "GravityGenerator")
+                    LargeSteelTube += CalculateComponents(newPanel.SubtypeName, newPanel.count, False, "LargeTube")
+                    MedicalComponents += CalculateComponents(newPanel.SubtypeName, newPanel.count, False, "Medical")
+                    Motor += CalculateComponents(newPanel.SubtypeName, newPanel.count, False, "Motor")
+                    PowerCell += CalculateComponents(newPanel.SubtypeName, newPanel.count, False, "PowerCell")
+                    RadioCommunicationComponents += CalculateComponents(newPanel.SubtypeName, newPanel.count, False, "RadioCommunication")
+                    ReactorComponents += CalculateComponents(newPanel.SubtypeName, newPanel.count, False, "Reactor")
+                    SolarCell += CalculateComponents(newPanel.SubtypeName, newPanel.count, False, "SolarCell")
+                    ThrusterComponents += CalculateComponents(newPanel.SubtypeName, newPanel.count, False, "Thrust")
                 End If
             Next
 
             'add count of current block to total block count
             TotalBlockCount += newPanel.count
-
             'Add items to the list box for information output
             ListBox1.Items.Add(newPanel.SubtypeName & " | BlockCount: " & " (" & newPanel.count.ToString & ")")
         Next panelNumber
