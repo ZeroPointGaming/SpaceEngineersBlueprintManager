@@ -193,6 +193,7 @@ Partial Class Configurator
         Me.TextBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TextBox5.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.TextBox5.Location = New System.Drawing.Point(52, 224)
+        Me.TextBox5.MaxLength = 5
         Me.TextBox5.Name = "TextBox5"
         Me.TextBox5.Size = New System.Drawing.Size(196, 20)
         Me.TextBox5.TabIndex = 12
@@ -203,6 +204,7 @@ Partial Class Configurator
         Me.TextBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TextBox6.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.TextBox6.Location = New System.Drawing.Point(346, 224)
+        Me.TextBox6.MaxLength = 5
         Me.TextBox6.Name = "TextBox6"
         Me.TextBox6.Size = New System.Drawing.Size(199, 20)
         Me.TextBox6.TabIndex = 13

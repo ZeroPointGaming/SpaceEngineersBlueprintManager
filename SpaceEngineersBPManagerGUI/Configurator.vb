@@ -30,18 +30,51 @@
 
     'Save Settings Button
     Private Sub SaveSettingsBtn_Click(sender As Object, e As EventArgs) Handles SaveSettingsBtn.Click
-        My.Settings.SpaceEngineersDirectory = TextBox1.Text
-        My.Settings.SpaceEngineersBPDirectory = TextBox2.Text
-        My.Settings.SpaceEngineersModsDirectory = TextBox3.Text
-        My.Settings.SpaceEngineersWorkingDirectory = TextBox4.Text
-        My.Settings.ThemeBackColor = BackColorBtn.BackColor
-        My.Settings.ThemeForeColor = BackColorBtn.ForeColor
-
-        My.Settings.BlockImgWidth = TextBox5.Text
-        My.Settings.BlockImgHeight = TextBox6.Text
-
-
-        My.Settings.Save()
+        Try
+            My.Settings.SpaceEngineersDirectory = TextBox1.Text
+        Catch ex As Exception
+            MessageBox.Show("Error in Space Engineers Game Directory! Could not save changes. Try restarting the application in administrator mode.")
+        End Try
+        Try
+            My.Settings.SpaceEngineersBPDirectory = TextBox2.Text
+        Catch ex As Exception
+            MessageBox.Show("Error in space enginers blueprint Directory! Could not save changes. Try restarting the application in administrator mode.")
+        End Try
+        Try
+            My.Settings.SpaceEngineersWorkingDirectory = TextBox4.Text
+        Catch ex As Exception
+            MessageBox.Show("Error in application working directory! Could not save changes. Try restarting the application in administrator mode.")
+        End Try
+        Try
+            My.Settings.SpaceEngineersModsDirectory = TextBox3.Text
+        Catch ex As Exception
+            MessageBox.Show("Error in space engineers mod directory! Could not save changes. Try restarting the application in administrator mode.")
+        End Try
+        Try
+            My.Settings.ThemeBackColor = BackColorBtn.BackColor
+        Catch ex As Exception
+            MessageBox.Show("Error saving text color.")
+        End Try
+        Try
+            My.Settings.ThemeForeColor = BackColorBtn.ForeColor
+        Catch ex As Exception
+            MessageBox.Show("Error saving back color.")
+        End Try
+        Try
+            My.Settings.BlockImgWidth = TextBox5.Text
+        Catch ex As Exception
+            MessageBox.Show("Error saving block image width, make sure the value is a number between 1-999.")
+        End Try
+        Try
+            My.Settings.BlockImgHeight = TextBox6.Text
+        Catch ex As Exception
+            MessageBox.Show("Error saving block image height, make sure the value is a number between 1-999.")
+        End Try
+        Try
+            My.Settings.Save()
+        Catch ex As Exception
+            MessageBox.Show("There was an error saving the settings file, try running the application as administrator!")
+        End Try
 
         'Update Form Properties
         Me.BackColor = My.Settings.ThemeBackColor
