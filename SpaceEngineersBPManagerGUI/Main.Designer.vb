@@ -294,7 +294,8 @@ Partial Class Main
         Me.Margin = New System.Windows.Forms.Padding(2)
         Me.MinimumSize = New System.Drawing.Size(629, 503)
         Me.Name = "Main"
-        Me.Text = "Space Engineers Blueprint Manager"
+        Me.Text = "Space Engineers Blueprint Manager | Right click anywhere to get started."
+        Me.ToolTip1.SetToolTip(Me, "Right click anywhere to get started.")
         Me.FlatTabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
         Me.TabPage2.ResumeLayout(False)
