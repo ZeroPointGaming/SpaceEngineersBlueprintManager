@@ -714,8 +714,8 @@ Public Class Main
                 'simplified query to save code
                 Dim blockname As String = newPanel.SubtypeName
                 Dim newPicture As New PictureBox()
-                newPicture.Height = 120
-                newPicture.Width = 120
+                newPicture.Height = My.Settings.BlockImgHeight
+                newPicture.Width = My.Settings.BlockImgWidth
                 newPicture.Top = PICTURE_BOX_TOP
                 newPicture.Left = PICTURE_BOX_LEFT
                 newPicture.BackgroundImageLayout = ImageLayout.Stretch
