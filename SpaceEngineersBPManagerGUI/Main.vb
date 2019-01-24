@@ -690,8 +690,6 @@ Public Class Main
             End Try
             Me.Text = OwnerVariable.ToString + " | " + gridsizeenum.ToString + " Grid | " + DisplayVariable.ToString
 
-
-
             'Procedural Control Generation
             _model = New Model()
             _model.Load(FILENAME)
@@ -1098,8 +1096,6 @@ Public Class Main
         ListBox3.ForeColor = My.Settings.ThemeForeColor
         ListBox4.BackColor = My.Settings.ThemeBackColor
         ListBox4.ForeColor = My.Settings.ThemeForeColor
-        StatusStrip1.BackColor = My.Settings.ThemeBackColor
-        StatusStrip1.ForeColor = My.Settings.ThemeForeColor
         PictureBox1.BackColor = My.Settings.ThemeBackColor
 
         'Failsafe if user deletes working folders remake them
@@ -1157,8 +1153,6 @@ Public Class Main
         ListBox3.ForeColor = My.Settings.ThemeForeColor
         ListBox4.BackColor = My.Settings.ThemeBackColor
         ListBox4.ForeColor = My.Settings.ThemeForeColor
-        StatusStrip1.BackColor = My.Settings.ThemeBackColor
-        StatusStrip1.ForeColor = My.Settings.ThemeForeColor
         PictureBox1.BackColor = My.Settings.ThemeBackColor
     End Sub
 
@@ -1169,16 +1163,6 @@ Public Class Main
     Private Sub ResetToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ResetToolStripMenuItem.Click
         ResetControlSystems()
     End Sub
-    Private Sub OpemToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OpemToolStripMenuItem.Click
-        OpenFileFunction()
-    End Sub
-    Private Sub ResetToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles ResetToolStripMenuItem1.Click
-        ResetControlSystems()
-    End Sub
-    Private Sub SettingsStatusBarMenu_Click(sender As Object, e As EventArgs) Handles SettingsStatusBarMenu.Click
-        Me.Hide()
-        Configurator.Show()
-    End Sub
     Private Sub SettingsContextMenuItem_Click(sender As Object, e As EventArgs) Handles SettingsContextMenuItem.Click
         Me.Hide()
         Configurator.Show()
@@ -1186,14 +1170,8 @@ Public Class Main
     Private Sub UpdateContextMenuBtn_Click(sender As Object, e As EventArgs) Handles UpdateContextMenuBtn.Click
         CheckUpdates(Assembly.GetExecutingAssembly().GetName().Version.ToString())
     End Sub
-    Private Sub UpdateStatusBarBtn_Click(sender As Object, e As EventArgs) Handles UpdateStatusBarBtn.Click
-        CheckUpdates(Assembly.GetExecutingAssembly().GetName().Version.ToString())
-    End Sub
+
     Private Sub ModManagerContextMenuBtn_Click(sender As Object, e As EventArgs) Handles ModManagerContextMenuBtn.Click
-        Me.Hide()
-        LocalModManager.Show()
-    End Sub
-    Private Sub OpenModManagerStatusBarBtn_Click(sender As Object, e As EventArgs) Handles OpenModManagerStatusBarBtn.Click
         Me.Hide()
         LocalModManager.Show()
     End Sub
@@ -1201,15 +1179,7 @@ Public Class Main
         Me.Hide()
         LocalBlueprintManager.Show()
     End Sub
-    Private Sub OpenBPManagerStatusBarBtn_Click(sender As Object, e As EventArgs) Handles OpenBPManagerStatusBarBtn.Click
-        Me.Hide()
-        LocalBlueprintManager.Show()
-    End Sub
-
     Private Sub HelpContextMenuBtn_Click(sender As Object, e As EventArgs) Handles HelpContextMenuBtn.Click
-
-    End Sub
-    Private Sub HelpStatusBarBtn_Click(sender As Object, e As EventArgs) Handles HelpStatusBarBtn.Click
 
     End Sub
 End Class
