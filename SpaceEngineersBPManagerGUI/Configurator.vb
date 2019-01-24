@@ -15,15 +15,32 @@
         TextBox3.BackColor = My.Settings.ThemeBackColor
         TextBox4.ForeColor = My.Settings.ThemeForeColor
         TextBox4.BackColor = My.Settings.ThemeBackColor
+        TextBox5.ForeColor = My.Settings.ThemeForeColor
+        TextBox5.BackColor = My.Settings.ThemeBackColor
+        TextBox6.ForeColor = My.Settings.ThemeForeColor
+        TextBox6.BackColor = My.Settings.ThemeBackColor
 
         TextBox1.Text = My.Settings.SpaceEngineersDirectory
         TextBox2.Text = My.Settings.SpaceEngineersBPDirectory
         TextBox3.Text = My.Settings.SpaceEngineersModsDirectory
         TextBox4.Text = My.Settings.SpaceEngineersWorkingDirectory
+        TextBox5.Text = My.Settings.BlockImgWidth
+        TextBox6.Text = My.Settings.BlockImgHeight
     End Sub
 
     'Save Settings Button
     Private Sub SaveSettingsBtn_Click(sender As Object, e As EventArgs) Handles SaveSettingsBtn.Click
+        My.Settings.SpaceEngineersDirectory = TextBox1.Text
+        My.Settings.SpaceEngineersBPDirectory = TextBox2.Text
+        My.Settings.SpaceEngineersModsDirectory = TextBox3.Text
+        My.Settings.SpaceEngineersWorkingDirectory = TextBox4.Text
+        My.Settings.ThemeBackColor = BackColorBtn.BackColor
+        My.Settings.ThemeForeColor = BackColorBtn.ForeColor
+
+        My.Settings.BlockImgWidth = TextBox5.Text
+        My.Settings.BlockImgHeight = TextBox6.Text
+
+
         My.Settings.Save()
 
         'Update Form Properties
@@ -43,6 +60,10 @@
         TextBox3.BackColor = My.Settings.ThemeBackColor
         TextBox4.ForeColor = My.Settings.ThemeForeColor
         TextBox4.BackColor = My.Settings.ThemeBackColor
+        TextBox5.ForeColor = My.Settings.ThemeForeColor
+        TextBox5.BackColor = My.Settings.ThemeBackColor
+        TextBox6.ForeColor = My.Settings.ThemeForeColor
+        TextBox6.BackColor = My.Settings.ThemeBackColor
     End Sub
 
     'Fore Color
@@ -63,6 +84,10 @@
         TextBox3.BackColor = My.Settings.ThemeBackColor
         TextBox4.ForeColor = My.Settings.ThemeForeColor
         TextBox4.BackColor = My.Settings.ThemeBackColor
+        TextBox5.ForeColor = My.Settings.ThemeForeColor
+        TextBox5.BackColor = My.Settings.ThemeBackColor
+        TextBox6.ForeColor = My.Settings.ThemeForeColor
+        TextBox6.BackColor = My.Settings.ThemeBackColor
     End Sub
 
     'Back Color
@@ -83,6 +108,10 @@
         TextBox3.BackColor = My.Settings.ThemeBackColor
         TextBox4.ForeColor = My.Settings.ThemeForeColor
         TextBox4.BackColor = My.Settings.ThemeBackColor
+        TextBox5.ForeColor = My.Settings.ThemeForeColor
+        TextBox5.BackColor = My.Settings.ThemeBackColor
+        TextBox6.ForeColor = My.Settings.ThemeForeColor
+        TextBox6.BackColor = My.Settings.ThemeBackColor
     End Sub
 
     Private Sub Configurator_Closed(sender As Object, e As EventArgs) Handles Me.Closed
