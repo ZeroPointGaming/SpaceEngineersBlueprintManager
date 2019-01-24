@@ -137,6 +137,30 @@ Namespace My
                 Me("IdentifierAplha") = value
             End Set
         End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("100")>  _
+        Public Property BlockImgWidth() As Integer
+            Get
+                Return CType(Me("BlockImgWidth"),Integer)
+            End Get
+            Set
+                Me("BlockImgWidth") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("100")>  _
+        Public Property BlockImgHeight() As Integer
+            Get
+                Return CType(Me("BlockImgHeight"),Integer)
+            End Get
+            Set
+                Me("BlockImgHeight") = value
+            End Set
+        End Property
     End Class
 End Namespace
 

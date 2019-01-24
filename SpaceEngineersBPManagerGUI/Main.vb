@@ -18,6 +18,7 @@ Public Class Main
     Public fileloader As New OpenFileDialog 'Set the open dialog as an accessible variable
     Public Shared WorkingPath As String = Nothing
     Public _model As New Model 'Grant access to the model class through _model
+    Public status As Boolean = True
     Public subPanels As New List(Of CubeBlock) 'Set a new variable subpanels as a list of cube blocks through the cubeblock class
 
     'Component Delecrations
@@ -497,6 +498,9 @@ Public Class Main
 
 #Region "------------=================== Function To Reset Controls Systems ===================------------"
     Public Sub ResetControlSystems()
+        'Reset flag
+        status = True
+
         'Reset Working Path
         WorkingPath = Nothing
 
@@ -576,7 +580,7 @@ Public Class Main
     End Sub
 #End Region
 
-#Region "------------=================== Function to Load ALL modded block data into a list ===================------------"
+#Region "------------=================== Function to Load ALL modded block data into a Dictionary ===================------------"
     Public Sub LoadModDefinitions()
         Dim modpath As String = My.Settings.SpaceEngineersWorkingDirectory
         Dim id As Integer = 0
@@ -653,385 +657,398 @@ Public Class Main
             models.Load(FILENAME) 'Initiate the loading sequence to get the information from the XML file
         Catch ex As Exception
             MessageBox.Show("Error: No file selected!")
+            status = False
         End Try
 
-        'Grabbing information from XML file
-        Dim blockNames As List(Of String) = models.print.cubes.cubeBlocks.Select(Function(x) x.SubtypeName).ToList() 'List of blocks in the blueprint
-        Dim display As String = models.print.displayname 'Gets the owner of the blueprint
-        Dim gridsizeenum As String = models.print.cubes.enumerator 'Gets the gridsize of the blueprint
-        Dim ownername As String = models.print._id.subtype 'returns the name of the blueprint
+        If status = True Then
+            'Grabbing information from XML filet
+            Dim blockNames As List(Of String)
+            Dim display As String = ""
+            Dim gridsizeenum As String = ""
+            Dim ownername As String = ""
+            Try
+                blockNames = models.print.cubes.cubeBlocks.Select(Function(x) x.SubtypeName).ToList() 'List of blocks in the blueprint
+                display = models.print.displayname 'Gets the owner of the blueprint
+                gridsizeenum = models.print.cubes.enumerator 'Gets the gridsize of the blueprint
+                ownername = models.print._id.subtype 'returns the name of the blueprint
+            Catch ex As Exception
+                ex = Nothing
+            End Try
 
-        'Load the information about the blueprint (ownername, grid name, grid type) into the title of the form
-        Dim OwnerVariable As String
-        Dim DisplayVariable As String
-        Try
-            OwnerVariable = ownername.ToString
-        Catch ex As Exception
-            OwnerVariable = "Blueprint Name Not Found"
-        End Try
-        Try
-            DisplayVariable = display.ToString()
-        Catch ex As Exception
-            DisplayVariable = "Username Not Found"
-        End Try
-        Me.Text = OwnerVariable.ToString + " | " + gridsizeenum.ToString + " Grid | " + DisplayVariable.ToString
+            'Load the information about the blueprint (ownername, grid name, grid type) into the title of the form
+            Dim OwnerVariable As String = ""
+            Dim DisplayVariable As String = ""
+            Try
+                OwnerVariable = ownername.ToString
+            Catch ex As Exception
+                OwnerVariable = "Blueprint Name Not Found"
+            End Try
+            Try
+                DisplayVariable = display.ToString()
+            Catch ex As Exception
+                DisplayVariable = "Username Not Found"
+            End Try
+            Me.Text = OwnerVariable.ToString + " | " + gridsizeenum.ToString + " Grid | " + DisplayVariable.ToString
 
-        'Procedural Control Generation
-        _model = New Model()
-        _model.Load(FILENAME)
-        NUMBER_OF_PANELS = _model.print.cubes.cubeBlocks.Count
-        CalulateControlSizes(NUMBER_OF_PANELS) 'Run the calculate control sizes function to properly size the control surfaces
 
-        For panelNumber As Integer = 0 To (NUMBER_OF_PANELS - 1)
-            Dim row As Integer = Math.Floor(panelNumber / PANEL_COLUMNS)
-            Dim col As Integer = panelNumber Mod PANEL_COLUMNS
-            Dim newPanel As CubeBlock = _model.print.cubes.cubeBlocks(panelNumber)
 
-            newPanel.Top = row * (PANEL_HEIGHT + PANEL_HEIGHT_MARGIN)
-            newPanel.Left = col * (PANEL_WIDTH + PANEL_WIDTH_MARGIN)
-            newPanel.Width = PANEL_WIDTH
-            newPanel.Height = PANEL_HEIGHT
-            newPanel.BackColor = Color.FromArgb(24, 24, 24)
-            newPanel.ForeColor = Color.White
-            subPanels.Add(newPanel)
+            'Procedural Control Generation
+            _model = New Model()
+            _model.Load(FILENAME)
+            NUMBER_OF_PANELS = _model.print.cubes.cubeBlocks.Count
+            CalulateControlSizes(NUMBER_OF_PANELS) 'Run the calculate control sizes function to properly size the control surfaces
 
-            'simplified query to save code
-            Dim blockname As String = newPanel.SubtypeName
-            Dim newPicture As New PictureBox()
-            newPicture.Height = 120
-            newPicture.Width = 120
-            newPicture.Top = PICTURE_BOX_TOP
-            newPicture.Left = PICTURE_BOX_LEFT
-            newPicture.BackgroundImageLayout = ImageLayout.Stretch
+            For panelNumber As Integer = 0 To (NUMBER_OF_PANELS - 1)
+                Dim row As Integer = Math.Floor(panelNumber / PANEL_COLUMNS)
+                Dim col As Integer = panelNumber Mod PANEL_COLUMNS
+                Dim newPanel As CubeBlock = _model.print.cubes.cubeBlocks(panelNumber)
 
-            'Workaround for blocks with no/wrong subtype names
-            Dim avar2 = newPanel.username
-            If avar2 = "MyObjectBuilder_OxygenGenerator" And newPanel.SubtypeName = "" Then
-                newPanel.SubtypeName = "OxygenGenerator"
-                blockname = "OxygenGenerator"
-            End If
-            If avar2 = "MyObjectBuilder_OxygenTank" And newPanel.SubtypeName = "" Then
-                newPanel.SubtypeName = "OxygenTank"
-                blockname = "OxygenTank"
-            End If
-            If avar2 = "MyObjectBuilder_OxygenTank" And newPanel.SubtypeName = "LargeHydrogenTank" Then
-                newPanel.SubtypeName = "LargeHydrogenTank"
-                blockname = "LargeHydrogenTank"
-            End If
-            If newPanel.SubtypeName = "Blast Furnace" Then newPanel.SubtypeName = "BlastFurnace"
-            If avar2 = "MyObjectBuilder_LargeGatlingTurret" And newPanel.SubtypeName = "" Then
-                newPanel.SubtypeName = "LargeGatlingTurret"
-                blockname = newPanel.SubtypeName
-            End If
-            If avar2 = "MyObjectBuilder_LargeMissileTurret" And newPanel.SubtypeName = "" Then
-                newPanel.SubtypeName = "LargeMissileTurret"
-                blockname = newPanel.SubtypeName
-            End If
-            If avar2 = "MyObjectBuilder_SmallGatlingGun" And newPanel.SubtypeName = "" Then
-                newPanel.SubtypeName = "SmallGatlingGun"
-                blockname = newPanel.SubtypeName
-            End If
-            If avar2 = "MyObjectBuilder_SmallMissileLauncher" And newPanel.SubtypeName = "" Then
-                newPanel.SubtypeName = "SmallMissileLauncher"
-                blockname = newPanel.SubtypeName
-            End If
-            If newPanel.SubtypeName = "" Then newPanel.SubtypeName = newPanel.username 'Workaround for blank subtype names
+                newPanel.Top = row * (PANEL_HEIGHT + PANEL_HEIGHT_MARGIN)
+                newPanel.Left = col * (PANEL_WIDTH + PANEL_WIDTH_MARGIN)
+                newPanel.Width = PANEL_WIDTH
+                newPanel.Height = PANEL_HEIGHT
+                newPanel.BackColor = Color.FromArgb(24, 24, 24)
+                newPanel.ForeColor = Color.White
+                subPanels.Add(newPanel)
 
-            'Tool Tip Handling
-            Dim avar1 As String = newPanel.SubtypeName & " (" & newPanel.count & ")"
-            ToolTip1.SetToolTip(newPicture, avar1.ToString)
+                'simplified query to save code
+                Dim blockname As String = newPanel.SubtypeName
+                Dim newPicture As New PictureBox()
+                newPicture.Height = 120
+                newPicture.Width = 120
+                newPicture.Top = PICTURE_BOX_TOP
+                newPicture.Left = PICTURE_BOX_LEFT
+                newPicture.BackgroundImageLayout = ImageLayout.Stretch
 
-            'Function to check the blocktype name and cross check if it is a vanilla block or not
-            If ListOfVanillaBlocks.Contains(newPanel.SubtypeName) = True Then
-                newPicture.BackgroundImage = DirectCast(My.Resources.ResourceManager.GetObject(newPanel.SubtypeName), Bitmap)
-                If newPicture.BackgroundImage Is Nothing Then
-                    newPicture.BackgroundImage = My.Resources.ModdedItem
+                'Workaround for blocks with no/wrong subtype names
+                Dim avar2 = newPanel.username
+                If avar2 = "MyObjectBuilder_OxygenGenerator" And newPanel.SubtypeName = "" Then
+                    newPanel.SubtypeName = "OxygenGenerator"
+                    blockname = "OxygenGenerator"
                 End If
-            ElseIf ListOfVanillaBlocks.Contains(newPanel.SubtypeName) = False Then
-                newPicture.BackgroundImage = My.Resources.unavailable 'Set modded blocks images as unavailable 
-                'Run search for mod function
-                'ListOfModBlocks.Add(newPanel.SubtypeName) 'Add the modded block to the list of modded blocks
-            End If
-            newPicture.BackColor = Color.FromArgb(24, 24, 24)
-
-            'Append the image to the flow layout panel once generated
-            FlowLayoutPanel1.Controls.Add(newPicture)
-
-            'Give blocks with no subtype name a proper name to display on the label
-            If newPanel.SubtypeName = "MyObjectBuilder_GravityGeneratorSphere" Then
-                newPanel.SubtypeName = "GravityGeneratorSphere"
-                ToolTip1.SetToolTip(newPicture, newPanel.SubtypeName + " (" + newPanel.count.ToString + ")")
-            End If
-            If newPanel.SubtypeName = "MyObjectBuilder_Passage" Then
-                newPanel.SubtypeName = "Passage"
-                ToolTip1.SetToolTip(newPicture, newPanel.SubtypeName + " (" + newPanel.count.ToString + ")")
-            End If
-            If newPanel.SubtypeName = "MyObjectBuilder_AirtightHangarDoor" Then
-                newPanel.SubtypeName = "AirtightHangarDoor"
-                ToolTip1.SetToolTip(newPicture, newPanel.SubtypeName + " (" + newPanel.count.ToString + ")")
-            End If
-            If newPanel.SubtypeName = "MyObjectBuilder_Door" Then
-                newPanel.SubtypeName = "Door"
-                ToolTip1.SetToolTip(newPicture, newPanel.SubtypeName + " (" + newPanel.count.ToString + ")")
-            End If
-            If newPanel.SubtypeName = "MyObjectBuilder_AirVent" Then
-                newPanel.SubtypeName = "AirVent"
-                ToolTip1.SetToolTip(newPicture, newPanel.SubtypeName + " (" + newPanel.count.ToString + ")")
-            End If
-            If newPanel.SubtypeName = "MyObjectBuilder_GravityGenerator" Then
-                newPanel.SubtypeName = "GravityGenerator"
-                ToolTip1.SetToolTip(newPicture, newPanel.SubtypeName + " (" + newPanel.count.ToString + ")")
-            End If
-
-            'Block count label generation
-            Dim newLabel As New Label
-            newLabel.Height = LABEL_HEIGHT
-            newLabel.Width = LABEL_WIDTH
-            newLabel.BackColor = Color.Transparent
-            newLabel.ForeColor = Color.Orange
-            newLabel.Font = New Font("Segoe UI", 8, FontStyle.Regular)
-            'If block is not vanilla then give it its default block name
-            If Not ListOfVanillaBlocks.Contains(newPanel.SubtypeName) Then
-                newLabel.Text = newPanel.SubtypeName & "(" & newPanel.count & ")"
-            ElseIf newPanel.SubtypeName = "" Then
-                newPanel.SubtypeName = newPanel.username
-            End If
-            'Temporary Block Naming Function
-            newLabel.Text = newPanel.SubtypeName & " | Count: (" & newPanel.count & ")"
-            'Append the label of the block name and its count to the image generated before
-            newPicture.Controls.Add(newLabel)
-
-            'Calculate the ammount of components needed per set of blocks |>>FINISHED<<|
-            For Each block In ListOfVanillaBlocks
-                If newPanel.SubtypeName = block Then
-                    SteelPlateCount += CalculateComponents(newPanel.SubtypeName, newPanel.count, True, "SteelPlate")
-                    InteriorPlateCount += CalculateComponents(newPanel.SubtypeName, newPanel.count, True, "InteriorPlate")
-                    Computer += CalculateComponents(newPanel.SubtypeName, newPanel.count, True, "Computer")
-                    Superconducter += CalculateComponents(newPanel.SubtypeName, newPanel.count, True, "Superconductor")
-                    Canvas += CalculateComponents(newPanel.SubtypeName, newPanel.count, True, "Canvas")
-                    Girder += CalculateComponents(newPanel.SubtypeName, newPanel.count, True, "Girder")
-                    BulletproofGlass += CalculateComponents(newPanel.SubtypeName, newPanel.count, True, "BulletproofGlass")
-                    ConstructionComponent += CalculateComponents(newPanel.SubtypeName, newPanel.count, True, "Construction")
-                    DetectorComponent += CalculateComponents(newPanel.SubtypeName, newPanel.count, True, "Detector")
-                    Displays += CalculateComponents(newPanel.SubtypeName, newPanel.count, True, "Display")
-                    MetalGrid += CalculateComponents(newPanel.SubtypeName, newPanel.count, True, "MetalGrid")
-                    SmallSteelTube += CalculateComponents(newPanel.SubtypeName, newPanel.count, True, "SmallTube")
-                    GravityGeneratorComponents += CalculateComponents(newPanel.SubtypeName, newPanel.count, True, "GravityGenerator")
-                    LargeSteelTube += CalculateComponents(newPanel.SubtypeName, newPanel.count, True, "LargeTube")
-                    MedicalComponents += CalculateComponents(newPanel.SubtypeName, newPanel.count, True, "Medical")
-                    Motor += CalculateComponents(newPanel.SubtypeName, newPanel.count, True, "Motor")
-                    PowerCell += CalculateComponents(newPanel.SubtypeName, newPanel.count, True, "PowerCell")
-                    RadioCommunicationComponents += CalculateComponents(newPanel.SubtypeName, newPanel.count, True, "RadioCommunication")
-                    ReactorComponents += CalculateComponents(newPanel.SubtypeName, newPanel.count, True, "Reactor")
-                    SolarCell += CalculateComponents(newPanel.SubtypeName, newPanel.count, True, "SolarCell")
-                    ThrusterComponents += CalculateComponents(newPanel.SubtypeName, newPanel.count, True, "Thrust")
+                If avar2 = "MyObjectBuilder_OxygenTank" And newPanel.SubtypeName = "" Then
+                    newPanel.SubtypeName = "OxygenTank"
+                    blockname = "OxygenTank"
                 End If
-            Next
-
-            'Calculate components for modded blocks
-            For Each block In ModBlockDefinitionDictionary
-                If block.Key.ToString() = newPanel.SubtypeName.ToString() Then
-                    SteelPlateCount += CalculateComponents(newPanel.SubtypeName, newPanel.count, False, "SteelPlate")
-                    InteriorPlateCount += CalculateComponents(newPanel.SubtypeName, newPanel.count, False, "InteriorPlate")
-                    Computer += CalculateComponents(newPanel.SubtypeName, newPanel.count, False, "Computer")
-                    Superconducter += CalculateComponents(newPanel.SubtypeName, newPanel.count, False, "Superconductor")
-                    Canvas += CalculateComponents(newPanel.SubtypeName, newPanel.count, False, "Canvas")
-                    Girder += CalculateComponents(newPanel.SubtypeName, newPanel.count, False, "Girder")
-                    BulletproofGlass += CalculateComponents(newPanel.SubtypeName, newPanel.count, False, "BulletproofGlass")
-                    ConstructionComponent += CalculateComponents(newPanel.SubtypeName, newPanel.count, False, "Construction")
-                    DetectorComponent += CalculateComponents(newPanel.SubtypeName, newPanel.count, False, "Detector")
-                    Displays += CalculateComponents(newPanel.SubtypeName, newPanel.count, False, "Display")
-                    MetalGrid += CalculateComponents(newPanel.SubtypeName, newPanel.count, False, "MetalGrid")
-                    SmallSteelTube += CalculateComponents(newPanel.SubtypeName, newPanel.count, False, "SmallTube")
-                    GravityGeneratorComponents += CalculateComponents(newPanel.SubtypeName, newPanel.count, False, "GravityGenerator")
-                    LargeSteelTube += CalculateComponents(newPanel.SubtypeName, newPanel.count, False, "LargeTube")
-                    MedicalComponents += CalculateComponents(newPanel.SubtypeName, newPanel.count, False, "Medical")
-                    Motor += CalculateComponents(newPanel.SubtypeName, newPanel.count, False, "Motor")
-                    PowerCell += CalculateComponents(newPanel.SubtypeName, newPanel.count, False, "PowerCell")
-                    RadioCommunicationComponents += CalculateComponents(newPanel.SubtypeName, newPanel.count, False, "RadioCommunication")
-                    ReactorComponents += CalculateComponents(newPanel.SubtypeName, newPanel.count, False, "Reactor")
-                    SolarCell += CalculateComponents(newPanel.SubtypeName, newPanel.count, False, "SolarCell")
-                    ThrusterComponents += CalculateComponents(newPanel.SubtypeName, newPanel.count, False, "Thrust")
+                If avar2 = "MyObjectBuilder_OxygenTank" And newPanel.SubtypeName = "LargeHydrogenTank" Then
+                    newPanel.SubtypeName = "LargeHydrogenTank"
+                    blockname = "LargeHydrogenTank"
                 End If
-            Next
+                If newPanel.SubtypeName = "Blast Furnace" Then newPanel.SubtypeName = "BlastFurnace"
+                If avar2 = "MyObjectBuilder_LargeGatlingTurret" And newPanel.SubtypeName = "" Then
+                    newPanel.SubtypeName = "LargeGatlingTurret"
+                    blockname = newPanel.SubtypeName
+                End If
+                If avar2 = "MyObjectBuilder_LargeMissileTurret" And newPanel.SubtypeName = "" Then
+                    newPanel.SubtypeName = "LargeMissileTurret"
+                    blockname = newPanel.SubtypeName
+                End If
+                If avar2 = "MyObjectBuilder_SmallGatlingGun" And newPanel.SubtypeName = "" Then
+                    newPanel.SubtypeName = "SmallGatlingGun"
+                    blockname = newPanel.SubtypeName
+                End If
+                If avar2 = "MyObjectBuilder_SmallMissileLauncher" And newPanel.SubtypeName = "" Then
+                    newPanel.SubtypeName = "SmallMissileLauncher"
+                    blockname = newPanel.SubtypeName
+                End If
+                If newPanel.SubtypeName = "" Then newPanel.SubtypeName = newPanel.username 'Workaround for blank subtype names
 
-            'add count of current block to total block count
-            TotalBlockCount += newPanel.count
-            'Add items to the list box for information output
-            ListBox1.Items.Add(newPanel.SubtypeName & " | BlockCount: " & " (" & newPanel.count.ToString & ")")
-        Next panelNumber
-        'Add total block count to the form name
-        Me.Text += " | Block Count: " + TotalBlockCount.ToString("N0")
+                'Tool Tip Handling
+                Dim avar1 As String = newPanel.SubtypeName & " (" & newPanel.count & ")"
+                ToolTip1.SetToolTip(newPicture, avar1.ToString)
 
-        '------------=================== Function to Calculate Material Costs ===================------------
-        'Iron Calculations
-        IronIngotOutput = (SteelPlateCount * 7) + (ReactorComponents * 5) + (Canvas * 0.67) + (Computer * 0.17) + (ConstructionComponent * 3.33) + (DetectorComponent * 1.67) + (Displays * 0.33) + (Girder * 2.33) + (GravityGeneratorComponents * 200) + (InteriorPlateCount * 1.17) + (LargeSteelTube * 10) + (MedicalComponents * 20) + (MetalGrid * 4) + (Motor * 6.67) + (PowerCell * 3.33) + (RadioCommunicationComponents * 2.67) + (ReactorComponents * 5) + (SmallSteelTube * 1.67) + (Superconducter * 3.33) + (ThrusterComponents * 10) 'Calculate how many iron ingots to add based on Steel Plates
-        IronAmmount = IronIngotOutput / 0.56
-        IronCraftTime = Math.Round(((IronAmmount * 0.038) / 60) / 60) 'Hours
-        Dim IronArcTime = Math.Round(((IronAmmount * 0.031) / 60) / 60) 'Hours
+                'Function to check the blocktype name and cross check if it is a vanilla block or not
+                If ListOfVanillaBlocks.Contains(newPanel.SubtypeName) = True Then
+                    newPicture.BackgroundImage = DirectCast(My.Resources.ResourceManager.GetObject(newPanel.SubtypeName), Bitmap)
+                    If newPicture.BackgroundImage Is Nothing Then
+                        newPicture.BackgroundImage = My.Resources.ModdedItem
+                    End If
+                ElseIf ListOfVanillaBlocks.Contains(newPanel.SubtypeName) = False Then
+                    newPicture.BackgroundImage = My.Resources.unavailable 'Set modded blocks images as unavailable 
+                    'Run search for mod function
+                    'ListOfModBlocks.Add(newPanel.SubtypeName) 'Add the modded block to the list of modded blocks
+                End If
+                newPicture.BackColor = Color.FromArgb(24, 24, 24)
 
-        'Silicon Calculations
-        SiliconIngotOutput = (BulletproofGlass * 5) + (Canvas * 11.67) + (Computer * 0.07) + (Displays * 1.67) + (PowerCell * 0.33) + (RadioCommunicationComponents * 0.33) + (SolarCell * 2.67)
-        SiliconAmmount = SiliconIngotOutput / 0.56
-        SiliconCraftTime = Math.Round(((SiliconAmmount * 0.038) / 60) / 60) 'Hours
+                'Append the image to the flow layout panel once generated
+                FlowLayoutPanel1.Controls.Add(newPicture)
 
-        'Stone Calculations
-        StoneIngotOutput = (ReactorComponents * 6.67)
-        StoneAmmount = StoneIngotOutput / 0.72
-        StoneCraftTime = Math.Round(((StoneAmmount * 0.077) / 60) / 60) 'Hours
+                'Give blocks with no subtype name a proper name to display on the label
+                If newPanel.SubtypeName = "MyObjectBuilder_GravityGeneratorSphere" Then
+                    newPanel.SubtypeName = "GravityGeneratorSphere"
+                    ToolTip1.SetToolTip(newPicture, newPanel.SubtypeName + " (" + newPanel.count.ToString + ")")
+                End If
+                If newPanel.SubtypeName = "MyObjectBuilder_Passage" Then
+                    newPanel.SubtypeName = "Passage"
+                    ToolTip1.SetToolTip(newPicture, newPanel.SubtypeName + " (" + newPanel.count.ToString + ")")
+                End If
+                If newPanel.SubtypeName = "MyObjectBuilder_AirtightHangarDoor" Then
+                    newPanel.SubtypeName = "AirtightHangarDoor"
+                    ToolTip1.SetToolTip(newPicture, newPanel.SubtypeName + " (" + newPanel.count.ToString + ")")
+                End If
+                If newPanel.SubtypeName = "MyObjectBuilder_Door" Then
+                    newPanel.SubtypeName = "Door"
+                    ToolTip1.SetToolTip(newPicture, newPanel.SubtypeName + " (" + newPanel.count.ToString + ")")
+                End If
+                If newPanel.SubtypeName = "MyObjectBuilder_AirVent" Then
+                    newPanel.SubtypeName = "AirVent"
+                    ToolTip1.SetToolTip(newPicture, newPanel.SubtypeName + " (" + newPanel.count.ToString + ")")
+                End If
+                If newPanel.SubtypeName = "MyObjectBuilder_GravityGenerator" Then
+                    newPanel.SubtypeName = "GravityGenerator"
+                    ToolTip1.SetToolTip(newPicture, newPanel.SubtypeName + " (" + newPanel.count.ToString + ")")
+                End If
 
-        'Platinum Calculations
-        PlatinumIngotOutput = (ThrusterComponents * 0.13)
-        PlatinumAmmount = PlatinumIngotOutput / 0.004
-        PlatinumCrafTime = Math.Round(((PlatinumAmmount * 3.077) / 60) / 60) 'Hours
+                'Block count label generation
+                Dim newLabel As New Label
+                newLabel.Height = LABEL_HEIGHT
+                newLabel.Width = LABEL_WIDTH
+                newLabel.BackColor = Color.Transparent
+                newLabel.ForeColor = Color.Orange
+                newLabel.Font = New Font("Segoe UI", 8, FontStyle.Regular)
+                'If block is not vanilla then give it its default block name
+                If Not ListOfVanillaBlocks.Contains(newPanel.SubtypeName) Then
+                    newLabel.Text = newPanel.SubtypeName & "(" & newPanel.count & ")"
+                ElseIf newPanel.SubtypeName = "" Then
+                    newPanel.SubtypeName = newPanel.username
+                End If
+                'Temporary Block Naming Function
+                newLabel.Text = newPanel.SubtypeName & " | Count: (" & newPanel.count & ")"
+                'Append the label of the block name and its count to the image generated before
+                newPicture.Controls.Add(newLabel)
 
-        'Gold Calculations
-        GoldIngotOutput = (Superconducter * 0.67) + (GravityGeneratorComponents * 3.33) + (ThrusterComponents * 0.33)
-        GoldAmmount = GoldIngotOutput / 0.008
-        GoldCraftTime = Math.Round(((GoldAmmount * 0.308) / 60) / 60) 'Hours
+                'Calculate the ammount of components needed per set of blocks |>>FINISHED<<|
+                For Each block In ListOfVanillaBlocks
+                    If newPanel.SubtypeName = block Then
+                        SteelPlateCount += CalculateComponents(newPanel.SubtypeName, newPanel.count, True, "SteelPlate")
+                        InteriorPlateCount += CalculateComponents(newPanel.SubtypeName, newPanel.count, True, "InteriorPlate")
+                        Computer += CalculateComponents(newPanel.SubtypeName, newPanel.count, True, "Computer")
+                        Superconducter += CalculateComponents(newPanel.SubtypeName, newPanel.count, True, "Superconductor")
+                        Canvas += CalculateComponents(newPanel.SubtypeName, newPanel.count, True, "Canvas")
+                        Girder += CalculateComponents(newPanel.SubtypeName, newPanel.count, True, "Girder")
+                        BulletproofGlass += CalculateComponents(newPanel.SubtypeName, newPanel.count, True, "BulletproofGlass")
+                        ConstructionComponent += CalculateComponents(newPanel.SubtypeName, newPanel.count, True, "Construction")
+                        DetectorComponent += CalculateComponents(newPanel.SubtypeName, newPanel.count, True, "Detector")
+                        Displays += CalculateComponents(newPanel.SubtypeName, newPanel.count, True, "Display")
+                        MetalGrid += CalculateComponents(newPanel.SubtypeName, newPanel.count, True, "MetalGrid")
+                        SmallSteelTube += CalculateComponents(newPanel.SubtypeName, newPanel.count, True, "SmallTube")
+                        GravityGeneratorComponents += CalculateComponents(newPanel.SubtypeName, newPanel.count, True, "GravityGenerator")
+                        LargeSteelTube += CalculateComponents(newPanel.SubtypeName, newPanel.count, True, "LargeTube")
+                        MedicalComponents += CalculateComponents(newPanel.SubtypeName, newPanel.count, True, "Medical")
+                        Motor += CalculateComponents(newPanel.SubtypeName, newPanel.count, True, "Motor")
+                        PowerCell += CalculateComponents(newPanel.SubtypeName, newPanel.count, True, "PowerCell")
+                        RadioCommunicationComponents += CalculateComponents(newPanel.SubtypeName, newPanel.count, True, "RadioCommunication")
+                        ReactorComponents += CalculateComponents(newPanel.SubtypeName, newPanel.count, True, "Reactor")
+                        SolarCell += CalculateComponents(newPanel.SubtypeName, newPanel.count, True, "SolarCell")
+                        ThrusterComponents += CalculateComponents(newPanel.SubtypeName, newPanel.count, True, "Thrust")
+                    End If
+                Next
 
-        'Silver Calculations
-        SilverIngotOutput = (GravityGeneratorComponents * 1.67) + (MedicalComponents * 6.67) + (ReactorComponents * 1.67)
-        SilverAmmount = SilverIngotOutput / 0.08
-        SilverCraftTime = Math.Round(((SilverAmmount * 0.769) / 60) / 60) 'Hours
+                'Calculate components for modded blocks
+                For Each block In ModBlockDefinitionDictionary
+                    If block.Key.ToString() = newPanel.SubtypeName.ToString() Then
+                        SteelPlateCount += CalculateComponents(newPanel.SubtypeName, newPanel.count, False, "SteelPlate")
+                        InteriorPlateCount += CalculateComponents(newPanel.SubtypeName, newPanel.count, False, "InteriorPlate")
+                        Computer += CalculateComponents(newPanel.SubtypeName, newPanel.count, False, "Computer")
+                        Superconducter += CalculateComponents(newPanel.SubtypeName, newPanel.count, False, "Superconductor")
+                        Canvas += CalculateComponents(newPanel.SubtypeName, newPanel.count, False, "Canvas")
+                        Girder += CalculateComponents(newPanel.SubtypeName, newPanel.count, False, "Girder")
+                        BulletproofGlass += CalculateComponents(newPanel.SubtypeName, newPanel.count, False, "BulletproofGlass")
+                        ConstructionComponent += CalculateComponents(newPanel.SubtypeName, newPanel.count, False, "Construction")
+                        DetectorComponent += CalculateComponents(newPanel.SubtypeName, newPanel.count, False, "Detector")
+                        Displays += CalculateComponents(newPanel.SubtypeName, newPanel.count, False, "Display")
+                        MetalGrid += CalculateComponents(newPanel.SubtypeName, newPanel.count, False, "MetalGrid")
+                        SmallSteelTube += CalculateComponents(newPanel.SubtypeName, newPanel.count, False, "SmallTube")
+                        GravityGeneratorComponents += CalculateComponents(newPanel.SubtypeName, newPanel.count, False, "GravityGenerator")
+                        LargeSteelTube += CalculateComponents(newPanel.SubtypeName, newPanel.count, False, "LargeTube")
+                        MedicalComponents += CalculateComponents(newPanel.SubtypeName, newPanel.count, False, "Medical")
+                        Motor += CalculateComponents(newPanel.SubtypeName, newPanel.count, False, "Motor")
+                        PowerCell += CalculateComponents(newPanel.SubtypeName, newPanel.count, False, "PowerCell")
+                        RadioCommunicationComponents += CalculateComponents(newPanel.SubtypeName, newPanel.count, False, "RadioCommunication")
+                        ReactorComponents += CalculateComponents(newPanel.SubtypeName, newPanel.count, False, "Reactor")
+                        SolarCell += CalculateComponents(newPanel.SubtypeName, newPanel.count, False, "SolarCell")
+                        ThrusterComponents += CalculateComponents(newPanel.SubtypeName, newPanel.count, False, "Thrust")
+                    End If
+                Next
 
-        'Magnesium Calculations
-        MagnesiumIngotOutput = (Explosives * 0.67) + (TwoHundredMMMissileContainer * 0.4) + (NATOAmmoContainer * 1) + (NATOAmmoMagazine * 0.05)
-        MagnesiumAmmount = MagnesiumIngotOutput / 0.0056
-        MagnesiumCraftTime = Math.Round(((MagnesiumAmmount * 0.385) / 60) / 60) 'Hours
+                'add count of current block to total block count
+                TotalBlockCount += newPanel.count
+                'Add items to the list box for information output
+                ListBox1.Items.Add(newPanel.SubtypeName & " | BlockCount: " & " (" & newPanel.count.ToString & ")")
+            Next panelNumber
+            'Add total block count to the form name
+            Me.Text += " | Block Count: " + TotalBlockCount.ToString("N0")
 
-        'Cobalt Calculations
-        CobaltIngotOutput = (GravityGeneratorComponents * 73.33) + (MetalGrid * 1) + (ThrusterComponents * 3.33)
-        CobaltAmmout = CobaltIngotOutput / 0.24
-        CobaltCraftTime = Math.Round(((CobaltAmmout * 3.077) / 60) / 60) 'Hours
+            '------------=================== Function to Calculate Material Costs ===================------------
+            'Iron Calculations
+            IronIngotOutput = (SteelPlateCount * 7) + (ReactorComponents * 5) + (Canvas * 0.67) + (Computer * 0.17) + (ConstructionComponent * 3.33) + (DetectorComponent * 1.67) + (Displays * 0.33) + (Girder * 2.33) + (GravityGeneratorComponents * 200) + (InteriorPlateCount * 1.17) + (LargeSteelTube * 10) + (MedicalComponents * 20) + (MetalGrid * 4) + (Motor * 6.67) + (PowerCell * 3.33) + (RadioCommunicationComponents * 2.67) + (ReactorComponents * 5) + (SmallSteelTube * 1.67) + (Superconducter * 3.33) + (ThrusterComponents * 10) 'Calculate how many iron ingots to add based on Steel Plates
+            IronAmmount = IronIngotOutput / 0.56
+            IronCraftTime = Math.Round(((IronAmmount * 0.038) / 60) / 60) 'Hours
+            Dim IronArcTime = Math.Round(((IronAmmount * 0.031) / 60) / 60) 'Hours
 
-        'Nickel Calculations
-        NickelIngotOutput = (DetectorComponent * 5) + (MedicalComponents * 23.33) + (MetalGrid * 1.67) + (Motor * 1.67) + (PowerCell * 0.67)
-        NickelAmmount = NickelIngotOutput / 0.32
-        NickelCraftTime = Math.Round(((CobaltAmmout * 1.538) / 60) / 60) 'Hours
+            'Silicon Calculations
+            SiliconIngotOutput = (BulletproofGlass * 5) + (Canvas * 11.67) + (Computer * 0.07) + (Displays * 1.67) + (PowerCell * 0.33) + (RadioCommunicationComponents * 0.33) + (SolarCell * 2.67)
+            SiliconAmmount = SiliconIngotOutput / 0.56
+            SiliconCraftTime = Math.Round(((SiliconAmmount * 0.038) / 60) / 60) 'Hours
 
-        'Uranium Calculations
-        UraniumIngotInput = (TwoHundredMMMissileContainer * 0.03)
-        UraniumAmmount = UraniumIngotInput / 0.0056
-        UraniumCraftTime = Math.Round(((CobaltAmmout * 3.077) / 60) / 60) 'Hours
+            'Stone Calculations
+            StoneIngotOutput = (ReactorComponents * 6.67)
+            StoneAmmount = StoneIngotOutput / 0.72
+            StoneCraftTime = Math.Round(((StoneAmmount * 0.077) / 60) / 60) 'Hours
 
-        '------------=================== Function to load stuff into the list boxes ===================------------
-        'Components List ListBox2                                                                  >>| FINISHED |<<
-        ListBox2.Items.Add(SteelPlateCount.ToString("N0") & " Steel Plates") 'Steel Plates
-        ListBox2.Items.Add(InteriorPlateCount.ToString("N0") & " Interior Plates") 'Interior Plates
-        ListBox2.Items.Add(Computer.ToString("N0") & " Computers") 'Computers
-        ListBox2.Items.Add(Superconducter.ToString("N0") & " Super Conductors") 'Super Conductors
-        ListBox2.Items.Add(Canvas.ToString("N0") & " Canvas") 'Canvas
-        ListBox2.Items.Add(Girder.ToString("N0") & " Girders") 'Girders
-        ListBox2.Items.Add(BulletproofGlass.ToString("N0") & " Blluetproof Glass") 'Blluetproof Glass
-        ListBox2.Items.Add(ConstructionComponent.ToString("N0") & " Construction Components") 'Construction Components
-        ListBox2.Items.Add(DetectorComponent.ToString("N0") & " Detector Components") 'Detector Components
-        ListBox2.Items.Add(Displays.ToString("N0") & " Displays") 'Displays
-        ListBox2.Items.Add(GravityGeneratorComponents.ToString("N0") & " Gravity Generator Components") 'Gravity Generator Components
-        ListBox2.Items.Add(LargeSteelTube.ToString("N0") & " Large Steel Tubes") 'Large Steel Tubes
-        ListBox2.Items.Add(SmallSteelTube.ToString("N0") & " Small Steel Tubes") 'Small Steel Tubes
-        ListBox2.Items.Add(MedicalComponents.ToString("N0") & " Medical Components") 'Medical Components
-        ListBox2.Items.Add(MetalGrid.ToString("N0") & " Metal Grids") 'Metal Grids
-        ListBox2.Items.Add(Motor.ToString("N0") & " Motors") 'Motors
-        ListBox2.Items.Add(PowerCell.ToString("N0") & " Power Cells") 'Power Cells
-        ListBox2.Items.Add(RadioCommunicationComponents.ToString("N0") & " Radio Communication Components") 'Radio Communication Components
-        ListBox2.Items.Add(ReactorComponents.ToString("N0") & " Reactor Components") 'Reactor Components
-        ListBox2.Items.Add(SolarCell.ToString("N0") & " Solar Cells") 'Solar Cells
-        ListBox2.Items.Add(ThrusterComponents.ToString("N0") & " Thruster Components") 'Thruster Components
+            'Platinum Calculations
+            PlatinumIngotOutput = (ThrusterComponents * 0.13)
+            PlatinumAmmount = PlatinumIngotOutput / 0.004
+            PlatinumCrafTime = Math.Round(((PlatinumAmmount * 3.077) / 60) / 60) 'Hours
 
-        'Materials List ListBox3                                                                     >>| FINISHED |<<
-        ListBox3.Items.Add(IronIngotOutput.ToString("N0") & " Iron Ingots")
-        ListBox3.Items.Add(SiliconIngotOutput.ToString("N0") & " Silicon Wafers")
-        ListBox3.Items.Add(StoneAmmount.ToString("N0") & " Stones")
-        ListBox3.Items.Add(PlatinumAmmount.ToString("N0") & " Platinum Ingots")
-        ListBox3.Items.Add(GoldAmmount.ToString("N0") & " Gold Ingots")
-        ListBox3.Items.Add(SilverAmmount.ToString("N0") & " Silver Ingots")
-        ListBox3.Items.Add(MagnesiumAmmount.ToString("N0") & " Bags Of Magnesium Powder")
-        ListBox3.Items.Add(CobaltAmmout.ToString("N0") & " Cobalt Ingots")
-        ListBox3.Items.Add(NickelAmmount.ToString("N0") & " Nickel Ingots")
-        ListBox3.Items.Add(UraniumAmmount.ToString("N0") & " Uranium Ingots")
+            'Gold Calculations
+            GoldIngotOutput = (Superconducter * 0.67) + (GravityGeneratorComponents * 3.33) + (ThrusterComponents * 0.33)
+            GoldAmmount = GoldIngotOutput / 0.008
+            GoldCraftTime = Math.Round(((GoldAmmount * 0.308) / 60) / 60) 'Hours
 
-        'Raw Materials List ListBox4                                                                 >>| FINISHED |<<
-        If IronCraftTime <= 0 And IronArcTime <= 0 Then
-            IronCraftTime = Math.Round(((IronAmmount * 0.038) / 60), 2) 'Minutes
-            IronArcTime = Math.Round(((IronAmmount * 0.031) / 60), 2) 'Minutes
-            ListBox4.Items.Add(IronAmmount.ToString("N0") & " KGs Iron ore | " & IronCraftTime.ToString() & " Minutes In Refinery OR " & IronArcTime.ToString("N0") & " Minutes In Arc Furnace")
-        ElseIf IronCraftTime >= 1 Then
-            IronCraftTime = Math.Round(((IronAmmount * 0.038) / 60) / 60, 2) 'Hours
-            IronArcTime = Math.Round(((IronAmmount * 0.031) / 60) / 60, 2) 'Hours
-            ListBox4.Items.Add(IronAmmount.ToString("N0") & " KGs Iron ore | " & IronCraftTime.ToString() & " Hours In Refinery OR " & IronArcTime.ToString("N0") & " Hours In Arc Furnace")
+            'Silver Calculations
+            SilverIngotOutput = (GravityGeneratorComponents * 1.67) + (MedicalComponents * 6.67) + (ReactorComponents * 1.67)
+            SilverAmmount = SilverIngotOutput / 0.08
+            SilverCraftTime = Math.Round(((SilverAmmount * 0.769) / 60) / 60) 'Hours
+
+            'Magnesium Calculations
+            MagnesiumIngotOutput = (Explosives * 0.67) + (TwoHundredMMMissileContainer * 0.4) + (NATOAmmoContainer * 1) + (NATOAmmoMagazine * 0.05)
+            MagnesiumAmmount = MagnesiumIngotOutput / 0.0056
+            MagnesiumCraftTime = Math.Round(((MagnesiumAmmount * 0.385) / 60) / 60) 'Hours
+
+            'Cobalt Calculations
+            CobaltIngotOutput = (GravityGeneratorComponents * 73.33) + (MetalGrid * 1) + (ThrusterComponents * 3.33)
+            CobaltAmmout = CobaltIngotOutput / 0.24
+            CobaltCraftTime = Math.Round(((CobaltAmmout * 3.077) / 60) / 60) 'Hours
+
+            'Nickel Calculations
+            NickelIngotOutput = (DetectorComponent * 5) + (MedicalComponents * 23.33) + (MetalGrid * 1.67) + (Motor * 1.67) + (PowerCell * 0.67)
+            NickelAmmount = NickelIngotOutput / 0.32
+            NickelCraftTime = Math.Round(((CobaltAmmout * 1.538) / 60) / 60) 'Hours
+
+            'Uranium Calculations
+            UraniumIngotInput = (TwoHundredMMMissileContainer * 0.03)
+            UraniumAmmount = UraniumIngotInput / 0.0056
+            UraniumCraftTime = Math.Round(((CobaltAmmout * 3.077) / 60) / 60) 'Hours
+
+            '------------=================== Function to load stuff into the list boxes ===================------------
+            'Components List ListBox2                                                                  >>| FINISHED |<<
+            ListBox2.Items.Add(SteelPlateCount.ToString("N0") & " Steel Plates") 'Steel Plates
+            ListBox2.Items.Add(InteriorPlateCount.ToString("N0") & " Interior Plates") 'Interior Plates
+            ListBox2.Items.Add(Computer.ToString("N0") & " Computers") 'Computers
+            ListBox2.Items.Add(Superconducter.ToString("N0") & " Super Conductors") 'Super Conductors
+            ListBox2.Items.Add(Canvas.ToString("N0") & " Canvas") 'Canvas
+            ListBox2.Items.Add(Girder.ToString("N0") & " Girders") 'Girders
+            ListBox2.Items.Add(BulletproofGlass.ToString("N0") & " Blluetproof Glass") 'Blluetproof Glass
+            ListBox2.Items.Add(ConstructionComponent.ToString("N0") & " Construction Components") 'Construction Components
+            ListBox2.Items.Add(DetectorComponent.ToString("N0") & " Detector Components") 'Detector Components
+            ListBox2.Items.Add(Displays.ToString("N0") & " Displays") 'Displays
+            ListBox2.Items.Add(GravityGeneratorComponents.ToString("N0") & " Gravity Generator Components") 'Gravity Generator Components
+            ListBox2.Items.Add(LargeSteelTube.ToString("N0") & " Large Steel Tubes") 'Large Steel Tubes
+            ListBox2.Items.Add(SmallSteelTube.ToString("N0") & " Small Steel Tubes") 'Small Steel Tubes
+            ListBox2.Items.Add(MedicalComponents.ToString("N0") & " Medical Components") 'Medical Components
+            ListBox2.Items.Add(MetalGrid.ToString("N0") & " Metal Grids") 'Metal Grids
+            ListBox2.Items.Add(Motor.ToString("N0") & " Motors") 'Motors
+            ListBox2.Items.Add(PowerCell.ToString("N0") & " Power Cells") 'Power Cells
+            ListBox2.Items.Add(RadioCommunicationComponents.ToString("N0") & " Radio Communication Components") 'Radio Communication Components
+            ListBox2.Items.Add(ReactorComponents.ToString("N0") & " Reactor Components") 'Reactor Components
+            ListBox2.Items.Add(SolarCell.ToString("N0") & " Solar Cells") 'Solar Cells
+            ListBox2.Items.Add(ThrusterComponents.ToString("N0") & " Thruster Components") 'Thruster Components
+
+            'Materials List ListBox3                                                                     >>| FINISHED |<<
+            ListBox3.Items.Add(IronIngotOutput.ToString("N0") & " Iron Ingots")
+            ListBox3.Items.Add(SiliconIngotOutput.ToString("N0") & " Silicon Wafers")
+            ListBox3.Items.Add(StoneAmmount.ToString("N0") & " Stones")
+            ListBox3.Items.Add(PlatinumAmmount.ToString("N0") & " Platinum Ingots")
+            ListBox3.Items.Add(GoldAmmount.ToString("N0") & " Gold Ingots")
+            ListBox3.Items.Add(SilverAmmount.ToString("N0") & " Silver Ingots")
+            ListBox3.Items.Add(MagnesiumAmmount.ToString("N0") & " Bags Of Magnesium Powder")
+            ListBox3.Items.Add(CobaltAmmout.ToString("N0") & " Cobalt Ingots")
+            ListBox3.Items.Add(NickelAmmount.ToString("N0") & " Nickel Ingots")
+            ListBox3.Items.Add(UraniumAmmount.ToString("N0") & " Uranium Ingots")
+
+            'Raw Materials List ListBox4                                                                 >>| FINISHED |<<
+            If IronCraftTime <= 0 And IronArcTime <= 0 Then
+                IronCraftTime = Math.Round(((IronAmmount * 0.038) / 60), 2) 'Minutes
+                IronArcTime = Math.Round(((IronAmmount * 0.031) / 60), 2) 'Minutes
+                ListBox4.Items.Add(IronAmmount.ToString("N0") & " KGs Iron ore | " & IronCraftTime.ToString() & " Minutes In Refinery OR " & IronArcTime.ToString("N0") & " Minutes In Arc Furnace")
+            ElseIf IronCraftTime >= 1 Then
+                IronCraftTime = Math.Round(((IronAmmount * 0.038) / 60) / 60, 2) 'Hours
+                IronArcTime = Math.Round(((IronAmmount * 0.031) / 60) / 60, 2) 'Hours
+                ListBox4.Items.Add(IronAmmount.ToString("N0") & " KGs Iron ore | " & IronCraftTime.ToString() & " Hours In Refinery OR " & IronArcTime.ToString("N0") & " Hours In Arc Furnace")
+            End If
+            If SiliconCraftTime < 1 Then
+                SiliconCraftTime = Math.Round(((SiliconAmmount * 0.462) / 60), 2) 'Minutes
+                ListBox4.Items.Add(SiliconAmmount.ToString("N0") & " KGs Silicon Ore | " & SiliconCraftTime.ToString() & " Minutes In Refinery")
+            ElseIf SiliconCraftTime > 1 Then
+                SiliconCraftTime = Math.Round(((SiliconAmmount * 0.462) / 60) / 60, 2) 'Hours
+                ListBox4.Items.Add(SiliconAmmount.ToString("N0") & " KGs Silicon Ore | " & SiliconCraftTime.ToString() & " Hours In Refinery")
+            End If
+            If StoneCraftTime < 1 Then
+                StoneCraftTime = Math.Round(((StoneAmmount * 0.077) / 60), 2) 'Minutes
+                ListBox4.Items.Add(StoneAmmount.ToString("N0") & " KGs Stones | " & StoneCraftTime.ToString() & " Minutes In Refinery")
+            ElseIf StoneCraftTime > 1 Then
+                StoneCraftTime = Math.Round(((StoneAmmount * 0.077) / 60) / 60, 2) 'Hours
+                ListBox4.Items.Add(StoneAmmount.ToString("N0") & " KGs Stones | " & StoneCraftTime.ToString() & " Hours In Refinery")
+            End If
+            If PlatinumCrafTime < 1 Then
+                PlatinumCrafTime = Math.Round(((PlatinumAmmount * 3.077) / 60), 2) 'Minutes
+                ListBox4.Items.Add(PlatinumAmmount.ToString("N0") & " KGs Platinum Ore | " & PlatinumCrafTime.ToString() & " Minutes In Refinery")
+            ElseIf PlatinumCrafTime > 1 Then
+                PlatinumCrafTime = Math.Round(((PlatinumAmmount * 3.077) / 60) / 60, 2) 'Hours
+                ListBox4.Items.Add(PlatinumAmmount.ToString("N0") & " KGs Platinum Ore | " & PlatinumCrafTime.ToString() & " Hours In Refinery")
+            End If
+            If GoldCraftTime < 1 Then
+                GoldCraftTime = Math.Round(((GoldAmmount * 0.308) / 60), 2) 'Minutes
+                ListBox4.Items.Add(GoldAmmount.ToString("N0") & " KGs Gold Ore | " & GoldCraftTime.ToString() & " Minutes In Refinery")
+            ElseIf GoldCraftTime > 1 Then
+                GoldCraftTime = Math.Round(((GoldAmmount * 0.308) / 60) / 60, 2) 'Hours
+                ListBox4.Items.Add(GoldAmmount.ToString("N0") & " KGs Gold Ore | " & GoldCraftTime.ToString() & " Hours In Refinery")
+            End If
+            If SilverCraftTime < 1 Then
+                SilverCraftTime = Math.Round(((SilverAmmount * 0.769) / 60), 2) 'Minutes
+                ListBox4.Items.Add(SilverAmmount.ToString("N0") & " KGs Silver Ore | " & SilverCraftTime.ToString() & " Minutes In Refinery")
+            ElseIf SilverCraftTime > 1 Then
+                SilverCraftTime = Math.Round(((SilverAmmount * 0.769) / 60) / 60, 2) 'Hours
+                ListBox4.Items.Add(SilverAmmount.ToString("N0") & " KGs Silver Ore | " & SilverCraftTime.ToString() & " Hours In Refinery")
+            End If
+            If MagnesiumCraftTime < 1 Then
+                MagnesiumCraftTime = Math.Round(((MagnesiumAmmount * 0.385) / 60), 2) 'Minutes
+                ListBox4.Items.Add(MagnesiumAmmount.ToString("N0") & " KGs Magnesium Ore | " & MagnesiumCraftTime.ToString() & " Minutes In Refinery")
+            ElseIf MagnesiumCraftTime > 1 Then
+                MagnesiumCraftTime = Math.Round(((MagnesiumAmmount * 0.385) / 60) / 60, 2) 'Hours
+                ListBox4.Items.Add(MagnesiumAmmount.ToString("N0") & " KGs Magnesium Ore | " & MagnesiumCraftTime.ToString() & " Hours In Refinery")
+            End If
+            If CobaltCraftTime < 1 Then
+                CobaltCraftTime = Math.Round(((CobaltAmmout * 3.077) / 60), 2) 'Minutes
+                ListBox4.Items.Add(CobaltAmmout.ToString("N0") & " KGs Silicon Ore | " & CobaltCraftTime.ToString() & " Minutes In Refinery")
+            ElseIf CobaltCraftTime > 1 Then
+                CobaltCraftTime = Math.Round(((CobaltAmmout * 3.077) / 60) / 60, 2) 'Hours
+                ListBox4.Items.Add(CobaltAmmout.ToString("N0") & " KGs Silicon Ore | " & CobaltCraftTime.ToString() & " Hours In Refinery")
+            End If
+            If NickelCraftTime < 1 Then
+                NickelCraftTime = Math.Round(((NickelAmmount * 1.538) / 60), 2) 'Minutes
+                ListBox4.Items.Add(NickelAmmount.ToString("N0") & " KGs Silicon Ore | " & NickelCraftTime.ToString() & " Minutes In Refinery")
+            ElseIf NickelCraftTime > 1 Then
+                NickelCraftTime = Math.Round(((NickelAmmount * 1.538) / 60) / 60, 2) 'Hours
+                ListBox4.Items.Add(NickelAmmount.ToString("N0") & " KGs Silicon Ore | " & NickelCraftTime.ToString() & " Hours In Refinery")
+            End If
+            If UraniumCraftTime < 1 Then
+                UraniumCraftTime = Math.Round(((UraniumAmmount * 3.077) / 60), 2) 'Minutes
+                ListBox4.Items.Add(UraniumAmmount.ToString("N0") & " KGs Uranium Ore | " & UraniumCraftTime.ToString() & " Minutes In Refinery")
+            ElseIf UraniumCraftTime > 1 Then
+                UraniumCraftTime = Math.Round(((UraniumAmmount * 3.077) / 60) / 60, 2) 'Hours
+                ListBox4.Items.Add(UraniumAmmount.ToString("N0") & " KGs Uranium Ore | " & UraniumCraftTime.ToString() & " Hours In Refinery")
+            End If
+
+            'Try to load an image of the blueprint if it is available
+            Dim bpimagepath As String = WorkingPath + "\thumb.png"
+            Try
+                PictureBox1.BackgroundImage = Image.FromFile(bpimagepath)
+            Catch ex As Exception
+
+            End Try
         End If
-        If SiliconCraftTime < 1 Then
-            SiliconCraftTime = Math.Round(((SiliconAmmount * 0.462) / 60), 2) 'Minutes
-            ListBox4.Items.Add(SiliconAmmount.ToString("N0") & " KGs Silicon Ore | " & SiliconCraftTime.ToString() & " Minutes In Refinery")
-        ElseIf SiliconCraftTime > 1 Then
-            SiliconCraftTime = Math.Round(((SiliconAmmount * 0.462) / 60) / 60, 2) 'Hours
-            ListBox4.Items.Add(SiliconAmmount.ToString("N0") & " KGs Silicon Ore | " & SiliconCraftTime.ToString() & " Hours In Refinery")
-        End If
-        If StoneCraftTime < 1 Then
-            StoneCraftTime = Math.Round(((StoneAmmount * 0.077) / 60), 2) 'Minutes
-            ListBox4.Items.Add(StoneAmmount.ToString("N0") & " KGs Stones | " & StoneCraftTime.ToString() & " Minutes In Refinery")
-        ElseIf StoneCraftTime > 1 Then
-            StoneCraftTime = Math.Round(((StoneAmmount * 0.077) / 60) / 60, 2) 'Hours
-            ListBox4.Items.Add(StoneAmmount.ToString("N0") & " KGs Stones | " & StoneCraftTime.ToString() & " Hours In Refinery")
-        End If
-        If PlatinumCrafTime < 1 Then
-            PlatinumCrafTime = Math.Round(((PlatinumAmmount * 3.077) / 60), 2) 'Minutes
-            ListBox4.Items.Add(PlatinumAmmount.ToString("N0") & " KGs Platinum Ore | " & PlatinumCrafTime.ToString() & " Minutes In Refinery")
-        ElseIf PlatinumCrafTime > 1 Then
-            PlatinumCrafTime = Math.Round(((PlatinumAmmount * 3.077) / 60) / 60, 2) 'Hours
-            ListBox4.Items.Add(PlatinumAmmount.ToString("N0") & " KGs Platinum Ore | " & PlatinumCrafTime.ToString() & " Hours In Refinery")
-        End If
-        If GoldCraftTime < 1 Then
-            GoldCraftTime = Math.Round(((GoldAmmount * 0.308) / 60), 2) 'Minutes
-            ListBox4.Items.Add(GoldAmmount.ToString("N0") & " KGs Gold Ore | " & GoldCraftTime.ToString() & " Minutes In Refinery")
-        ElseIf GoldCraftTime > 1 Then
-            GoldCraftTime = Math.Round(((GoldAmmount * 0.308) / 60) / 60, 2) 'Hours
-            ListBox4.Items.Add(GoldAmmount.ToString("N0") & " KGs Gold Ore | " & GoldCraftTime.ToString() & " Hours In Refinery")
-        End If
-        If SilverCraftTime < 1 Then
-            SilverCraftTime = Math.Round(((SilverAmmount * 0.769) / 60), 2) 'Minutes
-            ListBox4.Items.Add(SilverAmmount.ToString("N0") & " KGs Silver Ore | " & SilverCraftTime.ToString() & " Minutes In Refinery")
-        ElseIf SilverCraftTime > 1 Then
-            SilverCraftTime = Math.Round(((SilverAmmount * 0.769) / 60) / 60, 2) 'Hours
-            ListBox4.Items.Add(SilverAmmount.ToString("N0") & " KGs Silver Ore | " & SilverCraftTime.ToString() & " Hours In Refinery")
-        End If
-        If MagnesiumCraftTime < 1 Then
-            MagnesiumCraftTime = Math.Round(((MagnesiumAmmount * 0.385) / 60), 2) 'Minutes
-            ListBox4.Items.Add(MagnesiumAmmount.ToString("N0") & " KGs Magnesium Ore | " & MagnesiumCraftTime.ToString() & " Minutes In Refinery")
-        ElseIf MagnesiumCraftTime > 1 Then
-            MagnesiumCraftTime = Math.Round(((MagnesiumAmmount * 0.385) / 60) / 60, 2) 'Hours
-            ListBox4.Items.Add(MagnesiumAmmount.ToString("N0") & " KGs Magnesium Ore | " & MagnesiumCraftTime.ToString() & " Hours In Refinery")
-        End If
-        If CobaltCraftTime < 1 Then
-            CobaltCraftTime = Math.Round(((CobaltAmmout * 3.077) / 60), 2) 'Minutes
-            ListBox4.Items.Add(CobaltAmmout.ToString("N0") & " KGs Silicon Ore | " & CobaltCraftTime.ToString() & " Minutes In Refinery")
-        ElseIf CobaltCraftTime > 1 Then
-            CobaltCraftTime = Math.Round(((CobaltAmmout * 3.077) / 60) / 60, 2) 'Hours
-            ListBox4.Items.Add(CobaltAmmout.ToString("N0") & " KGs Silicon Ore | " & CobaltCraftTime.ToString() & " Hours In Refinery")
-        End If
-        If NickelCraftTime < 1 Then
-            NickelCraftTime = Math.Round(((NickelAmmount * 1.538) / 60), 2) 'Minutes
-            ListBox4.Items.Add(NickelAmmount.ToString("N0") & " KGs Silicon Ore | " & NickelCraftTime.ToString() & " Minutes In Refinery")
-        ElseIf NickelCraftTime > 1 Then
-            NickelCraftTime = Math.Round(((NickelAmmount * 1.538) / 60) / 60, 2) 'Hours
-            ListBox4.Items.Add(NickelAmmount.ToString("N0") & " KGs Silicon Ore | " & NickelCraftTime.ToString() & " Hours In Refinery")
-        End If
-        If UraniumCraftTime < 1 Then
-            UraniumCraftTime = Math.Round(((UraniumAmmount * 3.077) / 60), 2) 'Minutes
-            ListBox4.Items.Add(UraniumAmmount.ToString("N0") & " KGs Uranium Ore | " & UraniumCraftTime.ToString() & " Minutes In Refinery")
-        ElseIf UraniumCraftTime > 1 Then
-            UraniumCraftTime = Math.Round(((UraniumAmmount * 3.077) / 60) / 60, 2) 'Hours
-            ListBox4.Items.Add(UraniumAmmount.ToString("N0") & " KGs Uranium Ore | " & UraniumCraftTime.ToString() & " Hours In Refinery")
-        End If
-
-        'Try to load an image of the blueprint if it is available
-        Dim bpimagepath As String = WorkingPath + "\thumb.png"
-        Try
-            PictureBox1.BackgroundImage = Image.FromFile(bpimagepath)
-        Catch ex As Exception
-
-        End Try
     End Sub
 #End Region
 
