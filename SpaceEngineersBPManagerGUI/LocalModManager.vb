@@ -5,15 +5,41 @@ Imports System.Xml.Serialization
 
 Public Class LocalModManager
     Public ModInfoDictonary As New Dictionary(Of String, ModData)
-
-#Region "------------=================== Main Functions ===================------------"
     Dim appData As String = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData)
     Dim sepath As String = appData + "\SpaceEngineers\Mods"
     Dim extractto As String = My.Settings.SpaceEngineersWorkingDirectory + "\Temp"
 
-    Function UnpackMod(mods As String, Optional destPath As String = "") 'Unpack all the space engineers mods from %AppData%\Roaming\SpaceEngineers\Mods and to a folder in the root directory of the C drive
+    'Set theme colors
+    Private Sub LocalModManager_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Me.BackColor = My.Settings.ThemeBackColor
+        Me.ForeColor = My.Settings.ThemeForeColor
+
+        'Open all mods into the listbox
+        Dim modpath As String = My.Settings.SpaceEngineersModsDirectory
+        Dim id As Integer = 0
+        Dim Cleaner As New XMLCleaner()
+
+        For Each File In Directory.GetFiles(modpath)
+            Dim modname As String = File.Split("\").LastOrDefault
+            Dim modinfo As New ModData()
+            modinfo = UnpackMod(File)
+
+            Try
+                ModInfoDictonary.Add(modname, modinfo)
+            Catch ex As Exception
+                'error adding mod data to the system.
+                MessageBox.Show(ex.ToString)
+            End Try
+
+            ListBox1.Items.Add(modname.ToString())
+            id += 1
+        Next
+    End Sub
+
+#Region "------------=================== Main Functions ===================------------"
+    Function UnpackMod(mod_id As String, Optional destPath As String = "")
         'If attempting to unzip an invalid path return nothing
-        'If Not Directory.Exists(mods + ".sbm") Then Return Nothing
+        'If Not Directory.Exists(mod_id + ".sbm") Then Return Nothing
 
         'Check if the temp folder exists in the working diretory
         If Not Directory.Exists(extractto) Then
@@ -22,7 +48,7 @@ Public Class LocalModManager
 
         'Attempt to retrieve mod information froms steam workshop
         Dim ModInfo As New ModData()
-        Dim ModID As String = (mods.Split("\").Last).TrimEnd(".", "s", "b", "m")
+        Dim ModID As String = (mod_id.Split("\").Last).TrimEnd(".", "s", "b", "m")
         ModInfo = FetchModInfo(ModID)
 
         'Try to create a folder in the temp folder with the name of the mod retrieved from steam workshop
@@ -79,32 +105,7 @@ Public Class LocalModManager
     End Function
 #End Region
 
-    'Set theme colors
-    Private Sub LocalModManager_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Me.BackColor = My.Settings.ThemeBackColor
-        Me.ForeColor = My.Settings.ThemeForeColor
 
-        'Open all mods into the listbox
-        Dim modpath As String = My.Settings.SpaceEngineersModsDirectory
-        Dim id As Integer = 0
-        Dim Cleaner As New XMLCleaner()
-
-        For Each File In Directory.GetFiles(modpath)
-            Dim modname As String = File.Split("\").Last.ToString()
-            Dim modinfo As New ModData()
-            modinfo = UnpackMod(File)
-
-            Try
-                ModInfoDictonary.Add(modinfo.ModName, modinfo)
-            Catch ex As Exception
-                'error adding mod data to the system.
-                MessageBox.Show(ex.ToString)
-            End Try
-
-            ListBox1.Items.Add(modname.ToString())
-            id += 1
-        Next
-    End Sub
 
     Private Sub LocalModManager_Closed(sender As Object, e As EventArgs) Handles Me.Closed
         Main.Show()
