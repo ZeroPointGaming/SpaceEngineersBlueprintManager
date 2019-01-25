@@ -589,32 +589,36 @@ Public Class Main
         For Each folder In Directory.GetDirectories(modpath)
             Dim folder_complete As String = folder.ToString() + "\Data"
 
-            For Each file In Directory.GetFiles(folder_complete, "CubeBlocks.sbc") 'For each zipfilename in the given directory extract them to the given folder
-                Dim moddedxml As String = Cleaner.CleanXML(System.IO.File.ReadAllText(file))
-                Dim DefinitionData As New Definitions()
-                Dim xmlSerializer As XmlSerializer = New XmlSerializer(GetType(Definitions))
+            Try
+                For Each file In Directory.GetFiles(folder_complete, "CubeBlocks.sbc") 'For each zipfilename in the given directory extract them to the given folder
+                    Dim moddedxml As String = Cleaner.CleanXML(System.IO.File.ReadAllText(file))
+                    Dim DefinitionData As New Definitions()
+                    Dim xmlSerializer As XmlSerializer = New XmlSerializer(GetType(Definitions))
 
-                Try
-                    Dim streamread As New StringReader(moddedxml)
-                    DefinitionData = xmlSerializer.Deserialize(streamread)
-                Catch ex As Exception
-
-                End Try
-
-                For Each BlockDefinition In DefinitionData.CubeBlocks()
                     Try
-                        If Not ModBlockDefinitionDictionary(BlockDefinition.Id.SubtypeId.ToString()) Is Nothing Then
-                            'Block already exists dont add it
-                        Else
-                            ModBlockDefinitionDictionary.Add(BlockDefinition.Id.SubtypeId.ToString(), BlockDefinition)
-                        End If
+                        Dim streamread As New StringReader(moddedxml)
+                        DefinitionData = xmlSerializer.Deserialize(streamread)
                     Catch ex As Exception
 
                     End Try
-                Next
-            Next
 
-            id += 1
+                    For Each BlockDefinition In DefinitionData.CubeBlocks()
+                        Try
+                            If Not ModBlockDefinitionDictionary(BlockDefinition.Id.SubtypeId.ToString()) Is Nothing Then
+                                'Block already exists dont add it
+                            Else
+                                ModBlockDefinitionDictionary.Add(BlockDefinition.Id.SubtypeId.ToString(), BlockDefinition)
+                            End If
+                        Catch ex As Exception
+
+                        End Try
+                    Next
+                Next
+
+                id += 1
+            Catch ex As Exception
+
+            End Try
         Next
     End Sub
 #End Region
@@ -623,18 +627,22 @@ Public Class Main
     Public Function CheckUpdates(version As String)
         Dim Flag As Boolean
 
-        Dim wr As HttpWebRequest = CType(WebRequest.Create("https://raw.githubusercontent.com/ZeroPointGaming/SpaceEngineersBlueprintManager/master/version.ver?token=AV6lG9J0aoZCjBl4CXOGp0dfTTymJmkmks5cSOvOwA%3D%3D"), HttpWebRequest)
-        Dim ws As HttpWebResponse = CType(wr.GetResponse(), HttpWebResponse)
-        Dim SR As StreamReader = New StreamReader(ws.GetResponseStream())
-        Dim vers As String = SR.ReadToEnd()
+        Try
+            Dim wr As HttpWebRequest = CType(WebRequest.Create(""), HttpWebRequest)
+            Dim ws As HttpWebResponse = CType(wr.GetResponse(), HttpWebResponse)
+            Dim SR As StreamReader = New StreamReader(ws.GetResponseStream())
+            Dim vers As String = SR.ReadToEnd()
 
-        If vers = Assembly.GetExecutingAssembly().GetName().Version.ToString() Then
-            Flag = True
-            MessageBox.Show(vers + " Is the latest version, your all up to date!")
-        Else
-            Flag = False
-            MessageBox.Show("Updates are available!" + vbNewLine + "Your Version: " + Assembly.GetExecutingAssembly().GetName().Version.ToString() + vbNewLine + "Latest Version: " + vers.ToString() + vbNewLine + vbNewLine + "Visit the github to download the latest version!" + vbNewLine + "https://github.com/ZeroPointGaming/SpaceEngineersBlueprintManager/releases")
-        End If
+            If vers = Assembly.GetExecutingAssembly().GetName().Version.ToString() Then
+                Flag = True
+                MessageBox.Show(vers + " Is the latest version, your all up to date!")
+            Else
+                Flag = False
+                MessageBox.Show("Updates are available!" + vbNewLine + "Your Version: " + Assembly.GetExecutingAssembly().GetName().Version.ToString() + vbNewLine + "Latest Version: " + vers.ToString() + vbNewLine + vbNewLine + "Visit the github to download the latest version!" + vbNewLine + "https://github.com/ZeroPointGaming/SpaceEngineersBlueprintManager/releases")
+            End If
+        Catch ex As Exception
+            MessageBox.Show("There was an error checking for an update!" + vbNewLine + "Your Version: " + Assembly.GetExecutingAssembly().GetName().Version.ToString() + vbNewLine + "Check the github manually for a newer version here: " + vbNewLine + "https://github.com/ZeroPointGaming/SpaceEngineersBlueprintManager/releases")
+        End Try
 
         Return Flag
     End Function
