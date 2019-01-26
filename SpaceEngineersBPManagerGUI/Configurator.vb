@@ -99,6 +99,7 @@
         TextBox6.BackColor = My.Settings.ThemeBackColor
     End Sub
 
+    'Return the user to the main form
     Private Sub Configurator_Closed(sender As Object, e As EventArgs) Handles Me.Closed
         Main.Show()
     End Sub
