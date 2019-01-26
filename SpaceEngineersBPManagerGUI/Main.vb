@@ -200,12 +200,12 @@ Public Class Main
     Dim sepath As String = appData + "\SpaceEngineers\Mods"
     Dim bppath As String = appData + "\SpaceEngineers\Blueprints\Local"
     Dim extractto As String = My.Settings.SpaceEngineersWorkingDirectory
-    Function unpackAll(pat As String, Optional destPath As String = "") As Integer 'Unpack all the space engineers mods from %AppData%\Roaming\SpaceEngineers\Mods and to a folder in the root directory of the C drive
-        unpackAll = 0
+    Function UnpackAll(pat As String, Optional destPath As String = "") As Integer 'Unpack all the space engineers mods from %AppData%\Roaming\SpaceEngineers\Mods and to a folder in the root directory of the C drive
+        UnpackAll = 0
         If Not Directory.Exists(pat) Then Return Nothing
         If Not Directory.Exists(destPath) Then 'Test if the folder exists and if not then create the folder and cd into it
             Try
-                destPath = extractto + "\" + unpackAll.ToString
+                destPath = extractto + "\" + UnpackAll.ToString
                 Directory.CreateDirectory(destPath)
             Catch ex As Exception
             End Try
@@ -213,9 +213,9 @@ Public Class Main
         If Not Directory.Exists(destPath) Then Return Nothing
         For Each zfn In Directory.GetFiles(pat, "*.sbm") 'For each zipfilename in the given directory extract them to the given folder
             Try
-                destPath = extractto + "\" + unpackAll.ToString
+                destPath = extractto + "\" + UnpackAll.ToString
                 ZipFile.ExtractToDirectory(zfn, destPath)
-                unpackAll += 1
+                UnpackAll += 1
             Catch ex As Exception
             End Try
         Next
@@ -719,12 +719,13 @@ Public Class Main
 
                 'simplified query to save code
                 Dim blockname As String = newPanel.SubtypeName
-                Dim newPicture As New PictureBox()
-                newPicture.Height = My.Settings.BlockImgHeight
-                newPicture.Width = My.Settings.BlockImgWidth
-                newPicture.Top = PICTURE_BOX_TOP
-                newPicture.Left = PICTURE_BOX_LEFT
-                newPicture.BackgroundImageLayout = ImageLayout.Stretch
+                Dim newPicture As New PictureBox With {
+                    .Height = My.Settings.BlockImgHeight,
+                    .Width = My.Settings.BlockImgWidth,
+                    .Top = PICTURE_BOX_TOP,
+                    .Left = PICTURE_BOX_LEFT,
+                    .BackgroundImageLayout = ImageLayout.Stretch
+                }
 
                 'Workaround for blocks with no/wrong subtype names
                 Dim avar2 = newPanel.username
@@ -806,12 +807,13 @@ Public Class Main
                 End If
 
                 'Block count label generation
-                Dim newLabel As New Label
-                newLabel.Height = LABEL_HEIGHT
-                newLabel.Width = LABEL_WIDTH
-                newLabel.BackColor = Color.Transparent
-                newLabel.ForeColor = Color.Orange
-                newLabel.Font = New Font("Segoe UI", 8, FontStyle.Regular)
+                Dim newLabel As New Label With {
+                    .Height = LABEL_HEIGHT,
+                    .Width = LABEL_WIDTH,
+                    .BackColor = Color.Transparent,
+                    .ForeColor = Color.Orange,
+                    .Font = New Font("Segoe UI", 8, FontStyle.Regular)
+                }
                 'If block is not vanilla then give it its default block name
                 If Not ListOfVanillaBlocks.Contains(newPanel.SubtypeName) Then
                     newLabel.Text = newPanel.SubtypeName & "(" & newPanel.count & ")"

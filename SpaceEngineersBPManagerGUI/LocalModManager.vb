@@ -71,9 +71,10 @@ Public Class LocalModManager
     End Function
 
     Public Function CreateDocument(ByVal url As String) As HtmlDocument
-        Dim wb As New WebBrowser()
-        wb.ScriptErrorsSuppressed = True
-        wb.DocumentText = New WebClient().DownloadString(url)
+        Dim wb As New WebBrowser With {
+            .ScriptErrorsSuppressed = True,
+            .DocumentText = New WebClient().DownloadString(url)
+        }
         Return wb.Document
     End Function
 
