@@ -15,7 +15,6 @@ Public Class Main
     Public FILENAME As String = String.Empty 'Set the filename variable to an empty string
     Public models As Model 'Set the access of the model class through models
     Public TotalBlockCount As Integer = 0
-    Public fileloader As New OpenFileDialog 'Set the open dialog as an accessible variable
     Public Shared WorkingPath As String = Nothing
     Public _model As New Model 'Grant access to the model class through _model
     Public status As Boolean = True
@@ -655,6 +654,7 @@ Public Class Main
         ResetControlSystems()
 
         'pre-load initialization
+        Dim fileloader As New OpenFileDialog()
         fileloader.ShowDialog() 'Display the open dialog to select what file to load
         FILENAME = fileloader.FileName 'Setting the filename variable to the user selected file from the open dialog
 
@@ -1057,6 +1057,8 @@ Public Class Main
 
             End Try
         End If
+
+        fileloader.Dispose()
     End Sub
 #End Region
 
