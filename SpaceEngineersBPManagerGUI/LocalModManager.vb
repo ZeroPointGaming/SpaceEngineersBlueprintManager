@@ -75,23 +75,24 @@ Public Class LocalModManager
             .ScriptErrorsSuppressed = True,
             .DocumentText = New WebClient().DownloadString(url)
         }
+
+        Do Until wb.ReadyState = WebBrowserReadyState.Complete
+            Application.DoEvents()
+        Loop
+
         Return wb.Document
     End Function
 
+    Public Steam_Page As HtmlDocument
     Function FetchModInfo(ModId As String)
-        MessageBox.Show(ModId.ToString())
         Dim modinfo As New ModData()
-
-        Dim steam_workshop As String = "https://steamcommunity.com/sharedfiles/filedetails/?id=" + ModId
-        MessageBox.Show(steam_workshop.ToString())
-
         Dim mod_name As String = ""
         Dim mod_author As String = ""
+        Dim steam_workshop As String = ("https://steamcommunity.com/sharedfiles/filedetails/?id=" + ModId) 'Working as intended
 
-        Dim Steam_Page As HtmlDocument = CreateDocument(steam_workshop)
-        'MessageBox.Show(Steam_Page.Window.Document.ToString())
+        Steam_Page = CreateDocument(steam_workshop)
 
-        Dim PageElement As HtmlElementCollection = Steam_Page.GetElementsByTagName("div")
+        Dim PageElement As HtmlElementCollection = Steam_Page.Window.Document.GetElementsByTagName("div")
         For Each CurElement As HtmlElement In PageElement
             If (CurElement.GetAttribute("className") = "workshopItemTitle") Then
                 mod_name = CurElement.InnerText
