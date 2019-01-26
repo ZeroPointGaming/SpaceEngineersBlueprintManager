@@ -226,59 +226,59 @@ Partial Class Main
         Me.FlatContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OpenToolStripMenuItem, Me.ResetToolStripMenuItem, Me.SettingsContextMenuItem, Me.ToolsContextMenuBtn})
         Me.FlatContextMenuStrip1.Name = "FlatContextMenuStrip1"
         Me.FlatContextMenuStrip1.ShowImageMargin = False
-        Me.FlatContextMenuStrip1.Size = New System.Drawing.Size(92, 92)
+        Me.FlatContextMenuStrip1.Size = New System.Drawing.Size(156, 114)
         '
         'OpenToolStripMenuItem
         '
         Me.OpenToolStripMenuItem.Name = "OpenToolStripMenuItem"
-        Me.OpenToolStripMenuItem.Size = New System.Drawing.Size(91, 22)
+        Me.OpenToolStripMenuItem.Size = New System.Drawing.Size(155, 22)
         Me.OpenToolStripMenuItem.Text = "Open"
         '
         'ResetToolStripMenuItem
         '
         Me.ResetToolStripMenuItem.Name = "ResetToolStripMenuItem"
-        Me.ResetToolStripMenuItem.Size = New System.Drawing.Size(91, 22)
+        Me.ResetToolStripMenuItem.Size = New System.Drawing.Size(155, 22)
         Me.ResetToolStripMenuItem.Text = "Reset"
         '
         'SettingsContextMenuItem
         '
         Me.SettingsContextMenuItem.Name = "SettingsContextMenuItem"
-        Me.SettingsContextMenuItem.Size = New System.Drawing.Size(91, 22)
+        Me.SettingsContextMenuItem.Size = New System.Drawing.Size(155, 22)
         Me.SettingsContextMenuItem.Text = "Settings"
         '
         'ToolsContextMenuBtn
         '
         Me.ToolsContextMenuBtn.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ModManagerContextMenuBtn, Me.BlueprintManagerContextMenuBtn, Me.HelpContextMenuBtn, Me.UpdateContextMenuBtn})
         Me.ToolsContextMenuBtn.Name = "ToolsContextMenuBtn"
-        Me.ToolsContextMenuBtn.Size = New System.Drawing.Size(91, 22)
+        Me.ToolsContextMenuBtn.Size = New System.Drawing.Size(155, 22)
         Me.ToolsContextMenuBtn.Text = "Tools"
         '
         'ModManagerContextMenuBtn
         '
         Me.ModManagerContextMenuBtn.ForeColor = System.Drawing.Color.White
         Me.ModManagerContextMenuBtn.Name = "ModManagerContextMenuBtn"
-        Me.ModManagerContextMenuBtn.Size = New System.Drawing.Size(171, 22)
+        Me.ModManagerContextMenuBtn.Size = New System.Drawing.Size(180, 22)
         Me.ModManagerContextMenuBtn.Text = "Mod Manager"
         '
         'BlueprintManagerContextMenuBtn
         '
         Me.BlueprintManagerContextMenuBtn.ForeColor = System.Drawing.Color.White
         Me.BlueprintManagerContextMenuBtn.Name = "BlueprintManagerContextMenuBtn"
-        Me.BlueprintManagerContextMenuBtn.Size = New System.Drawing.Size(171, 22)
+        Me.BlueprintManagerContextMenuBtn.Size = New System.Drawing.Size(180, 22)
         Me.BlueprintManagerContextMenuBtn.Text = "Blueprint Manager"
         '
         'HelpContextMenuBtn
         '
         Me.HelpContextMenuBtn.ForeColor = System.Drawing.Color.White
         Me.HelpContextMenuBtn.Name = "HelpContextMenuBtn"
-        Me.HelpContextMenuBtn.Size = New System.Drawing.Size(171, 22)
+        Me.HelpContextMenuBtn.Size = New System.Drawing.Size(180, 22)
         Me.HelpContextMenuBtn.Text = "Help"
         '
         'UpdateContextMenuBtn
         '
         Me.UpdateContextMenuBtn.ForeColor = System.Drawing.Color.White
         Me.UpdateContextMenuBtn.Name = "UpdateContextMenuBtn"
-        Me.UpdateContextMenuBtn.Size = New System.Drawing.Size(171, 22)
+        Me.UpdateContextMenuBtn.Size = New System.Drawing.Size(180, 22)
         Me.UpdateContextMenuBtn.Text = "Check For Updates"
         '
         'Main

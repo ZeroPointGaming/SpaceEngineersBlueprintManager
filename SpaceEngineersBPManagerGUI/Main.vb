@@ -1182,8 +1182,8 @@ Public Class Main
     End Sub
 
     Private Sub ModManagerContextMenuBtn_Click(sender As Object, e As EventArgs) Handles ModManagerContextMenuBtn.Click
-        Me.Hide()
-        LocalModManager.Show()
+        'Me.Hide()
+        'LocalModManager.Show()
     End Sub
     Private Sub BlueprintManagerContextMenuBtn_Click(sender As Object, e As EventArgs) Handles BlueprintManagerContextMenuBtn.Click
         Me.Hide()
