@@ -1,4 +1,5 @@
-﻿Imports System.IO
+﻿Imports System.ComponentModel
+Imports System.IO
 Imports System.IO.Compression
 Imports System.Net
 Imports System.Xml.Serialization
@@ -9,77 +10,30 @@ Public Class LocalModManager
     Dim sepath As String = appData + "\SpaceEngineers\Mods"
     Dim extractto As String = My.Settings.SpaceEngineersWorkingDirectory + "\Temp"
 
-    'Set theme colors
-    Private Sub LocalModManager_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Me.BackColor = My.Settings.ThemeBackColor
-        Me.ForeColor = My.Settings.ThemeForeColor
+    'Background worker to handle extraneious processies
+    Public WithEvents BGProcess As New BackgroundWorker
+    Public cur_id As String
+    Public cur_mod As New ModData()
+    Private Sub BGProcess_DoWork(ByVal sender As System.Object, ByVal e As DoWorkEventArgs) Handles BGProcess.DoWork
+        cur_mod = FetchModInfo(cur_id)
 
-        'Open all mods into the listbox
-        Dim modpath As String = My.Settings.SpaceEngineersModsDirectory
-        Dim id As Integer = 0
-        Dim Cleaner As New XMLCleaner()
-
-        For Each File In Directory.GetFiles(modpath)
-            Dim modname As String = File.Split("\").LastOrDefault
-            Dim modinfo As New ModData()
-            modinfo = UnpackMod(File)
-
-            Try
-                ModInfoDictonary.Add(modname, modinfo)
-            Catch ex As Exception
-                'error adding mod data to the system.
-                MessageBox.Show(ex.ToString)
-            End Try
-
-            ListBox1.Items.Add(modname.ToString())
-            id += 1
-        Next
-    End Sub
-
-#Region "------------=================== Main Functions ===================------------"
-    Function UnpackMod(mod_id As String, Optional destPath As String = "")
-        'Check if the temp folder exists in the working diretory
-        If Not Directory.Exists(extractto) Then
-            Directory.CreateDirectory(extractto)
-        End If
-
-        'Attempt to retrieve mod information froms steam workshop
-        Dim ModInfo As New ModData()
-        Dim ModID As String = (mod_id.Split("\").Last).TrimEnd(".", "s", "b", "m")
-        ModInfo = FetchModInfo(ModID)
-
-        'Try to create a folder in the temp folder with the name of the mod retrieved from steam workshop
-        Try
-            Directory.CreateDirectory(extractto + "\" + ModInfo.ModName)
-        Catch ex As Exception
-            MessageBox.Show("Unable to connect to the steam workshop!")
-        End Try
-
-        Return ModInfo
-    End Function
-
-    Public Function CreateDocument(ByVal url As String) As HtmlDocument
-        Dim wb As New WebBrowser With {
-            .ScriptErrorsSuppressed = True,
-            .DocumentText = New WebClient().DownloadString(url)
-        }
-
-        Do Until wb.ReadyState = WebBrowserReadyState.Complete
-            Application.DoEvents()
-        Loop
-
-        Return wb.Document
-    End Function
-
-    Public Steam_Page As HtmlDocument
-    Function FetchModInfo(ModId As String)
         Dim modinfo As New ModData()
         Dim mod_name As String = ""
         Dim mod_author As String = ""
         Dim mod_description As String = ""
-        Dim steam_workshop As String = ("https://steamcommunity.com/sharedfiles/filedetails/?id=" + ModId) 'Working as intended
+        Dim steam_workshop As String = ("https://steamcommunity.com/sharedfiles/filedetails/?id=" + cur_id) 'Working as intended
 
-        Steam_Page = CreateDocument(steam_workshop)
+        Dim wb As New WebBrowser With {
+            .ScriptErrorsSuppressed = True
+        }
+
+        wb.Navigate(steam_workshop)
+
+        Do Until wb.ReadyState = WebBrowserReadyState.Complete
+            'Application.DoEvents()
+        Loop
+
+        Steam_Page = wb.Document
 
         Dim PageElement As HtmlElementCollection = Steam_Page.Window.Document.GetElementsByTagName("div")
         For Each CurElement As HtmlElement In PageElement
@@ -97,8 +51,59 @@ Public Class LocalModManager
         Next
 
         modinfo.ModDat(mod_name, mod_author, mod_description)
+        cur_mod = modinfo
+    End Sub
 
-        Return modinfo
+    'Set theme colors
+    Private Sub LocalModManager_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Me.BackColor = My.Settings.ThemeBackColor
+        Me.ForeColor = My.Settings.ThemeForeColor
+
+        'Open all mods into the listbox
+        Dim modpath As String = My.Settings.SpaceEngineersModsDirectory
+        Dim Cleaner As New XMLCleaner()
+
+        For Each File In Directory.GetFiles(modpath)
+            Dim modname As String = File.Split("\").LastOrDefault
+            cur_id = File.Split("\").Last.ToString().TrimEnd(".", "s", "b", "m")
+
+            BGProcess.RunWorkerAsync()
+            BGProcess.WorkerReportsProgress = True
+
+            Dim progress = Nothing
+            Do Until progress = 100
+                BGProcess.ReportProgress(progress)
+            Loop
+
+            Try
+                ModInfoDictonary.Add(modname, cur_mod)
+            Catch ex As Exception
+                'error adding mod data to the system.
+                MessageBox.Show(ex.ToString)
+            End Try
+
+            ListBox1.Items.Add(modname.ToString())
+        Next
+    End Sub
+
+#Region "------------=================== Main Functions ===================------------"
+    Public Function CreateDocument(ByVal url As String) As HtmlDocument
+        Dim wb As New WebBrowser With {
+            .ScriptErrorsSuppressed = True,
+            .DocumentText = New WebClient().DownloadString(url)
+        }
+
+        Do Until wb.ReadyState = WebBrowserReadyState.Complete
+            Application.DoEvents()
+        Loop
+
+        Return wb.Document
+        wb.Dispose()
+    End Function
+
+    Public Steam_Page As HtmlDocument
+    Function FetchModInfo(ModId As String)
+
     End Function
 #End Region
 
@@ -110,7 +115,7 @@ Public Class LocalModManager
     Private Sub ListBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ListBox1.SelectedIndexChanged
         Try
             Dim modinfo As New ModData()
-            modinfo = UnpackMod(My.Settings.SpaceEngineersModsDirectory + "\" + ListBox1.SelectedItem.ToString().TrimEnd(".", "s", "b", "m"))
+            'modinfo = UnpackMod(My.Settings.SpaceEngineersModsDirectory + "\" + ListBox1.SelectedItem.ToString().TrimEnd(".", "s", "b", "m"))
         Catch ex As Exception
         End Try
     End Sub
