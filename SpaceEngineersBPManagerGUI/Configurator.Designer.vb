@@ -24,13 +24,13 @@ Partial Class Configurator
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Configurator))
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.ForeColorMetroBtn = New MetroFramework.Controls.MetroButton()
+        Me.BackgroundColorMetroBtn = New MetroFramework.Controls.MetroButton()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.TextBox6 = New System.Windows.Forms.TextBox()
         Me.TextBox5 = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.ForeColorBtn = New System.Windows.Forms.Button()
-        Me.BackColorBtn = New System.Windows.Forms.Button()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -41,25 +41,21 @@ Partial Class Configurator
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.SaveSettingsBtn = New System.Windows.Forms.Button()
         Me.ColorDialog1 = New System.Windows.Forms.ColorDialog()
-        Me.MetroButton1 = New MetroFramework.Controls.MetroButton()
-        Me.BackgroundColorMetroBtn = New MetroFramework.Controls.MetroButton()
-        Me.ForeColorMetroBtn = New MetroFramework.Controls.MetroButton()
+        Me.Label8 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel1
         '
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel1.Controls.Add(Me.Label8)
         Me.Panel1.Controls.Add(Me.ForeColorMetroBtn)
         Me.Panel1.Controls.Add(Me.BackgroundColorMetroBtn)
-        Me.Panel1.Controls.Add(Me.MetroButton1)
         Me.Panel1.Controls.Add(Me.Label7)
         Me.Panel1.Controls.Add(Me.Label6)
         Me.Panel1.Controls.Add(Me.TextBox6)
         Me.Panel1.Controls.Add(Me.TextBox5)
         Me.Panel1.Controls.Add(Me.Label5)
-        Me.Panel1.Controls.Add(Me.ForeColorBtn)
-        Me.Panel1.Controls.Add(Me.BackColorBtn)
         Me.Panel1.Controls.Add(Me.Label4)
         Me.Panel1.Controls.Add(Me.TextBox4)
         Me.Panel1.Controls.Add(Me.Label3)
@@ -71,16 +67,34 @@ Partial Class Configurator
         Me.Panel1.Controls.Add(Me.SaveSettingsBtn)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
-        Me.Panel1.MaximumSize = New System.Drawing.Size(558, 505)
-        Me.Panel1.MinimumSize = New System.Drawing.Size(558, 505)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(558, 505)
+        Me.Panel1.Size = New System.Drawing.Size(558, 321)
         Me.Panel1.TabIndex = 0
+        '
+        'ForeColorMetroBtn
+        '
+        Me.ForeColorMetroBtn.Location = New System.Drawing.Point(141, 159)
+        Me.ForeColorMetroBtn.Name = "ForeColorMetroBtn"
+        Me.ForeColorMetroBtn.Size = New System.Drawing.Size(75, 23)
+        Me.ForeColorMetroBtn.Style = MetroFramework.MetroColorStyle.Teal
+        Me.ForeColorMetroBtn.TabIndex = 18
+        Me.ForeColorMetroBtn.Text = "Text Color"
+        Me.ForeColorMetroBtn.Theme = MetroFramework.MetroThemeStyle.Dark
+        '
+        'BackgroundColorMetroBtn
+        '
+        Me.BackgroundColorMetroBtn.Location = New System.Drawing.Point(11, 159)
+        Me.BackgroundColorMetroBtn.Name = "BackgroundColorMetroBtn"
+        Me.BackgroundColorMetroBtn.Size = New System.Drawing.Size(115, 23)
+        Me.BackgroundColorMetroBtn.Style = MetroFramework.MetroColorStyle.Teal
+        Me.BackgroundColorMetroBtn.TabIndex = 17
+        Me.BackgroundColorMetroBtn.Text = "Background Color"
+        Me.BackgroundColorMetroBtn.Theme = MetroFramework.MetroThemeStyle.Dark
         '
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(302, 226)
+        Me.Label7.Location = New System.Drawing.Point(413, 163)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(38, 13)
         Me.Label7.TabIndex = 15
@@ -89,7 +103,7 @@ Partial Class Configurator
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(11, 226)
+        Me.Label6.Location = New System.Drawing.Point(268, 163)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(35, 13)
         Me.Label6.TabIndex = 14
@@ -100,10 +114,10 @@ Partial Class Configurator
         Me.TextBox6.BackColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(35, Byte), Integer), CType(CType(35, Byte), Integer))
         Me.TextBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TextBox6.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.TextBox6.Location = New System.Drawing.Point(346, 224)
+        Me.TextBox6.Location = New System.Drawing.Point(457, 161)
         Me.TextBox6.MaxLength = 5
         Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(199, 20)
+        Me.TextBox6.Size = New System.Drawing.Size(83, 20)
         Me.TextBox6.TabIndex = 13
         '
         'TextBox5
@@ -111,40 +125,20 @@ Partial Class Configurator
         Me.TextBox5.BackColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(35, Byte), Integer), CType(CType(35, Byte), Integer))
         Me.TextBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TextBox5.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.TextBox5.Location = New System.Drawing.Point(52, 224)
+        Me.TextBox5.Location = New System.Drawing.Point(309, 161)
         Me.TextBox5.MaxLength = 5
         Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(196, 20)
+        Me.TextBox5.Size = New System.Drawing.Size(83, 20)
         Me.TextBox5.TabIndex = 12
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(234, 204)
+        Me.Label5.Location = New System.Drawing.Point(362, 140)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(89, 13)
         Me.Label5.TabIndex = 11
         Me.Label5.Text = "Block Image Size"
-        '
-        'ForeColorBtn
-        '
-        Me.ForeColorBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.ForeColorBtn.Location = New System.Drawing.Point(346, 151)
-        Me.ForeColorBtn.Name = "ForeColorBtn"
-        Me.ForeColorBtn.Size = New System.Drawing.Size(199, 23)
-        Me.ForeColorBtn.TabIndex = 10
-        Me.ForeColorBtn.Text = "Text Color"
-        Me.ForeColorBtn.UseVisualStyleBackColor = True
-        '
-        'BackColorBtn
-        '
-        Me.BackColorBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.BackColorBtn.Location = New System.Drawing.Point(11, 151)
-        Me.BackColorBtn.Name = "BackColorBtn"
-        Me.BackColorBtn.Size = New System.Drawing.Size(199, 23)
-        Me.BackColorBtn.TabIndex = 9
-        Me.BackColorBtn.Text = "Background Color"
-        Me.BackColorBtn.UseVisualStyleBackColor = True
         '
         'Label4
         '
@@ -226,54 +220,35 @@ Partial Class Configurator
         '
         Me.SaveSettingsBtn.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.SaveSettingsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.SaveSettingsBtn.Location = New System.Drawing.Point(0, 480)
+        Me.SaveSettingsBtn.Location = New System.Drawing.Point(0, 291)
         Me.SaveSettingsBtn.Name = "SaveSettingsBtn"
-        Me.SaveSettingsBtn.Size = New System.Drawing.Size(556, 23)
+        Me.SaveSettingsBtn.Size = New System.Drawing.Size(556, 28)
         Me.SaveSettingsBtn.TabIndex = 0
         Me.SaveSettingsBtn.Text = "Apply Changes"
         Me.SaveSettingsBtn.UseVisualStyleBackColor = True
         '
-        'MetroButton1
+        'Label8
         '
-        Me.MetroButton1.Location = New System.Drawing.Point(159, 436)
-        Me.MetroButton1.Name = "MetroButton1"
-        Me.MetroButton1.Size = New System.Drawing.Size(239, 23)
-        Me.MetroButton1.Style = MetroFramework.MetroColorStyle.Teal
-        Me.MetroButton1.TabIndex = 16
-        Me.MetroButton1.Text = "MetroButton1"
-        Me.MetroButton1.Theme = MetroFramework.MetroThemeStyle.Dark
-        '
-        'BackgroundColorMetroBtn
-        '
-        Me.BackgroundColorMetroBtn.Location = New System.Drawing.Point(11, 122)
-        Me.BackgroundColorMetroBtn.Name = "BackgroundColorMetroBtn"
-        Me.BackgroundColorMetroBtn.Size = New System.Drawing.Size(199, 23)
-        Me.BackgroundColorMetroBtn.Style = MetroFramework.MetroColorStyle.Teal
-        Me.BackgroundColorMetroBtn.TabIndex = 17
-        Me.BackgroundColorMetroBtn.Text = "Background Color"
-        Me.BackgroundColorMetroBtn.Theme = MetroFramework.MetroThemeStyle.Dark
-        '
-        'ForeColorMetroBtn
-        '
-        Me.ForeColorMetroBtn.Location = New System.Drawing.Point(346, 122)
-        Me.ForeColorMetroBtn.Name = "ForeColorMetroBtn"
-        Me.ForeColorMetroBtn.Size = New System.Drawing.Size(199, 23)
-        Me.ForeColorMetroBtn.Style = MetroFramework.MetroColorStyle.Teal
-        Me.ForeColorMetroBtn.TabIndex = 18
-        Me.ForeColorMetroBtn.Text = "Text Color"
-        Me.ForeColorMetroBtn.Theme = MetroFramework.MetroThemeStyle.Dark
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(52, 140)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(122, 13)
+        Me.Label8.TabIndex = 19
+        Me.Label8.Text = "Theme Coloring Settings"
         '
         'Configurator
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(35, Byte), Integer), CType(CType(35, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(558, 505)
+        Me.ClientSize = New System.Drawing.Size(558, 321)
         Me.Controls.Add(Me.Panel1)
         Me.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
+        Me.MaximumSize = New System.Drawing.Size(574, 360)
         Me.MinimizeBox = False
+        Me.MinimumSize = New System.Drawing.Size(574, 360)
         Me.Name = "Configurator"
         Me.Text = "Configurator"
         Me.Panel1.ResumeLayout(False)
@@ -292,15 +267,13 @@ Partial Class Configurator
     Friend WithEvents TextBox2 As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents ForeColorBtn As Button
-    Friend WithEvents BackColorBtn As Button
     Friend WithEvents ColorDialog1 As ColorDialog
     Friend WithEvents Label7 As Label
     Friend WithEvents Label6 As Label
     Friend WithEvents TextBox6 As TextBox
     Friend WithEvents TextBox5 As TextBox
     Friend WithEvents Label5 As Label
-    Friend WithEvents MetroButton1 As MetroFramework.Controls.MetroButton
     Friend WithEvents ForeColorMetroBtn As MetroFramework.Controls.MetroButton
     Friend WithEvents BackgroundColorMetroBtn As MetroFramework.Controls.MetroButton
+    Friend WithEvents Label8 As Label
 End Class
