@@ -940,30 +940,30 @@ Public Class Main
             UraniumCraftTime = Math.Round(((CobaltAmmout * 3.077) / 60) / 60) 'Hours
 
             '------------=================== Function to load stuff into the list boxes ===================------------
-            'Components List ListBox2                                                                  >>| FINISHED |<<
-            ListBox2.Items.Add(SteelPlateCount.ToString("N0") & " Steel Plates") 'Steel Plates
-            ListBox2.Items.Add(InteriorPlateCount.ToString("N0") & " Interior Plates") 'Interior Plates
-            ListBox2.Items.Add(Computer.ToString("N0") & " Computers") 'Computers
-            ListBox2.Items.Add(Superconducter.ToString("N0") & " Super Conductors") 'Super Conductors
-            ListBox2.Items.Add(Canvas.ToString("N0") & " Canvas") 'Canvas
-            ListBox2.Items.Add(Girder.ToString("N0") & " Girders") 'Girders
-            ListBox2.Items.Add(BulletproofGlass.ToString("N0") & " Blluetproof Glass") 'Blluetproof Glass
-            ListBox2.Items.Add(ConstructionComponent.ToString("N0") & " Construction Components") 'Construction Components
-            ListBox2.Items.Add(DetectorComponent.ToString("N0") & " Detector Components") 'Detector Components
-            ListBox2.Items.Add(Displays.ToString("N0") & " Displays") 'Displays
-            ListBox2.Items.Add(GravityGeneratorComponents.ToString("N0") & " Gravity Generator Components") 'Gravity Generator Components
-            ListBox2.Items.Add(LargeSteelTube.ToString("N0") & " Large Steel Tubes") 'Large Steel Tubes
-            ListBox2.Items.Add(SmallSteelTube.ToString("N0") & " Small Steel Tubes") 'Small Steel Tubes
-            ListBox2.Items.Add(MedicalComponents.ToString("N0") & " Medical Components") 'Medical Components
-            ListBox2.Items.Add(MetalGrid.ToString("N0") & " Metal Grids") 'Metal Grids
-            ListBox2.Items.Add(Motor.ToString("N0") & " Motors") 'Motors
-            ListBox2.Items.Add(PowerCell.ToString("N0") & " Power Cells") 'Power Cells
-            ListBox2.Items.Add(RadioCommunicationComponents.ToString("N0") & " Radio Communication Components") 'Radio Communication Components
-            ListBox2.Items.Add(ReactorComponents.ToString("N0") & " Reactor Components") 'Reactor Components
-            ListBox2.Items.Add(SolarCell.ToString("N0") & " Solar Cells") 'Solar Cells
-            ListBox2.Items.Add(ThrusterComponents.ToString("N0") & " Thruster Components") 'Thruster Components
+            'Components List ListBox2
+            ListBox2.Items.Add(SteelPlateCount.ToString("N0") & " Steel Plates")
+            ListBox2.Items.Add(InteriorPlateCount.ToString("N0") & " Interior Plates")
+            ListBox2.Items.Add(Computer.ToString("N0") & " Computers")
+            ListBox2.Items.Add(Superconducter.ToString("N0") & " Super Conductors")
+            ListBox2.Items.Add(Canvas.ToString("N0") & " Canvas")
+            ListBox2.Items.Add(Girder.ToString("N0") & " Girders")
+            ListBox2.Items.Add(BulletproofGlass.ToString("N0") & " Blluetproof Glass")
+            ListBox2.Items.Add(ConstructionComponent.ToString("N0") & " Construction Components")
+            ListBox2.Items.Add(DetectorComponent.ToString("N0") & " Detector Components")
+            ListBox2.Items.Add(Displays.ToString("N0") & " Displays")
+            ListBox2.Items.Add(GravityGeneratorComponents.ToString("N0") & " Gravity Generator Components")
+            ListBox2.Items.Add(LargeSteelTube.ToString("N0") & " Large Steel Tubes")
+            ListBox2.Items.Add(SmallSteelTube.ToString("N0") & " Small Steel Tubes")
+            ListBox2.Items.Add(MedicalComponents.ToString("N0") & " Medical Components")
+            ListBox2.Items.Add(MetalGrid.ToString("N0") & " Metal Grids")
+            ListBox2.Items.Add(Motor.ToString("N0") & " Motors")
+            ListBox2.Items.Add(PowerCell.ToString("N0") & " Power Cells")
+            ListBox2.Items.Add(RadioCommunicationComponents.ToString("N0") & " Radio Communication Components")
+            ListBox2.Items.Add(ReactorComponents.ToString("N0") & " Reactor Components")
+            ListBox2.Items.Add(SolarCell.ToString("N0") & " Solar Cells")
+            ListBox2.Items.Add(ThrusterComponents.ToString("N0") & " Thruster Components")
 
-            'Materials List ListBox3                                                                     >>| FINISHED |<<
+            'Materials List ListBox3
             ListBox3.Items.Add(IronIngotOutput.ToString("N0") & " Iron Ingots")
             ListBox3.Items.Add(SiliconIngotOutput.ToString("N0") & " Silicon Wafers")
             ListBox3.Items.Add(StoneAmmount.ToString("N0") & " Stones")
@@ -975,7 +975,7 @@ Public Class Main
             ListBox3.Items.Add(NickelAmmount.ToString("N0") & " Nickel Ingots")
             ListBox3.Items.Add(UraniumAmmount.ToString("N0") & " Uranium Ingots")
 
-            'Raw Materials List ListBox4                                                                 >>| FINISHED |<<
+            'Raw Materials List ListBox4
             If IronCraftTime <= 0 And IronArcTime <= 0 Then
                 IronCraftTime = Math.Round(((IronAmmount * 0.038) / 60), 2) 'Minutes
                 IronArcTime = Math.Round(((IronAmmount * 0.031) / 60), 2) 'Minutes
