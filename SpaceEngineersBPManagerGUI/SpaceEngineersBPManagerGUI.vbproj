@@ -109,6 +109,12 @@
     <Compile Include="FlatTheme.vb">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="HelpMenu.Designer.vb">
+      <DependentUpon>HelpMenu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="HelpMenu.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="LocalBlueprintManager.Designer.vb">
       <DependentUpon>LocalBlueprintManager.vb</DependentUpon>
     </Compile>
@@ -153,6 +159,9 @@
     <Compile Include="XMLCleaner.vb" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="HelpMenu.resx">
+      <DependentUpon>HelpMenu.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LocalBlueprintManager.resx">
       <DependentUpon>LocalBlueprintManager.vb</DependentUpon>
     </EmbeddedResource>
