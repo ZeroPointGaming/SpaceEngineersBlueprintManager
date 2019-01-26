@@ -38,9 +38,6 @@ Public Class LocalModManager
 
 #Region "------------=================== Main Functions ===================------------"
     Function UnpackMod(mod_id As String, Optional destPath As String = "")
-        'If attempting to unzip an invalid path return nothing
-        'If Not Directory.Exists(mod_id + ".sbm") Then Return Nothing
-
         'Check if the temp folder exists in the working diretory
         If Not Directory.Exists(extractto) Then
             Directory.CreateDirectory(extractto)
@@ -56,15 +53,6 @@ Public Class LocalModManager
             Directory.CreateDirectory(extractto + "\" + ModInfo.ModName)
         Catch ex As Exception
             MessageBox.Show("Unable to connect to the steam workshop!")
-        End Try
-
-        'Finally extract the mod for processing of its data.
-        Try
-            MessageBox.Show(extractto + "\" + ModInfo.ModName, destPath)
-            MessageBox.Show(mod_id.ToString() + " | " + extractto + "\" + ModInfo.ModName)
-            ZipFile.ExtractToDirectory(My.Settings.SpaceEngineersModsDirectory + "/" + mod_id.ToString(), extractto + "\" + ModInfo.ModName)
-        Catch ex As Exception
-            MessageBox.Show(ex.ToString())
         End Try
 
         Return ModInfo
@@ -88,6 +76,7 @@ Public Class LocalModManager
         Dim modinfo As New ModData()
         Dim mod_name As String = ""
         Dim mod_author As String = ""
+        Dim mod_description As String = ""
         Dim steam_workshop As String = ("https://steamcommunity.com/sharedfiles/filedetails/?id=" + ModId) 'Working as intended
 
         Steam_Page = CreateDocument(steam_workshop)
@@ -96,13 +85,18 @@ Public Class LocalModManager
         For Each CurElement As HtmlElement In PageElement
             If (CurElement.GetAttribute("className") = "workshopItemTitle") Then
                 mod_name = CurElement.InnerText
-                MessageBox.Show(mod_name.ToString())
+            End If
+
+            If (CurElement.GetAttribute("className") = "friendBlockContent") Then
+                mod_author = CurElement.InnerText
+            End If
+
+            If (CurElement.GetAttribute("className") = "workshopItemDescription") Then
+                mod_description = CurElement.InnerText
             End If
         Next
 
-        If mod_name = "" Then mod_name = "mod_name_default"
-
-        modinfo.ModDat(mod_name, mod_author)
+        modinfo.ModDat(mod_name, mod_author, mod_description)
 
         Return modinfo
     End Function
@@ -117,9 +111,7 @@ Public Class LocalModManager
         Try
             Dim modinfo As New ModData()
             modinfo = UnpackMod(My.Settings.SpaceEngineersModsDirectory + "\" + ListBox1.SelectedItem.ToString().TrimEnd(".", "s", "b", "m"))
-            MessageBox.Show(My.Settings.SpaceEngineersModsDirectory + "\" + ListBox1.SelectedItem.ToString().TrimEnd(".", "s", "b", "m"))
         Catch ex As Exception
-            MessageBox.Show(ex.ToString)
         End Try
     End Sub
 End Class
@@ -128,9 +120,11 @@ End Class
 Public Class ModData
     Public ModName As String
     Public ModAuthor As String
+    Public ModDescription As String
 
-    Public Sub ModDat(mod_name As String, mod_auth As String)
+    Public Sub ModDat(mod_name As String, mod_auth As String, mod_desc As String)
         ModName = mod_name
         ModAuthor = mod_auth
+        ModDescription = mod_desc
     End Sub
 End Class
