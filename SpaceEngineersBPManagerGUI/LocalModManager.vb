@@ -15,14 +15,13 @@ Public Class LocalModManager
     Public cur_id As String
     Public cur_mod As New ModData()
     Private Sub BGProcess_DoWork(ByVal sender As System.Object, ByVal e As DoWorkEventArgs) Handles BGProcess.DoWork
-        cur_mod = FetchModInfo(cur_id)
-
         Dim modinfo As New ModData()
         Dim mod_name As String = ""
         Dim mod_author As String = ""
         Dim mod_description As String = ""
         Dim steam_workshop As String = ("https://steamcommunity.com/sharedfiles/filedetails/?id=" + cur_id) 'Working as intended
 
+        'Throws an active x error for not being on same thread or something
         Dim wb As New WebBrowser With {
             .ScriptErrorsSuppressed = True
         }
@@ -33,9 +32,7 @@ Public Class LocalModManager
             'Application.DoEvents()
         Loop
 
-        Steam_Page = wb.Document
-
-        Dim PageElement As HtmlElementCollection = Steam_Page.Window.Document.GetElementsByTagName("div")
+        Dim PageElement As HtmlElementCollection = wb.Document.GetElementsByTagName("div")
         For Each CurElement As HtmlElement In PageElement
             If (CurElement.GetAttribute("className") = "workshopItemTitle") Then
                 mod_name = CurElement.InnerText
@@ -52,6 +49,10 @@ Public Class LocalModManager
 
         modinfo.ModDat(mod_name, mod_author, mod_description)
         cur_mod = modinfo
+
+        wb.Dispose()
+        PageElement = Nothing
+        modinfo = Nothing
     End Sub
 
     'Set theme colors
@@ -99,11 +100,6 @@ Public Class LocalModManager
 
         Return wb.Document
         wb.Dispose()
-    End Function
-
-    Public Steam_Page As HtmlDocument
-    Function FetchModInfo(ModId As String)
-
     End Function
 #End Region
 
