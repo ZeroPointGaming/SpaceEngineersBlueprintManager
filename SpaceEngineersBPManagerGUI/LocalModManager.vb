@@ -61,9 +61,10 @@ Public Class LocalModManager
         'Finally extract the mod for processing of its data.
         Try
             MessageBox.Show(extractto + "\" + ModInfo.ModName, destPath)
-            ZipFile.ExtractToDirectory(extractto + "\" + ModInfo.ModName, destPath)
+            MessageBox.Show(mod_id.ToString() + " | " + extractto + "\" + ModInfo.ModName)
+            ZipFile.ExtractToDirectory(My.Settings.SpaceEngineersModsDirectory + "/" + mod_id.ToString(), extractto + "\" + ModInfo.ModName)
         Catch ex As Exception
-            'MessageBox.Show(ex.ToString())
+            MessageBox.Show(ex.ToString())
         End Try
 
         Return ModInfo
@@ -77,35 +78,33 @@ Public Class LocalModManager
     End Function
 
     Function FetchModInfo(ModId As String)
+        MessageBox.Show(ModId.ToString())
         Dim modinfo As New ModData()
 
         Dim steam_workshop As String = "https://steamcommunity.com/sharedfiles/filedetails/?id=" + ModId
+        MessageBox.Show(steam_workshop.ToString())
 
         Dim mod_name As String = ""
         Dim mod_author As String = ""
 
-        Try
-            Dim Steam_Page As HtmlDocument = CreateDocument(steam_workshop)
+        Dim Steam_Page As HtmlDocument = CreateDocument(steam_workshop)
+        'MessageBox.Show(Steam_Page.Window.Document.ToString())
 
-            Dim PageElement As HtmlElementCollection = Steam_Page.GetElementsByTagName("div")
-            For Each CurElement As HtmlElement In PageElement
-                If (CurElement.GetAttribute("className") = "workshopItemTitle") Then
-                    mod_name = CurElement.InnerText
-                    MessageBox.Show(mod_name.ToString())
-                End If
-            Next
+        Dim PageElement As HtmlElementCollection = Steam_Page.GetElementsByTagName("div")
+        For Each CurElement As HtmlElement In PageElement
+            If (CurElement.GetAttribute("className") = "workshopItemTitle") Then
+                mod_name = CurElement.InnerText
+                MessageBox.Show(mod_name.ToString())
+            End If
+        Next
 
-        Catch ex As Exception
-            MessageBox.Show(ex.ToString)
-        End Try
+        If mod_name = "" Then mod_name = "mod_name_default"
 
         modinfo.ModDat(mod_name, mod_author)
 
         Return modinfo
     End Function
 #End Region
-
-
 
     Private Sub LocalModManager_Closed(sender As Object, e As EventArgs) Handles Me.Closed
         Main.Show()
