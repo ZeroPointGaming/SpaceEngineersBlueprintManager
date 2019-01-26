@@ -51,14 +51,14 @@
             MessageBox.Show("Error in space engineers mod directory! Could not save changes. Try restarting the application in administrator mode.")
         End Try
         Try
-            My.Settings.ThemeBackColor = BackColorBtn.BackColor
+            My.Settings.ThemeBackColor = BackgroundColorMetroBtn.BackColor
         Catch ex As Exception
-            MessageBox.Show("Error saving text color.")
+            MessageBox.Show("Error saving background color.")
         End Try
         Try
-            My.Settings.ThemeForeColor = BackColorBtn.ForeColor
+            My.Settings.ThemeForeColor = ForeColorMetroBtn.ForeColor
         Catch ex As Exception
-            MessageBox.Show("Error saving back color.")
+            MessageBox.Show("Error saving text color.")
         End Try
         Try
             My.Settings.BlockImgWidth = TextBox5.Text
