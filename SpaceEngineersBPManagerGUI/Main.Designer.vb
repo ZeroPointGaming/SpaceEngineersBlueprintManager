@@ -226,31 +226,31 @@ Partial Class Main
         Me.FlatContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OpenToolStripMenuItem, Me.ResetToolStripMenuItem, Me.SettingsContextMenuItem, Me.ToolsContextMenuBtn})
         Me.FlatContextMenuStrip1.Name = "FlatContextMenuStrip1"
         Me.FlatContextMenuStrip1.ShowImageMargin = False
-        Me.FlatContextMenuStrip1.Size = New System.Drawing.Size(156, 114)
+        Me.FlatContextMenuStrip1.Size = New System.Drawing.Size(92, 92)
         '
         'OpenToolStripMenuItem
         '
         Me.OpenToolStripMenuItem.Name = "OpenToolStripMenuItem"
-        Me.OpenToolStripMenuItem.Size = New System.Drawing.Size(155, 22)
+        Me.OpenToolStripMenuItem.Size = New System.Drawing.Size(91, 22)
         Me.OpenToolStripMenuItem.Text = "Open"
         '
         'ResetToolStripMenuItem
         '
         Me.ResetToolStripMenuItem.Name = "ResetToolStripMenuItem"
-        Me.ResetToolStripMenuItem.Size = New System.Drawing.Size(155, 22)
+        Me.ResetToolStripMenuItem.Size = New System.Drawing.Size(91, 22)
         Me.ResetToolStripMenuItem.Text = "Reset"
         '
         'SettingsContextMenuItem
         '
         Me.SettingsContextMenuItem.Name = "SettingsContextMenuItem"
-        Me.SettingsContextMenuItem.Size = New System.Drawing.Size(155, 22)
+        Me.SettingsContextMenuItem.Size = New System.Drawing.Size(91, 22)
         Me.SettingsContextMenuItem.Text = "Settings"
         '
         'ToolsContextMenuBtn
         '
         Me.ToolsContextMenuBtn.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ModManagerContextMenuBtn, Me.BlueprintManagerContextMenuBtn, Me.HelpContextMenuBtn, Me.UpdateContextMenuBtn})
         Me.ToolsContextMenuBtn.Name = "ToolsContextMenuBtn"
-        Me.ToolsContextMenuBtn.Size = New System.Drawing.Size(155, 22)
+        Me.ToolsContextMenuBtn.Size = New System.Drawing.Size(91, 22)
         Me.ToolsContextMenuBtn.Text = "Tools"
         '
         'ModManagerContextMenuBtn
