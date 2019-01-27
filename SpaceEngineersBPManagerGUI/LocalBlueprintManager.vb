@@ -29,6 +29,13 @@ Public Class LocalBlueprintManager
         End If
 
         'load workshop blueprints
+        If Directory.Exists(My.Settings.SpaceEngineersBPDirectory + "\Workshop") Then
+            For Each file In Directory.GetFiles(My.Settings.SpaceEngineersBPDirectory + "\Workshop")
+                'unzip the bp to workingdir/temp/bpid
+                'read info from /bpid/bp.sbc
+                'load /bpid/temp.png into a image box for preview
+            Next
+        End If
     End Sub
 
     Private Sub LocalBlueprintManager_Closed(sender As Object, e As EventArgs) Handles Me.Closed
