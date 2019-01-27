@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="MetroTextBox1.Text" xml:space="preserve">
+    <value>Loading blueprints can be achieved by right clicking anywhere on the main form and select the open function. Navigate to a folder containing a space engineers blueprint file (BLUEPRINT.sbc), workshop blueprint sbm files are currently unsupported. The program will then read the information from the blieprint file and display it in the gui of the application.</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

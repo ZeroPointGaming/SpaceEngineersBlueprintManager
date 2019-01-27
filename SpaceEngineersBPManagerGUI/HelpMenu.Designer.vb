@@ -101,16 +101,17 @@ Partial Class HelpMenu
         Me.MetroTile1.Size = New System.Drawing.Size(543, 574)
         Me.MetroTile1.Style = MetroFramework.MetroColorStyle.Silver
         Me.MetroTile1.TabIndex = 20
-        Me.MetroTile1.Text = "MetroTile1"
+        Me.MetroTile1.Text = "How To Load Blueprints"
         Me.MetroTile1.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
         'MetroTextBox1
         '
         Me.MetroTextBox1.Location = New System.Drawing.Point(15, 42)
+        Me.MetroTextBox1.Multiline = True
         Me.MetroTextBox1.Name = "MetroTextBox1"
         Me.MetroTextBox1.Size = New System.Drawing.Size(513, 502)
         Me.MetroTextBox1.TabIndex = 0
-        Me.MetroTextBox1.Text = "MetroTextBox1"
+        Me.MetroTextBox1.Text = resources.GetString("MetroTextBox1.Text")
         Me.MetroTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.MetroTextBox1.Theme = MetroFramework.MetroThemeStyle.Dark
         '
