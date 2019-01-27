@@ -627,7 +627,7 @@ Public Class Main
         Dim Flag As Boolean
 
         Try
-            Dim wr As HttpWebRequest = CType(WebRequest.Create(""), HttpWebRequest)
+            Dim wr As HttpWebRequest = CType(WebRequest.Create("https://raw.githubusercontent.com/ZeroPointGaming/SpaceEngineersBlueprintManager/master/version.ver"), HttpWebRequest)
             Dim ws As HttpWebResponse = CType(wr.GetResponse(), HttpWebResponse)
             Dim SR As StreamReader = New StreamReader(ws.GetResponseStream())
             Dim vers As String = SR.ReadToEnd()
