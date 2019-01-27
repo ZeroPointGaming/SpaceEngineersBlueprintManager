@@ -1192,7 +1192,8 @@ Public Class Main
         LocalBlueprintManager.Show()
     End Sub
     Private Sub HelpContextMenuBtn_Click(sender As Object, e As EventArgs) Handles HelpContextMenuBtn.Click
-
+        Me.Hide()
+        HelpMenu.Show()
     End Sub
 End Class
 #End Region
