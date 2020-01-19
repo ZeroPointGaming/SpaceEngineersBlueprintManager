@@ -564,7 +564,6 @@ Public Class Main
                 control.Dispose()
                 System.Runtime.InteropServices.Marshal.ReleaseComObject(control)
             Catch ex As Exception
-                control.Dispose()
                 ex = Nothing
             Finally
                 GC.Collect()
@@ -1202,6 +1201,7 @@ End Class
 #Region "---------------------------===================== XML FUNCTIONS =====================---------------------------"
 'XML INPUT LOADING FUNCTION
 Public Class Model
+
     Public print As Model
     Public _type As String
     Public _id As ID

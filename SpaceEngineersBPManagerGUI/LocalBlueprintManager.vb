@@ -23,7 +23,6 @@ Public Class LocalBlueprintManager
         'load local blueprints
         If Directory.Exists(My.Settings.SpaceEngineersBPDirectory + "\Local") Then
             For Each folder In Directory.GetDirectories(My.Settings.SpaceEngineersBPDirectory + "\Local")
-                Dim bppath As String = folder + "bp.sbc"
                 ListBox1.Items.Add(folder.Split("\").Last.ToString())
             Next
         End If
