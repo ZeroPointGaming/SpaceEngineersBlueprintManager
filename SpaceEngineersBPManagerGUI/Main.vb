@@ -505,7 +505,7 @@ Public Class Main
 
         'Reset the image prieview box
         Try
-            PictureBox1.BackgroundImage.Dispose()
+            PictureBox1.BackgroundImage = Nothing
         Catch ex As Exception
             ex = Nothing
         End Try
@@ -1023,17 +1023,17 @@ Public Class Main
                 End If
                 If CobaltCraftTime < 1 Then
                     CobaltCraftTime = Math.Round(((CobaltAmmout * 3.077) / 60), 2) 'Minutes
-                    ListBox4.Items.Add(CobaltAmmout.ToString("N0") & " KGs Silicon Ore | " & CobaltCraftTime.ToString() & " Minutes In Refinery")
+                    ListBox4.Items.Add(CobaltAmmout.ToString("N0") & " KGs Cobalt Ore | " & CobaltCraftTime.ToString() & " Minutes In Refinery")
                 ElseIf CobaltCraftTime > 1 Then
                     CobaltCraftTime = Math.Round(((CobaltAmmout * 3.077) / 60) / 60, 2) 'Hours
-                    ListBox4.Items.Add(CobaltAmmout.ToString("N0") & " KGs Silicon Ore | " & CobaltCraftTime.ToString() & " Hours In Refinery")
+                    ListBox4.Items.Add(CobaltAmmout.ToString("N0") & " KGs Cobalt Ore | " & CobaltCraftTime.ToString() & " Hours In Refinery")
                 End If
                 If NickelCraftTime < 1 Then
                     NickelCraftTime = Math.Round(((NickelAmmount * 1.538) / 60), 2) 'Minutes
-                    ListBox4.Items.Add(NickelAmmount.ToString("N0") & " KGs Silicon Ore | " & NickelCraftTime.ToString() & " Minutes In Refinery")
+                    ListBox4.Items.Add(NickelAmmount.ToString("N0") & " KGs Nickel Ore | " & NickelCraftTime.ToString() & " Minutes In Refinery")
                 ElseIf NickelCraftTime > 1 Then
                     NickelCraftTime = Math.Round(((NickelAmmount * 1.538) / 60) / 60, 2) 'Hours
-                    ListBox4.Items.Add(NickelAmmount.ToString("N0") & " KGs Silicon Ore | " & NickelCraftTime.ToString() & " Hours In Refinery")
+                    ListBox4.Items.Add(NickelAmmount.ToString("N0") & " KGs Nickel Ore | " & NickelCraftTime.ToString() & " Hours In Refinery")
                 End If
                 If UraniumCraftTime < 1 Then
                     UraniumCraftTime = Math.Round(((UraniumAmmount * 3.077) / 60), 2) 'Minutes

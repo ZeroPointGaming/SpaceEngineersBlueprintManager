@@ -257,28 +257,28 @@ Partial Class Main
         '
         Me.ModManagerContextMenuBtn.ForeColor = System.Drawing.Color.White
         Me.ModManagerContextMenuBtn.Name = "ModManagerContextMenuBtn"
-        Me.ModManagerContextMenuBtn.Size = New System.Drawing.Size(180, 22)
+        Me.ModManagerContextMenuBtn.Size = New System.Drawing.Size(171, 22)
         Me.ModManagerContextMenuBtn.Text = "Mod Manager"
         '
         'BlueprintManagerContextMenuBtn
         '
         Me.BlueprintManagerContextMenuBtn.ForeColor = System.Drawing.Color.White
         Me.BlueprintManagerContextMenuBtn.Name = "BlueprintManagerContextMenuBtn"
-        Me.BlueprintManagerContextMenuBtn.Size = New System.Drawing.Size(180, 22)
+        Me.BlueprintManagerContextMenuBtn.Size = New System.Drawing.Size(171, 22)
         Me.BlueprintManagerContextMenuBtn.Text = "Blueprint Manager"
         '
         'HelpContextMenuBtn
         '
         Me.HelpContextMenuBtn.ForeColor = System.Drawing.Color.White
         Me.HelpContextMenuBtn.Name = "HelpContextMenuBtn"
-        Me.HelpContextMenuBtn.Size = New System.Drawing.Size(180, 22)
+        Me.HelpContextMenuBtn.Size = New System.Drawing.Size(171, 22)
         Me.HelpContextMenuBtn.Text = "Help"
         '
         'UpdateContextMenuBtn
         '
         Me.UpdateContextMenuBtn.ForeColor = System.Drawing.Color.White
         Me.UpdateContextMenuBtn.Name = "UpdateContextMenuBtn"
-        Me.UpdateContextMenuBtn.Size = New System.Drawing.Size(180, 22)
+        Me.UpdateContextMenuBtn.Size = New System.Drawing.Size(171, 22)
         Me.UpdateContextMenuBtn.Text = "Check For Updates"
         '
         'Main
